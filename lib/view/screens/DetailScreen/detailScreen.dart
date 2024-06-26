@@ -13,6 +13,13 @@ class _DetailScreenState extends State<DetailScreen> {
     return SafeArea(
       child: Scaffold(
         appBar: AppBar(),
+        body: Column(
+          children: [
+            Row(
+              children: [],
+            )
+          ],
+        ),
       ),
     );
   }

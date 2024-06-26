@@ -1,6 +1,6 @@
 class DetailModel {
   String? location, name, address,city;
-  int? amount, rent, par, tax;
+  int? amount, rent, per, tax;
   double? rating;
   List<DetailModel> hotelList1 = [];
 
@@ -10,7 +10,7 @@ class DetailModel {
         this.tax,
         this.amount,
         this.location,
-        this.par,
+        this.per,
         this.rating,
         this.address,this.city});
 
@@ -21,7 +21,7 @@ class DetailModel {
       address: m1['address'],
       amount: m1['amount'],
       location: m1['location'],
-      par: m1['par'],
+      per: m1['par'],
       rating: m1['ret'],
       tax: m1['tax'],
       city: m1['city'],
@@ -38,9 +38,9 @@ class DetailModel {
 
 class DetailModel2 {
   String? location, name, address,city;
-  int? amount, rent, par, tax;
+  int? amount, rent, per, tax;
   double? rating;
-  List<DetailModel2> hotelList2 = [];
+  List<DetailModel2> hotelList3 = [];
 
   DetailModel2(
       {this.rent,
@@ -48,7 +48,7 @@ class DetailModel2 {
         this.tax,
         this.amount,
         this.location,
-        this.par,
+        this.per,
         this.rating,
         this.address,this.city});
 
@@ -59,7 +59,7 @@ class DetailModel2 {
       address: m2['address'],
       amount: m2['amount'],
       location: m2['location'],
-      par: m2['par'],
+      per: m2['par'],
       rating: m2['ret'],
       tax: m2['tax'],
       city: m2['city'],
@@ -68,7 +68,7 @@ class DetailModel2 {
 
   DetailModel2.toList(List l2) {
     for (int i = 0; i < l2.length; i++) {
-      hotelList2.add(DetailModel2.fromDetailModel2(l2[i]));
+      hotelList3.add(DetailModel2.fromDetailModel2(l2[i]));
     }
   }
 }
