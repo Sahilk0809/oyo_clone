@@ -1,3 +1,6 @@
+import 'package:flutter/material.dart';
+
+int dropDownSelectedIndex = 0;
 //40
 List hotelList = [
   {
