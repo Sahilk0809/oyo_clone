@@ -12,14 +12,8 @@ class Service_page extends StatefulWidget {
 class _Service_pageState extends State<Service_page> {
   @override
   Widget build(BuildContext context) {
-    double height = MediaQuery
-        .of(context)
-        .size
-        .height;
-    double width = MediaQuery
-        .of(context)
-        .size
-        .width;
+    double height = MediaQuery.of(context).size.height;
+    double width = MediaQuery.of(context).size.width;
     return Scaffold(
       backgroundColor: Colors.white70,
       body: SingleChildScrollView(

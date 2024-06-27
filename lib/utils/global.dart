@@ -976,36 +976,37 @@ List hotelList2 = [
 
 List prachiimg=[
   {
-    'imgs':'',
+    'imgs':'asset/images/banglore.jpeg',
   },
   {
-    'imgs':'',
+    'imgs':'asset/images/chennai.jpeg',
   },
   {
-    'imgs':'',
+    'imgs':'asset/images/dehli.jpeg',
   },
   {
-    'imgs':'',
+    'imgs':'asset/images/gurgoan.jpeg',
   },
   {
-    'imgs':'',
+    'imgs':'asset/images/haybd.jpeg',
   },
   {
-    'imgs':'',
+    'imgs':'asset/images/banglore.jpeg',
   },
   {
-    'imgs':'',
+    'imgs':'asset/images/banglore.jpeg',
   },
   {
-    'imgs':'',
+    'imgs':'asset/images/banglore.jpeg',
   },
   {
-    'imgs':'',
+    'imgs':'asset/images/banglore.jpeg',
   },
   {
-    'imgs':'',
+    'imgs':'asset/images/banglore.jpeg',
   },
   {
+    'imgs':'asset/images/banglore.jpeg',
     'imgs':'',
   },
 ];
