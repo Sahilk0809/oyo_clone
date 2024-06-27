@@ -1,5 +1,5 @@
 import 'package:flutter/cupertino.dart';
-import 'package:oyo_clone/view/screens/DetailScreen/detailScreen.dart';
+import 'package:oyo_clone/view/screens/DetailScreen/detailscreen.dart';
 import 'package:oyo_clone/view/screens/bookingscreen/bookingscreen.dart';
 import 'package:oyo_clone/view/screens/homescreen/homescreen.dart';
 import 'package:oyo_clone/view/screens/savescreen/savescreen.dart';
