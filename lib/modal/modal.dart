@@ -2,6 +2,7 @@ class DetailModel {
   String? location, name, address,city;
   int? amount, rent, per, tax;
   double? rating;
+  bool? like;
   List<DetailModel> hotelList1 = [];
 
   DetailModel(
@@ -12,7 +13,7 @@ class DetailModel {
         this.location,
         this.per,
         this.rating,
-        this.address,this.city});
+        this.address,this.city,this.like});
 
   factory DetailModel.fromDetailModel(Map m1) {
     return DetailModel(
@@ -25,6 +26,7 @@ class DetailModel {
       rating: m1['ret'],
       tax: m1['tax'],
       city: m1['city'],
+      like: m1['like'],
     );
   }
 
