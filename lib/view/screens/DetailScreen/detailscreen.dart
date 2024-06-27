@@ -443,7 +443,7 @@ class _DetailScreenState extends State<DetailScreen> {
                         SizedBox(
                           height: height * 0.01,
                         ),
-                         Row(
+                        Row(
                           children: [
                             SizedBox(
                               width: width * 0.025,

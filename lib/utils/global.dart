@@ -7,6 +7,8 @@ int selectIndex = 0;
 bool favorite = false;
 
 var txtContact = TextEditingController();
+var txtName = TextEditingController();
+var txtReferral = TextEditingController();
 //40
 List hotelList = [
   {

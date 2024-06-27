@@ -2,8 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:oyo_clone/utils/Color.dart';
 import 'package:oyo_clone/utils/global.dart';
 
-import '../../../modal/modal.dart';
-
 class SearchScreen extends StatefulWidget {
   const SearchScreen({super.key});
 
