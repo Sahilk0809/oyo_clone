@@ -64,10 +64,10 @@ flutter:
   #   - images/a_dot_burr.jpeg
   #   - images/a_dot_ham.jpeg
   assets:
-    #- asset/Images/location/
-    - asset/Images/logo1.avif
-    - asset/Images/loc.webp
-
+    - asset/Images/location/
+    - asset/Images/
+    - asset/hotelImage/hotel1/
+    - asset/Icons/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
