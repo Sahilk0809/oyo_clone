@@ -10,19 +10,33 @@ class SearchScreen extends StatefulWidget {
   State<SearchScreen> createState() => _SearchScreenState();
 }
 
-void updateList(String value) {
-  List display = [];
-  
-}
-
-DetailModel? detailModel;
-DetailModel2? detailModel2;
-
 class _SearchScreenState extends State<SearchScreen> {
+  List display = [];
+
+  @override
+  void initState() {
+    display = hotelList;
+    super.initState();
+  }
+
+  void updateList(String change) {
+    List result = [];
+
+    if (change.isEmpty) {
+      result = hotelList;
+    } else {
+      result = hotelList
+          .where((user) =>
+              user["city"].toLowerCase().contains(change.toLowerCase()))
+          .toList();
+    }
+    setState(() {
+      display = result;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
-    detailModel = DetailModel.toList(hotelList);
-    detailModel2 = DetailModel2.toList(hotelList2);
     return SafeArea(
       child: Scaffold(
         body: Padding(
@@ -46,21 +60,30 @@ class _SearchScreenState extends State<SearchScreen> {
                 height: 20,
               ),
               Expanded(
-                child: ListView.builder(
-                  itemCount: detailModel!.hotelList1.length,
-                  itemBuilder: (context, index) => ListTile(
-                    contentPadding: EdgeInsets.all(8),
-                    title: Text(detailModel!.hotelList1[index].name!),
-                    subtitle:
-                        Text('Rs. ${detailModel!.hotelList1[index].rent!}/-'),
-                    trailing: Text(
-                      detailModel!.hotelList1[index].rating.toString(),
-                      style: const TextStyle(
-                        color: Colors.amber,
+                child: (display.length > 0)
+                    ? ListView.builder(
+                        itemCount: display.length,
+                        itemBuilder: (context, index) => ListTile(
+                          contentPadding: EdgeInsets.all(8),
+                          title: Text('${display[index]["name"]}'),
+                          subtitle: Text('${display[index]["city"]}'),
+                          trailing: Text(
+                            '${display[index]["ret"]}',
+                            style: const TextStyle(
+                              color: Colors.blue,
+                            ),
+                          ),
+                        ),
+                      )
+                    : const Center(
+                        child: Text(
+                          'No result found!',
+                          style: TextStyle(
+                            fontSize: 25,
+                            color: Colors.black,
+                          ),
+                        ),
                       ),
-                    ),
-                  ),
-                ),
               ),
             ],
           ),
