@@ -971,3 +971,39 @@ List hotelList2 = [
     "img": "assets/img/hotel.jpg",
   },
 ];
+
+List prachiimg=[
+  {
+    'imgs':'',
+  },
+  {
+    'imgs':'',
+  },
+  {
+    'imgs':'',
+  },
+  {
+    'imgs':'',
+  },
+  {
+    'imgs':'',
+  },
+  {
+    'imgs':'',
+  },
+  {
+    'imgs':'',
+  },
+  {
+    'imgs':'',
+  },
+  {
+    'imgs':'',
+  },
+  {
+    'imgs':'',
+  },
+  {
+    'imgs':'',
+  },
+];
