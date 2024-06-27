@@ -25,7 +25,10 @@ class _SavedScreenState extends State<SavedScreen> {
           Row(
             children: [
               Container(
-                margin: const EdgeInsets.only(left: 15, top: 28),
+                margin: const EdgeInsets.only(
+                  left: 15,
+                  top: 28,
+                ),
                 child: const Text(
                   'Your saved OYOs',
                   style: TextStyle(fontSize: 28, fontWeight: FontWeight.bold),
