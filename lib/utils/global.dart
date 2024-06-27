@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
 int dropDownSelectedIndex = 0;
+
+var txtContact = TextEditingController();
 //40
 List hotelList = [
   {
