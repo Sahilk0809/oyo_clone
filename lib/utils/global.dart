@@ -9,6 +9,7 @@ bool favorite = false;
 var txtContact = TextEditingController();
 var txtName = TextEditingController();
 var txtReferral = TextEditingController();
+var txtEmail = TextEditingController();
 //40
 List hotelList = [
   {

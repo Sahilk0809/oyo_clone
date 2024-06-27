@@ -14,6 +14,6 @@ class MyRoutes{
     //'/':(context)=>Service_page(),
     // '/': (context) => const SavedScreen(),
     // '/': (context) => const DetailScreen(),
-    '/': (context) => const DetailScreen(),
+    '/': (context) => const Createaccount(),
   };
 }
