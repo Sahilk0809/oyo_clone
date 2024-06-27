@@ -1,4 +1,5 @@
 import 'package:flutter/cupertino.dart';
+import 'package:oyo_clone/view/screens/bookingscreen/bookingscreen.dart';
 import 'package:oyo_clone/view/screens/homescreen/homescreen.dart';
 import 'package:oyo_clone/view/screens/savescreen/savescreen.dart';
 import '../view/screens/login/login.dart';
@@ -9,6 +10,7 @@ class MyRoutes{
     //  '/': (context) => const Homescreen(),
     // '/': (context) => const LoginScreen(),
     //'/':(context)=>Service_page(),
-    '/': (context) => const SavedScreen(),
+    // '/': (context) => const SavedScreen(),
+    '/': (context) => const BookingScreen(),
   };
 }

@@ -23,7 +23,7 @@ class _BookingScreenState extends State<BookingScreen> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Image.asset(
-                  'assets/book1.jpg',
+                  'asset/Images/bg2.jpg',
                   height: 210,
                 ),
               ],
