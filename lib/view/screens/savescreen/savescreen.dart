@@ -39,7 +39,7 @@ class _SavedScreenState extends State<SavedScreen> {
           Column(
             children: [
               Image.asset(
-                'asset/banglore.jpeg',
+                'asset/Images/banglore.jpeg',
                 height: 255,
               ),
             ],
