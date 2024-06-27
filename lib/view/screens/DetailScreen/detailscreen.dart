@@ -727,13 +727,20 @@ class _DetailScreenState extends State<DetailScreen> {
                               height: height * 0.01,
                             ),
                             Container(
-                              height: height * 0.1,
+                              height: height * 0.2 + 50,
                               width: width * 0.9 + 10,
-                              child: Text(
-                                  'If I have any options for give ratings less then this, I will definitely do that, Oyo is not its state of mind, its only a app for finding a hotel near you nothing else, otherwise whenever you call them they will not pick up, after this you have to talk to direct hotel, oyo is showing any amount of a room whenever you go to the hotel, they said its not right, we are not giving any room at this price you have to pay double otherwise we dont have any room, the charge extra for AC. Disgusting.'),
+                              child: Column(
+                                children: [
+                                  SizedBox(
+                                    height: height * 0.01,
+                                  ),
+                                  Text(
+                                      'I will definitely do that, Oyo is not its state of mind, its only a app for finding a hotel near you nothing else, otherwise whenever you call them they will not pick up, after this you have to talk to direct hotel, oyo is showing any amount of a room whenever you go to the hotel, they said its not right, we are not giving any room at this price you have to pay double otherwise we dont have any room, the charge extra for AC. Disgusting.'),
+                                ],
+                              ),
                             ),
                             SizedBox(
-                              height: height * 0.05,
+                              height: height * 0.01,
                             ),
                             Row(
                               children: [
@@ -778,12 +785,17 @@ class _DetailScreenState extends State<DetailScreen> {
                               height: height * 0.01,
                             ),
                             Container(
-                                height: height * 0.1,
+                                height: height * 0.2 + 50,
                                 width: width * 0.9 + 10,
-                                child: Text(
-                                    'Oyo Rooms is a hotel chain that is known for its budget-friendly prices and comfortable accommodations. According to customer reviews, Oyo Rooms generally receives positive feedback for its clean and well-maintained rooms, friendly staff, and convenient locations. Some reviewers have also noted that the Oyo Rooms app is easy to use and makes booking a room quick and simple.')),
+                                child: Column(
+                                  children: [
+                                    SizedBox(height: height* 0.01,),
+                                    Text(
+                                        'Oyo Rooms is a hotel chain that is known for its budget-friendly prices and comfortable accommodations. According to customer reviews, Oyo Rooms generally receives positive feedback for its clean and well-maintained rooms, friendly staff, and convenient locations. Some reviewers have also noted that the Oyo Rooms app is easy to use and makes booking a room quick and simple.'),
+                                  ],
+                                )),
                             SizedBox(
-                              height: height * 0.05,
+                              height: height * 0.01,
                             ),
                             Row(
                               children: [
@@ -828,10 +840,16 @@ class _DetailScreenState extends State<DetailScreen> {
                               height: height * 0.01,
                             ),
                             Container(
-                                height: height * 0.1,
+                                height: height *0.2 + 50,
                                 width: width * 0.9 + 10,
-                                child: Text(
-                                    'Oyo Rooms is a hotel chain that is known for its budget-friendly prices and comfortable accommodations. According to customer reviews, Oyo Rooms generally receives positive feedback for its clean and well-maintained rooms, friendly staff, and convenient locations. Some reviewers have also noted that the Oyo Rooms app is easy to use and makes booking a room quick and simple.'))
+                                child: Column(
+                                  children: [
+                                    SizedBox(height: height* 0.01,),
+
+                                    Text(
+                                        'Oyo Rooms is a hotel chain that is known for its budget-friendly prices and comfortable accommodations. According to customer reviews, Oyo Rooms generally receives positive feedback for its clean and well-maintained rooms, friendly staff, and convenient locations. Some reviewers have also noted that the Oyo Rooms app is easy to use and makes booking a room quick and simple.'),
+                                  ],
+                                ))
                           ],
                         )
                       ],
@@ -854,9 +872,10 @@ class _DetailScreenState extends State<DetailScreen> {
                   SizedBox(
                     width: width * 0.6 + 10,
                   ),
-                  InkWell(onTap: () {
-                    LikeList.add(selectindex);
-                  },
+                  InkWell(
+                    onTap: () {
+                      LikeList.add(selectindex);
+                    },
                     child: Container(
                       height: height * 0.07,
                       width: width * 0.08,
