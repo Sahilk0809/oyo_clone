@@ -19,6 +19,7 @@ class _LoginScreenState extends State<LoginScreen> {
         body: Column(
           children: [
             Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Container(
                   height: height * 0.12,
@@ -29,9 +30,13 @@ class _LoginScreenState extends State<LoginScreen> {
                     ),
                   ),
                 ),
-                DropdownButtonExample(),
+                Padding(
+                  padding: const EdgeInsets.only(right: 10),
+                  child: DropdownButtonExample(),
+                ),
               ],
-            )
+            ),
+            Text('Welcome aboard!\nEnjoy Extra rs100 off on your\n'),
           ],
         ),
       ),

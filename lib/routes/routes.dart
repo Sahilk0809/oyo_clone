@@ -7,7 +7,7 @@ import '../view/screens/servicescreen/servicescreen.dart';
 class MyRoutes{
   static Map<String, Widget Function(BuildContext)> routes = {
     //  '/': (context) => const Homescreen(),
-    // '/login': (context) => const LoginScreen(),
-    '/':(context)=>Service_page(),
+    '/': (context) => const LoginScreen(),
+    //'/':(context)=>Service_page(),
   };
 }

@@ -14,7 +14,7 @@ class _DropdownButtonExampleState extends State<DropdownButtonExample> {
   Widget build(BuildContext context) {
     return DropdownButton<String>(
       value: dropdownValue,
-      icon: const Icon(Icons.arrow_downward),
+      icon: const Icon(Icons.keyboard_arrow_down_outlined),
       elevation: 16,
       style: const TextStyle(color: Colors.deepPurple),
       underline: Container(
@@ -36,4 +36,36 @@ class _DropdownButtonExampleState extends State<DropdownButtonExample> {
     );
   }
 }
-const List<String> list = <String>['India', 'Brazil', 'Indonesia', 'Malaysia', 'Mexico'];
+
+const List<String> list = <String>[
+  'India',
+  'Brazil',
+  'Indonesia',
+  'Malaysia',
+  'Mexico',
+  'Nepal',
+  'Oman',
+  'China',
+  'Japan',
+  'Thailand',
+  'Singapore',
+  'Philippines',
+  'Vietnam',
+  'Hong kong',
+  'Malaysia',
+  'Israel',
+  'Taiwan',
+  'Saudi Arabia',
+  'Pakistan',
+  'Iran',
+  'Bangladesh',
+  'Iraq',
+  'Sri Lanka',
+  'North Korea',
+  'South Korea',
+  'Qatar',
+  'Bhutan',
+  'Jordan',
+  'Kuwait',
+  'Macao'
+];
