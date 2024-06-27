@@ -13,7 +13,7 @@ List hotelList = [
     "tax": 156,
     "ret": 3.4,
     "address": "1010 Banjara Hills, Hyderabad, Telangana 500034",
-    "img": "assets/img/hotel.jpg",
+    "img": "asset/Images/oyo.jpg",
   },
   {
     "name": "OYO Hotel Green Valley",
@@ -25,7 +25,7 @@ List hotelList = [
     "tax": 198,
     "ret": 4.0,
     "address": "1111 Hadimba Temple Road, Manali, Himachal Pradesh 175131",
-    "img": "assets/img/hotel.jpg",
+    "img": "asset/Images/oyo.jpg",
   },
   {
     "name": "OYO Hotel Horizon",
@@ -37,7 +37,7 @@ List hotelList = [
     "tax": 115,
     "ret": 3.5,
     "address": "1212 Mall Road, Nainital, Uttarakhand 263002",
-    "img": "assets/img/hotel.jpg",
+    "img": "asset/Images/oyo.jpg",
   },
   {
     "name": "OYO Hotel Metro",
@@ -49,7 +49,7 @@ List hotelList = [
     "tax": 100,
     "ret": 3.7,
     "address": "1313 Hazratganj, Lucknow, Uttar Pradesh 226001",
-    "img": "assets/img/hotel.jpg",
+    "img": "asset/Images/oyo.jpg",
   },
   {
     "name": "OYO Hotel Garden View",
@@ -61,7 +61,7 @@ List hotelList = [
     "tax": 95,
     "ret": 4.3,
     "address": "1414 Shamla Hills, Bhopal, Madhya Pradesh 462002",
-    "img": "assets/img/hotel.jpg",
+    "img":"asset/Images/oyo.jpg",
   },
   {
     "name": "OYO Hotel Sea Breeze",
@@ -73,7 +73,7 @@ List hotelList = [
     "tax": 140,
     "ret": 4.1,
     "address": "1515 Beach Road, Visakhapatnam, Andhra Pradesh 530001",
-    "img": "assets/img/hotel.jpg",
+    "img": "asset/Images/oyo.jpg",
   },
   {
     "name": "OYO Hotel Sunrise",
@@ -85,7 +85,7 @@ List hotelList = [
     "tax": 148,
     "ret": 3.6,
     "address": "1616 Taj Ganj, Agra, Uttar Pradesh 282001",
-    "img": "assets/img/hotel.jpg",
+    "img": "asset/Images/oyo.jpg",
   },
   {
     "name": "OYO Hotel Royal Inn",
@@ -97,7 +97,7 @@ List hotelList = [
     "tax": 129,
     "ret": 4.6,
     "address": "1717 Golden Temple Road, Amritsar, Punjab 143006",
-    "img": "assets/img/hotel.jpg",
+    "img": "asset/Images/oyo.jpg",
   },
   {
     "name": "OYO Hotel Royal Palace",
@@ -109,7 +109,7 @@ List hotelList = [
     "tax": 99,
     "ret": 4.8,
     "address": "123 Marine Drive, Mumbai, Maharashtra",
-    "img": "assets/img/hotel.jpg",
+    "img": "asset/Images/oyo.jpg",
   },
   {
     "name": "OYO Hotel Central Inn",
@@ -121,7 +121,7 @@ List hotelList = [
     "tax": 162,
     "ret": 3.4,
     "address": "456 Connaught Place, Delhi, Delhi ",
-    "img": "assets/img/hotel.jpg",
+    "img": "asset/Images/oyo.jpg",
   },
   {
     "name": "OYO Hotel Silver Sands",
@@ -133,7 +133,7 @@ List hotelList = [
     "tax": 98,
     "ret": 4.0,
     "address": "789 Calangute Beach Road, Goa, Goa 403516",
-    "img": "assets/img/hotel.jpg",
+    "img":"asset/Images/oyo.jpg",
   },
   {
     "name": "OYO Hotel Green Park",
@@ -145,7 +145,7 @@ List hotelList = [
     "tax": 85,
     "ret": 3.7,
     "address": "101 MG Road, Bangalore, Karnataka 560001",
-    "img": "assets/img/hotel.jpg",
+    "img": "asset/Images/oyo.jpg",
   },
   {
     "name": "OYO Hotel Sunshine",
@@ -157,7 +157,7 @@ List hotelList = [
     "tax": 145,
     "ret": 3.5,
     "address": "202 Marina Beach, Chennai, Tamil Nadu 600002",
-    "img": "assets/img/hotel.jpg",
+    "img": "asset/Images/oyo.jpg",
   },
   {
     "name": "OYO Hotel Lake View",
@@ -169,7 +169,7 @@ List hotelList = [
     "tax": 214,
     "ret": 3.2,
     "address": "303 Lake Pichola, Udaipur, Rajasthan 313001",
-    "img": "assets/img/hotel.jpg",
+    "img": "asset/Images/oyo.jpg",
   },
   {
     "name": "OYO Hotel Heritage",
@@ -181,7 +181,7 @@ List hotelList = [
     "tax": 235,
     "ret": 3.9,
     "address": "404 Amer Fort Road, Jaipur, Rajasthan 302002",
-    "img": "assets/img/hotel.jpg",
+    "img": "asset/Images/oyo.jpg",
   },
   {
     "name": "OYO Hotel Riverside",
@@ -193,7 +193,7 @@ List hotelList = [
     "tax": 120,
     "ret": 4.5,
     "address": "505 Marine Drive, Kochi, Kerala 682031",
-    "img": "assets/img/hotel.jpg",
+    "img":"asset/Images/oyo.jpg",
   },
   {
     "name": "OYO Hotel Blue Lagoon",
@@ -205,7 +205,7 @@ List hotelList = [
     "tax": 215,
     "ret": 4.7,
     "address": "606 Beach Road, Pondicherry, Pondicherry 605001",
-    "img": "assets/img/hotel.jpg",
+    "img": "asset/Images/oyo.jpg",
   },
   {
     "name": "OYO Hotel Lotus",
@@ -217,7 +217,7 @@ List hotelList = [
     "tax": 197,
     "ret": 4.8,
     "address": "707 SG Highway, Ahmedabad, Gujarat 380015",
-    "img": "assets/img/hotel.jpg",
+    "img":"asset/Images/oyo.jpg",
   },
   {
     "name": "OYO Hotel City Plaza",
@@ -229,7 +229,7 @@ List hotelList = [
     "tax": 251,
     "ret": 4.2,
     "address": "808 Park Street, Kolkata, West Bengal 700016",
-    "img": "assets/img/hotel.jpg",
+    "img": "asset/Images/oyo.jpg",
   },
   {
     "name": "OYO Hotel Midtown",
@@ -241,7 +241,7 @@ List hotelList = [
     "tax": 319,
     "ret": 4.0,
     "address": "909 FC Road, Pune, Maharashtra 411004",
-    "img": "assets/img/hotel.jpg",
+    "img": "asset/Images/oyo.jpg",
   },
   {
     "name": "OYO Hotel Willow",
@@ -253,7 +253,7 @@ List hotelList = [
     "tax": 148,
     "ret": 3.6,
     "address": "6666 MG Road, Thiruvananthapuram, Kerala 695001",
-    "img": "assets/img/hotel.jpg",
+    "img": "asset/Images/oyo.jpg",
   },
   {
     "name": "OYO Hotel Xanadu",
@@ -265,7 +265,7 @@ List hotelList = [
     "tax": 248,
     "ret": 4.5,
     "address": "6767 Avinashi Road, Coimbatore, Tamil Nadu 641018",
-    "img": "assets/img/hotel.jpg",
+    "img": "asset/Images/oyo.jpg",
   },
   {
     "name": "OYO Hotel Yellow House",
@@ -277,7 +277,7 @@ List hotelList = [
     "tax": 18,
     "ret": 3.6,
     "address": "6868 Dal Lake Road, Srinagar, Jammu and Kashmir 190001",
-    "img": "assets/img/hotel.jpg",
+    "img": "asset/Images/oyo.jpg",
   },
   {
     "name": "OYO Hotel Zenith",
@@ -289,7 +289,7 @@ List hotelList = [
     "tax": 138,
     "ret": 4.6,
     "address": "6969 Alkapuri Road, Vadodara, Gujarat 390007",
-    "img": "assets/img/hotel.jpg",
+    "img":"asset/Images/oyo.jpg",
   },
   {
     "name": "OYO Hotel Aspen",
