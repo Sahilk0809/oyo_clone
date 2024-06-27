@@ -67,6 +67,25 @@ flutter:
     - asset/Images/location/
     - asset/Images/
     - asset/hotelImage/hotel1/
+    - asset/hotelImage/hotel2/
+    - asset/hotelImage/hotel3/
+    - asset/hotelImage/hotel4/
+    - asset/hotelImage/hotel5/
+    - asset/hotelImage/hotel6/
+    - asset/hotelImage/hotel7/
+    - asset/hotelImage/hotel8/
+    - asset/hotelImage/hotel9/
+    - asset/hotelImage/hotel10/
+    - asset/hotelImage/hotel11/
+    - asset/hotelImage/hotel12/
+    - asset/hotelImage/hotel13/
+    - asset/hotelImage/hotel14/
+    - asset/hotelImage/hotel15/
+    - asset/hotelImage/hotel16/
+    - asset/hotelImage/hotel17/
+    - asset/hotelImage/hotel18/
+    - asset/hotelImage/hotel19/
+    - asset/hotelImage/hotel20/
     - asset/Icons/
 
   # An image asset can refer to one or more resolution-specific "variants", see
