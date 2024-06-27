@@ -28,109 +28,143 @@ class _LoginScreenState extends State<LoginScreen> {
                     Container(
                       height: height * 0.12,
                       width: width * 0.3,
-                      decoration: BoxDecoration(
+                      decoration: const BoxDecoration(
                         image: DecorationImage(
                           image: AssetImage('asset/Images/oyo.png'),
                         ),
                       ),
                     ),
-                    Padding(
-                      padding: const EdgeInsets.only(right: 10),
+                    const Padding(
+                      padding: EdgeInsets.only(right: 10),
                       child: DropdownButtonExample(),
                     ),
                   ],
                 ),
-                SizedBox(height: 280,),
-                Text(
+                SizedBox(
+                  height: height * 0.3,
+                ),
+                const Text(
                   'Welcome aboard!',
                   style: TextStyle(
                     fontSize: 23,
                     fontWeight: FontWeight.w800,
                   ),
                 ),
-                Text(
+                const Text(
                   'Enjoy Extra rs100 off on your',
                   style: TextStyle(
                     fontSize: 23,
                     fontWeight: FontWeight.w800,
                   ),
                 ),
-                Text(
+                const Text(
                   'first stay! 🎉',
                   style: TextStyle(
                     fontSize: 23,
                     fontWeight: FontWeight.w800,
                   ),
                 ),
-                SizedBox(height: 20,),
+                SizedBox(
+                  height: height * 0.025,
+                ),
                 TextFormField(
                   controller: txtContact,
                   maxLength: 10,
                   cursorColor: Colors.black,
-                   keyboardType: TextInputType.number,
+                  keyboardType: TextInputType.number,
                   decoration: InputDecoration(
                     hintText: 'Enter mobile number',
                     labelText: 'Enter mobile number',
-                    labelStyle: TextStyle(
+                    labelStyle: const TextStyle(
                       color: Colors.black,
                       fontWeight: FontWeight.bold,
                       fontSize: 17,
                     ),
                     enabledBorder: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(5),
-                      borderSide: BorderSide(width: 1,color: Colors.grey.shade500),
+                      borderSide:
+                          BorderSide(width: 1, color: Colors.grey.shade500),
                     ),
                     focusedBorder: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(5),
-                      borderSide: BorderSide(width: 1.7),
+                      borderSide: const BorderSide(width: 1.7),
                     ),
                   ),
                 ),
-                SizedBox(height: 20,),
+                SizedBox(
+                  height: height * 0.02,
+                ),
                 Container(
                   height: height * 0.06,
-                  width: width * 1,
+                  width: width,
                   decoration: BoxDecoration(
                     color: Colors.red,
                     borderRadius: BorderRadius.circular(10),
                   ),
-                  child: Center(
-                    child: Text('Continue',style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 16,
-                      fontWeight: FontWeight.bold,
-                    ),),
+                  child: const Center(
+                    child: Text(
+                      'Continue',
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 16,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
                   ),
                 ),
-                SizedBox(height: 15,),
-                Center(child: Text('OR',style: TextStyle(fontSize: 17),)),
-                SizedBox(height: 15,),
+                SizedBox(
+                  height: height * 0.015,
+                ),
+                const Center(
+                    child: Text(
+                  'OR',
+                  style: TextStyle(
+                    fontSize: 17,
+                  ),
+                )),
+                SizedBox(
+                  height: height * 0.015,
+                ),
                 Container(
                   height: height * 0.06,
-                  width: width * 1,
+                  width: width,
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(10),
-                    border: Border.all(width: 1,color: Colors.black)
+                    border: Border.all(
+                      width: 1,
+                      color: Colors.black,
+                    ),
                   ),
                   child: Row(
                     children: [
                       Padding(
                         padding: const EdgeInsets.only(left: 40),
-                        child: Image.asset('asset/Images/google_logo.png',height: 37,),
+                        child: Image.asset(
+                          'asset/Images/google_logo.png',
+                          height: 37,
+                        ),
                       ),
-                      Text('Continue with Google',style: TextStyle(
-                        color: Colors.black,
-                        fontSize: 16,
-                        fontWeight: FontWeight.bold,
-                      ),),
+                      const Text(
+                        'Continue with Google',
+                        style: TextStyle(
+                          color: Colors.black,
+                          fontSize: 16,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
                     ],
                   ),
                 ),
-                SizedBox(height: 30,),
-                Center(
-                  child: Text("I'll Signup Later",style: TextStyle(
-                    color: Colors.blue,
-                  ),),
+                SizedBox(
+                  height: height * 0.03,
+                ),
+                const Center(
+                  child: Text(
+                    "I'll Signup Later",
+                    style: TextStyle(
+                      color: Colors.blue,
+                    ),
+                  ),
                 ),
               ],
             ),
