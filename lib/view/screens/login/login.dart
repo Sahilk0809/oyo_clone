@@ -1,3 +1,4 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import '../../../utils/global.dart';
 import 'component/component.dart';
@@ -68,10 +69,13 @@ class _LoginScreenState extends State<LoginScreen> {
                   height: height * 0.025,
                 ),
                 TextFormField(
+                  onChanged: (value) {
+                    phone = value;
+                  },
                   controller: txtContact,
                   maxLength: 10,
                   cursorColor: Colors.black,
-                  keyboardType: TextInputType.number,
+                  keyboardType: TextInputType.phone,
                   decoration: InputDecoration(
                     hintText: 'Enter mobile number',
                     labelText: 'Enter mobile number',
@@ -95,10 +99,21 @@ class _LoginScreenState extends State<LoginScreen> {
                   height: height * 0.02,
                 ),
                 GestureDetector(
-                  onTap: () {
-                    Navigator.of(context).pushNamed('/otp');
+                  onTap: () async{
+                    await FirebaseAuth.instance.verifyPhoneNumber(
+                      phoneNumber: countryCode + phone,
+                      verificationCompleted: (PhoneAuthCredential credential) {},
+                      verificationFailed: (FirebaseAuthException e) {},
+                      codeSent: (String verificationId, int? resendToken) {
+                        verify = verificationId;
+                        Navigator.of(context).pushNamed('/otp');
+                      },
+                      codeAutoRetrievalTimeout: (String verificationId) {
+
+                      },
+                    );
                   },
-                  child: button(height, width),
+                  child: button(height, width, 'Cntinue'),
                 ),
                 SizedBox(
                   height: height * 0.015,
@@ -162,3 +177,7 @@ class _LoginScreenState extends State<LoginScreen> {
     );
   }
 }
+
+String countryCode = '+91';
+String phone = '';
+String verify = '';

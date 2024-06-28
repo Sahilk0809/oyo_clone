@@ -72,7 +72,7 @@ const List<String> list = <String>[
   'Macao'
 ];
 
-Container button(double height, double width) {
+Container button(double height, double width, text) {
   return Container(
     alignment: Alignment.center,
     height: height * 0.06,
@@ -81,9 +81,9 @@ Container button(double height, double width) {
       color: Colors.red,
       borderRadius: BorderRadius.circular(10),
     ),
-    child: const Text(
-      'Continue',
-      style: TextStyle(
+    child: Text(
+      text,
+      style: const TextStyle(
         color: Colors.white,
         fontSize: 16,
         fontWeight: FontWeight.bold,
