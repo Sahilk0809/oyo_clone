@@ -423,7 +423,7 @@ class _DetailScreenState extends State<DetailScreen> {
                                     ),
                                     child: Image(
                                       image:
-                                      AssetImage('asset/Icons/rupee.jpg'),
+                                          AssetImage('asset/Icons/rupee.jpg'),
                                     ),
                                   ),
                                 ],
@@ -451,7 +451,7 @@ class _DetailScreenState extends State<DetailScreen> {
                             children: [
                               ...List.generate(
                                 5,
-                                    (index) => Container(
+                                (index) => Container(
                                   margin: EdgeInsets.all(5),
                                   height: height * 0.1 - 10,
                                   width: width * 0.9 + 10,
@@ -922,22 +922,26 @@ class _DetailScreenState extends State<DetailScreen> {
                     child: Icon(Icons.close),
                   ),
                   SizedBox(
-                    width: width * 0.6 + 10,
+                    width: width * 0.6 ,
                   ),
-                  InkWell(
-                    onTap: () {
-                      LikeList.add(selectindex);
-                    },
-                    child: Container(
-                      height: height * 0.07,
-                      width: width * 0.08,
-                      decoration: BoxDecoration(
-                          color: Colors.white, shape: BoxShape.circle),
-                      child: Icon(Icons.favorite_border),
+                  ActionChip(
+                    avatar: Padding(
+                      padding: const EdgeInsets.only(left: 5),
+                      child: Icon(
+                        favorite ? Icons.favorite : Icons.favorite_border,
+                        size: 24,color: Colors.red,
+                      ),
                     ),
+                    label: const Text(''),
+                    onPressed: () {
+                      setState(() {
+                        favorite = !favorite;
+                      });
+                    },
+                    shape: CircleBorder(),
                   ),
                   SizedBox(
-                    width: width * 0.05,
+                    width: width * 0.02,
                   ),
                   InkWell(
                     onTap: () {
@@ -956,17 +960,16 @@ class _DetailScreenState extends State<DetailScreen> {
                                         Container(
                                           height: height * 0.2 + 40,
                                           width: width * 0.9,
-                                          color: Color(0xffe9bcbf),
+                                          color: DialogBox,
                                         )
                                       ],
                                     ),
                                     Padding(
                                       padding: const EdgeInsets.all(12),
                                       child: Column(
-                                        // mainAxisAlignment: MainAxisAlignment.,
                                         children: [
                                           SizedBox(
-                                            height: height * 0.07,
+                                            height: height * 0.06,
                                           ),
                                           Row(
                                             children: [
@@ -1017,21 +1020,21 @@ class _DetailScreenState extends State<DetailScreen> {
                                           InkWell(
                                             onTap: () async {
                                               RenderRepaintBoundary boundary =
-                                              imgKey.currentContext!
-                                                  .findRenderObject()
-                                              as RenderRepaintBoundary;
+                                                  imgKey.currentContext!
+                                                          .findRenderObject()
+                                                      as RenderRepaintBoundary;
                                               ui.Image image =
-                                              await boundary.toImage();
+                                                  await boundary.toImage();
                                               ByteData? byteData =
-                                              await image.toByteData(
-                                                  format: ui
-                                                      .ImageByteFormat.png);
+                                                  await image.toByteData(
+                                                      format: ui
+                                                          .ImageByteFormat.png);
 
                                               Uint8List img = byteData!.buffer
                                                   .asUint8List();
                                               // ImageGallerySaver.saveImage(img);
                                               final path =
-                                              getApplicationDocumentsDirectory();
+                                                  getApplicationDocumentsDirectory();
                                               File file = File('$path/img.png');
                                               file.writeAsBytes(img);
 
@@ -1040,12 +1043,11 @@ class _DetailScreenState extends State<DetailScreen> {
                                             },
                                             child: Container(
                                               height: height * 0.05,
-                                              width: width * 0.9,
+                                              width: width * 0.7,
                                               decoration: BoxDecoration(
-                                                // color: Colors.green,
-                                                color: Color(0xffe9bcbf),
+                                                color: Colors.green,
                                                 borderRadius:
-                                                BorderRadius.circular(10),
+                                                    BorderRadius.circular(10),
                                               ),
                                               child: Center(
                                                 child: Text(
@@ -1180,5 +1182,5 @@ class _DetailScreenState extends State<DetailScreen> {
     );
   }
 }
-
+bool favorite = true;
 // Text scalar
