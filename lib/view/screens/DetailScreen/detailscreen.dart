@@ -1182,5 +1182,5 @@ class _DetailScreenState extends State<DetailScreen> {
     );
   }
 }
-bool favorite = true;
+bool favorite = false;
 // Text scalar
