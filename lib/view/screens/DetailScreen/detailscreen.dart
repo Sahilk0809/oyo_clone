@@ -450,7 +450,7 @@ class _DetailScreenState extends State<DetailScreen> {
                           child: Row(
                             children: [
                               ...List.generate(
-                                5,
+                                4,
                                 (index) => Container(
                                   margin: EdgeInsets.all(5),
                                   height: height * 0.1 - 10,
@@ -470,18 +470,44 @@ class _DetailScreenState extends State<DetailScreen> {
                                       Radius.circular(10),
                                     ),
                                   ),
-                                  child: ListTile(
-                                    title: Text(
-                                      'Get upto 60% off',
-                                      style: TextStyle(
-                                        fontSize: 18,
+                                  child: Row(
+                                    children: [
+                                      SizedBox(
+                                        width: width * 0.02,
                                       ),
-                                    ),
-                                    subtitle: Text(
-                                      'Use FIRSTOYO60',
-                                      style: TextStyle(
-                                          fontSize: 15, color: Colors.black38),
-                                    ),
+                                      Image(
+                                        image:
+                                            AssetImage('asset/Images/oyo.png'),
+                                        height: height * 0.1,
+                                        width: width * 0.3 / 2,
+                                      ),
+                                      SizedBox(
+                                        width: width * 0.04,
+                                      ),
+                                      Column(
+                                        children: [
+                                          SizedBox(
+                                            height: height * 0.01,
+                                          ),
+                                          Column(
+                                            children: [
+                                              Text(
+                                                '${offers[index]['first']}',
+                                                style: TextStyle(
+                                                  fontSize: 20,
+                                                ),
+                                              ),
+                                              Text(
+                                                '${offers[index]['second']}',
+                                                style: TextStyle(
+                                                    fontSize: 17,
+                                                    color: Colors.black38),
+                                              ),
+                                            ],
+                                          )
+                                        ],
+                                      ),
+                                    ],
                                   ),
                                 ),
                               )
@@ -891,17 +917,18 @@ class _DetailScreenState extends State<DetailScreen> {
                               height: height * 0.01,
                             ),
                             Container(
-                                height: height * 0.2 + 50,
-                                width: width * 0.9 + 10,
-                                child: Column(
-                                  children: [
-                                    SizedBox(
-                                      height: height * 0.01,
-                                    ),
-                                    Text(
-                                        'Oyo Rooms is a hotel chain that is known for its budget-friendly prices and comfortable accommodations. According to customer reviews, Oyo Rooms generally receives positive feedback for its clean and well-maintained rooms, friendly staff, and convenient locations. Some reviewers have also noted that the Oyo Rooms app is easy to use and makes booking a room quick and simple.'),
-                                  ],
-                                ))
+                              height: height * 0.2 + 50,
+                              width: width * 0.9 + 10,
+                              child: Column(
+                                children: [
+                                  SizedBox(
+                                    height: height * 0.01,
+                                  ),
+                                  Text(
+                                      'Oyo Rooms is a hotel chain that is known for its budget-friendly prices and comfortable accommodations. According to customer reviews, Oyo Rooms generally receives positive feedback for its clean and well-maintained rooms, friendly staff, and convenient locations. Some reviewers have also noted that the Oyo Rooms app is easy to use and makes booking a room quick and simple.'),
+                                ],
+                              ),
+                            ),
                           ],
                         )
                       ],
@@ -922,14 +949,15 @@ class _DetailScreenState extends State<DetailScreen> {
                     child: Icon(Icons.close),
                   ),
                   SizedBox(
-                    width: width * 0.6 ,
+                    width: width * 0.6,
                   ),
                   ActionChip(
                     avatar: Padding(
                       padding: const EdgeInsets.only(left: 5),
                       child: Icon(
                         favorite ? Icons.favorite : Icons.favorite_border,
-                        size: 24,color: Colors.red,
+                        size: 24,
+                        color: Colors.red,
                       ),
                     ),
                     label: const Text(''),
@@ -1182,5 +1210,6 @@ class _DetailScreenState extends State<DetailScreen> {
     );
   }
 }
+
 bool favorite = false;
 // Text scalar

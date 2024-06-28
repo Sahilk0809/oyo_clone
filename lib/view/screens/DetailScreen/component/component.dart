@@ -11,6 +11,14 @@ GlobalKey imgKey = GlobalKey();
 
 // library marquee_widget;
 
+List offers = [
+  {"first": "Get Upto 60% off", "second": "Use FIRSTOYO60"},
+  {"first": "Upto 65% off", "second": "Use UPIOYO"},
+  {"first": "Flat 55% pre booking", "second": "Use PAYNOW55"},
+  {"first": "Get Upto 75% off", "second": "Use FIRSTOYO60"},
+  {"first": "Get Upto 80% off", "second": "Use OYOXMW"}
+];
+
 
 enum DirectionMarguee { oneDirection, TwoDirection }
 
