@@ -94,23 +94,11 @@ class _LoginScreenState extends State<LoginScreen> {
                 SizedBox(
                   height: height * 0.02,
                 ),
-                Container(
-                  height: height * 0.06,
-                  width: width,
-                  decoration: BoxDecoration(
-                    color: Colors.red,
-                    borderRadius: BorderRadius.circular(10),
-                  ),
-                  child: const Center(
-                    child: Text(
-                      'Continue',
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 16,
-                        fontWeight: FontWeight.bold,
-                      ),
-                    ),
-                  ),
+                GestureDetector(
+                  onTap: () {
+                    Navigator.of(context).pushNamed('/otp');
+                  },
+                  child: button(height, width),
                 ),
                 SizedBox(
                   height: height * 0.015,

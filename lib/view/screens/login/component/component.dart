@@ -71,3 +71,23 @@ const List<String> list = <String>[
   'Kuwait',
   'Macao'
 ];
+
+Container button(double height, double width) {
+  return Container(
+    alignment: Alignment.center,
+    height: height * 0.06,
+    width: width,
+    decoration: BoxDecoration(
+      color: Colors.red,
+      borderRadius: BorderRadius.circular(10),
+    ),
+    child: const Text(
+      'Continue',
+      style: TextStyle(
+        color: Colors.white,
+        fontSize: 16,
+        fontWeight: FontWeight.bold,
+      ),
+    ),
+  );
+}
