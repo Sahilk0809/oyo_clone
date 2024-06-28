@@ -1,5 +1,6 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:google_sign_in/google_sign_in.dart';
 import '../../../utils/global.dart';
 import 'component/component.dart';
 
@@ -128,34 +129,39 @@ class _LoginScreenState extends State<LoginScreen> {
                 SizedBox(
                   height: height * 0.015,
                 ),
-                Container(
-                  height: height * 0.06,
-                  width: width,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(10),
-                    border: Border.all(
-                      width: 1,
-                      color: Colors.black,
+                GestureDetector(
+                  onTap: () {
+                    signInWithGoogle();
+                  },
+                  child: Container(
+                    height: height * 0.06,
+                    width: width,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(10),
+                      border: Border.all(
+                        width: 1,
+                        color: Colors.black,
+                      ),
                     ),
-                  ),
-                  child: Row(
-                    children: [
-                      Padding(
-                        padding: const EdgeInsets.only(left: 40),
-                        child: Image.asset(
-                          'asset/Images/google_logo.png',
-                          height: 37,
+                    child: Row(
+                      children: [
+                        Padding(
+                          padding: const EdgeInsets.only(left: 40),
+                          child: Image.asset(
+                            'asset/Images/google_logo.png',
+                            height: 37,
+                          ),
                         ),
-                      ),
-                      const Text(
-                        'Continue with Google',
-                        style: TextStyle(
-                          color: Colors.black,
-                          fontSize: 16,
-                          fontWeight: FontWeight.bold,
+                        const Text(
+                          'Continue with Google',
+                          style: TextStyle(
+                            color: Colors.black,
+                            fontSize: 16,
+                            fontWeight: FontWeight.bold,
+                          ),
                         ),
-                      ),
-                    ],
+                      ],
+                    ),
                   ),
                 ),
                 SizedBox(
@@ -176,6 +182,22 @@ class _LoginScreenState extends State<LoginScreen> {
       ),
     );
   }
+}
+
+signInWithGoogle() async{
+
+  GoogleSignInAccount? googleUser = await GoogleSignIn().signIn();
+
+  GoogleSignInAuthentication? googleAuth = await googleUser?.authentication;
+
+  AuthCredential credential = GoogleAuthProvider.credential(
+    accessToken: googleAuth?.accessToken,
+    idToken: googleAuth?.idToken,
+  );
+
+  UserCredential userCredential = await FirebaseAuth.instance.signInWithCredential(credential);
+
+
 }
 
 String countryCode = '+91';
