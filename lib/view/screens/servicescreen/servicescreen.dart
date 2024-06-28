@@ -26,177 +26,94 @@ class _Service_pageState extends State<Service_page> {
             Stack(
               children: [
                 Container(
-                  height: height * 0.4,
+                  height: height * 0.5,
                   width: width * double.infinity,
                   decoration: BoxDecoration(
                     image: DecorationImage(
                       fit: BoxFit.cover,
-                      image: AssetImage('asset/Images/oyo.jpg'),
+                      image: AssetImage('asset/hotelImage/hotel12/4.jpeg'),
                     ),
                     color: Colors.white,
                   ),
                 ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Container(
-                      height: height * 0.1,
-                      width: width * 0.1,
-                      decoration: BoxDecoration(
-                          shape: BoxShape.circle, color: Colors.white),
+                Padding(
+                  padding: const EdgeInsets.only(top: 90),
+                  child: Container(
+                    height: height * 0.061,
+                    width: width * 0.5,
+                    decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(15),
+                        color: Colors.white),
+                    child:  Row(
+                      children: [
+                        Icon(Icons.person_2_sharp),
+                        RichText(
+                          text: TextSpan(
+                            text: '\t\t\t\ Company-',
+                            style: TextStyle(fontSize: 15, color: Colors.black),
+                          ),
+                        ),
+                        RichText(text: TextSpan(text: 'Service',style: TextStyle(fontSize: 15,fontWeight: FontWeight.bold,color: Colors.black)))
+                      ],
                     ),
-                    Container(
-                      height: height * 0.1,
-                      width: width * 0.1,
-                      decoration: BoxDecoration(
-                          shape: BoxShape.circle, color: Colors.white),
-                    ),
-                  ],
+                  ),
                 ),
+                Padding(
+                  padding: const EdgeInsets.only(top: 150),
+                  child: Text('  This is OYO serviced \n  premium hotel',style: TextStyle(fontWeight: FontWeight.bold,fontSize: 35,color: Colors.white),),
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(top: 300,left: 1),
+                  child: Container(
+                    height: height*0.06,
+                    width: width*0.32,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(60),
+                      color: Colors.white,
+                    ),
+                    child: Row(
+                      children: [
+                        Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: Icon(Icons.play_arrow,color: Colors.black,),
+                        ),
+                        Text('play video',style: TextStyle(fontSize: 18),),
+                      ],
+                    ),
+                  ),
+                ),
+                SizedBox(height: height*0.1,),
+                Row(
+                  children: [
 
-                // Row(
-                //   children: [
-                //     Padding(
-                //       padding: const EdgeInsets.only(left: 20, top: 250),
-                //       child: Container(
-                //         height: height * 0.31,
-                //         width: width * 0.4,
-                //         decoration: BoxDecoration(
-                //           borderRadius: BorderRadius.circular(25),
-                //           color: Colors.white,
-                //         ),
-                //       ),
-                //     ),
-                //     Padding(
-                //       padding: const EdgeInsets.only(left: 30, top: 140),
-                //       child: Container(
-                //         height: height * 0.15,
-                //         width: width * 0.4,
-                //         decoration: BoxDecoration(
-                //           borderRadius: BorderRadius.circular(25),
-                //           color: Colors.white,
-                //         ),
-                //       ),
-                //     ),
-                //   ],
-                // ),
-                //
-                //
-                // Column(
-                //   children: [
-                //     Padding(
-                //       padding: const EdgeInsets.only(
-                //           top: 500, right: 200, left: 10),
-                //       child: Container(
-                //         height: height * 0.3,
-                //         width: width * 0.4,
-                //         decoration: BoxDecoration(
-                //           borderRadius: BorderRadius.circular(25),
-                //           color: Colors.white,
-                //         ),
-                //       ),
-                //     ),
-                //     Padding(
-                //       padding: const EdgeInsets.only(left: 180),
-                //       child: Container(
-                //         height: height * 0.3,
-                //         width: width * 0.4,
-                //         decoration: BoxDecoration(
-                //           borderRadius: BorderRadius.circular(25),
-                //           color: Colors.white,
-                //         ),
-                //       ),
-                //     ),
-                //     SizedBox(height: 10,),
-                //     Row(
-                //       children: [
-                //         Padding(
-                //           padding: const EdgeInsets.only(left: 210),
-                //           child: Container(
-                //             height: height * 0.3,
-                //             width: width * 0.4,
-                //             decoration: BoxDecoration(
-                //                 borderRadius: BorderRadius.circular(25),
-                //                 color: Colors.white
-                //             ),
-                //           ),
-                //         ),
-                //       ],
-                //     ),
-                //     Padding(
-                //       padding: const EdgeInsets.only(right: 170, bottom: 59),
-                //       child: Container(
-                //         height: height * 0.15,
-                //         width: width * 0.4,
-                //         decoration: BoxDecoration(
-                //           borderRadius: BorderRadius.circular(25),
-                //           color: Colors.white,
-                //         ),
-                //       ),
-                //     ),
-                //
-                //
-                Row(
-                  children: [
-                    Padding(
-                      padding: const EdgeInsets.only(left: 20, top: 290),
-                      child: Container(
-                        height: height * 0.3,
-                        width: width * 0.9,
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(20),
-                          color: Colors.white,
-                        ),
-                        child: SingleChildScrollView(scrollDirection:Axis.horizontal ,
-                          child: Padding(
-                            padding: const EdgeInsets.only(bottom: 20),
-                            child: Row(
-                              children: [
-                                ...List.generate(
-                                    locationList.length,
-                                    (index) => box1(
-                                        img: locationList[index]['img'],
-                                        name: locationList[index]['name']
-                                            .toString()))
-                              ],
-                            ),
+                    Column(
+                      children: [
+                        SizedBox(height: height * 0.2,),
+                        Container(
+                          height: height*0.3,
+                          width: width*0.4,
+                          decoration: BoxDecoration(
+
+                              borderRadius: BorderRadius.circular(20),
+                              color: Colors.white
                           ),
                         ),
-                      ),
+                      ],
                     ),
-                  ],
-                ),
-                Row(
-                  children: [
-                    Padding(
-                      padding: const EdgeInsets.only(top: 550, left: 20),
-                      child: Container(
-                        height: height * 0.3,
-                        width: width * 0.9,
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(20),
-                          color: Colors.white,
-                        ),
-                        child: SingleChildScrollView(
-                          scrollDirection:Axis.horizontal ,
-                          child: Padding(
-                            padding: const EdgeInsets.only(bottom: 20),
-                            child: Row(
-                              children: [
-                                ...List.generate(
-                                  ServiceList.length,
-                                      (index) => box2(
-                                    st: ServiceList[index]['st'],
-                                    rate: ServiceList[index]['rate'],
-                                    txt: ServiceList[index]['txt'],
-                                    imgs: ServiceList[index]['imgs'],
-                                  ),
-                                ),
-                              ],
-                            ),
+                    SizedBox(width: width*0.21,),
+                    Column(
+                      // crossAxisAlignment: CrossAxisAlignment.end,
+                      children: [
+                        SizedBox(height: height * 0.2,),
+                        Container(
+                          height: height*0.2,
+                          width: width*0.3,
+                          decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(20),
+                              color: Colors.white
                           ),
                         ),
-                      ),
+                      ],
                     ),
                   ],
                 ),
@@ -207,70 +124,4 @@ class _Service_pageState extends State<Service_page> {
       ),
     );
   }
-}
-
-Widget box1({required String img, required String name}) {
-  return Padding(
-    padding: const EdgeInsets.only(top: 50),
-    child: Container(
-      margin: EdgeInsets.all(5),
-      height: 100,
-      width: 80,
-      decoration: BoxDecoration(
-          image: DecorationImage(
-            fit: BoxFit.cover,
-            image: AssetImage(img),
-          ),
-          shape: BoxShape.circle,
-          color: Colors.blueGrey),
-      child: Padding(
-        padding: const EdgeInsets.only(top: 85, left: 15),
-        child: Text(
-          name,
-          style: TextStyle(
-            color: Colors.black,
-            fontSize: 10,
-          ),
-        ),
-      ),
-    ),
-  );
-}
-
-Widget box2({required String st, required String rate, required String txt,required String imgs}) {
-  return Padding(
-    padding: const EdgeInsets.only(top: 550, left: 20),
-    child: Container(
-      height: 150,
-      width: 100,
-      decoration: BoxDecoration(
-        image: DecorationImage(
-          fit: BoxFit.cover,
-          image: AssetImage(imgs),
-        ),
-        borderRadius: BorderRadius.circular(15),
-        color: Colors.black54,
-      ),
-      child: Padding(
-        padding: const EdgeInsets.only(top: 30),
-        child: Text.rich(TextSpan(children: [
-          TextSpan(
-            text: '${st}\n',
-            style: TextStyle(
-                color: Colors.white, fontSize: 8, ),
-          ),
-          TextSpan(
-            text: '${rate}\n',
-            style: TextStyle(
-                color: Colors.white, fontSize: 8,),
-          ),
-          TextSpan(
-            text: '${txt}\n',
-            style: TextStyle(
-                color: Colors.white, fontSize: 8,),
-          ),
-        ])),
-      ),
-    ),
-  );
 }
