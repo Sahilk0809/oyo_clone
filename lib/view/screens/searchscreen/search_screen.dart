@@ -48,7 +48,6 @@ class _SearchScreenState extends State<SearchScreen> {
                 cursorColor: Colors.black,
                 textInputAction: TextInputAction.search,
                 decoration: InputDecoration(
-                  filled: true,
                   focusedBorder: OutlineInputBorder(
                     borderSide: const BorderSide(
                       width: 1.5,
