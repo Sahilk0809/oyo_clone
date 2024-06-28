@@ -13,7 +13,7 @@ class MyRoutes{
     // '/': (context) => const LoginScreen(),
     //'/':(context)=>Service_page(),
     // '/': (context) => const SavedScreen(),
-    // '/': (context) => const DetailScreen(),
-    '/': (context) => const CreateAccount(),
+    '/': (context) => const DetailScreen(),
+    // '/': (context) => const CreateAccount(),
   };
 }

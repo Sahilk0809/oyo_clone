@@ -1,6 +1,5 @@
 import 'dart:io';
 import 'dart:typed_data';
-
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -10,7 +9,6 @@ import 'package:oyo_clone/utils/Color.dart';
 import 'package:oyo_clone/utils/global.dart';
 import 'package:share_extend/share_extend.dart';
 import 'dart:ui' as ui;
-
 import '../../../utils/global.dart';
 
 class DetailScreen extends StatefulWidget {
@@ -33,16 +31,17 @@ class _DetailScreenState extends State<DetailScreen> {
     return value;
   }
 
-  void initState() {
-    detailModel = DetailModel.toList(hotelList);
-// TODO: implement initState
-    super.initState();
-  }
-
   @override
   Widget build(BuildContext context) {
-    double height = MediaQuery.of(context).size.height;
-    double width = MediaQuery.of(context).size.width;
+    detailModel = DetailModel.toList(hotelList);
+    double height = MediaQuery
+        .of(context)
+        .size
+        .height;
+    double width = MediaQuery
+        .of(context)
+        .size
+        .width;
     return SafeArea(
       child: Scaffold(
         backgroundColor: Colors.white,
@@ -60,26 +59,27 @@ class _DetailScreenState extends State<DetailScreen> {
                     ),
                     items: hotelList.map((i) {
                       return Builder(
-                        builder: (context) => SingleChildScrollView(
-                          scrollDirection: Axis.horizontal,
-                          child: Row(
-                            children: [
-                              Container(
-                                // margin: EdgeInsets.all(5),
-                                height: height * 0.3,
-                                width: width * 0.9 + 150,
-                                // color: Colors.orange,
-                                decoration: BoxDecoration(
-                                  // border: Border.all(color: Colors.black38),
-                                  image: DecorationImage(
-                                      image: AssetImage(
-                                          'asset/hotelImage/hotel1/1.webp'),
-                                      fit: BoxFit.cover),
-                                ),
+                        builder: (context) =>
+                            SingleChildScrollView(
+                              scrollDirection: Axis.horizontal,
+                              child: Row(
+                                children: [
+                                  Container(
+                                    // margin: EdgeInsets.all(5),
+                                    height: height * 0.3,
+                                    width: width * 0.9 + 150,
+                                    // color: Colors.orange,
+                                    decoration: BoxDecoration(
+                                      // border: Border.all(color: Colors.black38),
+                                      image: DecorationImage(
+                                          image: AssetImage(
+                                              'asset/hotelImage/hotel1/1.webp'),
+                                          fit: BoxFit.cover),
+                                    ),
+                                  ),
+                                ],
                               ),
-                            ],
-                          ),
-                        ),
+                            ),
                       );
                     }).toList(),
                   ),
@@ -140,7 +140,7 @@ class _DetailScreenState extends State<DetailScreen> {
                               width: width * 0.02,
                             ),
                             Text(
-                              '${detailModel!.hotelList1[selectindex].rating}',
+                              '${detailModel!.hotelList1[selectindex].rating}'.toString(),
                               style: TextStyle(fontSize: 18),
                             ),
                             SizedBox(
@@ -315,7 +315,8 @@ class _DetailScreenState extends State<DetailScreen> {
                             Align(
                               alignment: Alignment.centerRight,
                               child: Text(
-                                '${detailModel!.hotelList1[selectindex].location}',
+                                '${detailModel!.hotelList1[selectindex]
+                                    .location}',
                                 style: TextStyle(fontSize: 18),
                               ),
                             ),
@@ -349,7 +350,7 @@ class _DetailScreenState extends State<DetailScreen> {
                                       style: TextStyle(
                                           fontSize: 17, color: Colors.black38
 // fontWeight: FontWeight.bold,
-                                          ),
+                                      ),
                                     ),
                                   ),
                                 ],
@@ -373,7 +374,7 @@ class _DetailScreenState extends State<DetailScreen> {
                                     ),
                                     child: Image(
                                       image:
-                                          AssetImage('asset/Icons/rupee.jpg'),
+                                      AssetImage('asset/Icons/rupee.jpg'),
                                     ),
                                   ),
                                 ],
@@ -401,40 +402,42 @@ class _DetailScreenState extends State<DetailScreen> {
                             children: [
                               ...List.generate(
                                 5,
-                                (index) => Container(
-                                  margin: EdgeInsets.all(5),
-                                  height: height * 0.1 - 10,
-                                  width: width * 0.9 + 10,
-                                  decoration: BoxDecoration(
-                                    color: Colors.white,
-                                    border: Border.all(
-                                      color: Colors.black,
-                                      width: 2,
-                                    ),
-                                    boxShadow: [
-                                      BoxShadow(
-                                        color: Colors.black,
+                                    (index) =>
+                                    Container(
+                                      margin: EdgeInsets.all(5),
+                                      height: height * 0.1 - 10,
+                                      width: width * 0.9 + 10,
+                                      decoration: BoxDecoration(
+                                        color: Colors.white,
+                                        border: Border.all(
+                                          color: Colors.black,
+                                          width: 2,
+                                        ),
+                                        boxShadow: [
+                                          BoxShadow(
+                                            color: Colors.black,
+                                          ),
+                                        ],
+                                        borderRadius: BorderRadius.all(
+                                          Radius.circular(10),
+                                        ),
                                       ),
-                                    ],
-                                    borderRadius: BorderRadius.all(
-                                      Radius.circular(10),
-                                    ),
-                                  ),
-                                  child: ListTile(
-                                    title: Text(
-                                      'Get upto 60% off',
-                                      style: TextStyle(
-                                        fontSize: 18,
+                                      child: ListTile(
+                                        title: Text(
+                                          'Get upto 60% off',
+                                          style: TextStyle(
+                                            fontSize: 18,
 // fontWeight: FontWeight.bold,
+                                          ),
+                                        ),
+                                        subtitle: Text(
+                                          'Use FIRSTOYO60',
+                                          style: TextStyle(
+                                              fontSize: 15,
+                                              color: Colors.black38),
+                                        ),
                                       ),
                                     ),
-                                    subtitle: Text(
-                                      'Use FIRSTOYO60',
-                                      style: TextStyle(
-                                          fontSize: 15, color: Colors.black38),
-                                    ),
-                                  ),
-                                ),
                               )
                             ],
                           ),
@@ -789,7 +792,7 @@ class _DetailScreenState extends State<DetailScreen> {
                                 width: width * 0.9 + 10,
                                 child: Column(
                                   children: [
-                                    SizedBox(height: height* 0.01,),
+                                    SizedBox(height: height * 0.01,),
                                     Text(
                                         'Oyo Rooms is a hotel chain that is known for its budget-friendly prices and comfortable accommodations. According to customer reviews, Oyo Rooms generally receives positive feedback for its clean and well-maintained rooms, friendly staff, and convenient locations. Some reviewers have also noted that the Oyo Rooms app is easy to use and makes booking a room quick and simple.'),
                                   ],
@@ -840,11 +843,11 @@ class _DetailScreenState extends State<DetailScreen> {
                               height: height * 0.01,
                             ),
                             Container(
-                                height: height *0.2 + 50,
+                                height: height * 0.2 + 50,
                                 width: width * 0.9 + 10,
                                 child: Column(
                                   children: [
-                                    SizedBox(height: height* 0.01,),
+                                    SizedBox(height: height * 0.01,),
 
                                     Text(
                                         'Oyo Rooms is a hotel chain that is known for its budget-friendly prices and comfortable accommodations. According to customer reviews, Oyo Rooms generally receives positive feedback for its clean and well-maintained rooms, friendly staff, and convenient locations. Some reviewers have also noted that the Oyo Rooms app is easy to use and makes booking a room quick and simple.'),
@@ -963,7 +966,8 @@ class _DetailScreenState extends State<DetailScreen> {
                         size: 17,
                       ),
                       Text(
-                        '${detailModel!.hotelList1[selectindex].tax} taxes & fees',
+                        '${detailModel!.hotelList1[selectindex]
+                            .tax} taxes & fees',
                         style: TextStyle(fontSize: 17, color: Colors.blue),
                       ),
                     ],
@@ -987,12 +991,12 @@ class _DetailScreenState extends State<DetailScreen> {
                     ),
                     child: Center(
                         child: Text(
-                      'Book now & pay at hotel',
-                      style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 17,
-                          fontWeight: FontWeight.w400),
-                    )),
+                          'Book now & pay at hotel',
+                          style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 17,
+                              fontWeight: FontWeight.w400),
+                        )),
                   ),
                 ],
               )
