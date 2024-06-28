@@ -38,14 +38,18 @@ class _WelcomePageState extends State<WelcomePage> {
               decoration: BoxDecoration(
                   color: Colors.white, borderRadius: BorderRadius.circular(20)),
               child: Container(
-                height: height * 0.1,
-                width: width * 0.1,
-                decoration: const BoxDecoration(
+                height: 80,
+                width: 80,
+                decoration:const BoxDecoration(
                   image: DecorationImage(
                     image: AssetImage(
                       'asset/Images/loc.webp',
                     ),
                   ),
+                ),
+                child: Text.rich(
+                    TextSpan(text: (''),
+                )
                 ),
               ),
             ),
