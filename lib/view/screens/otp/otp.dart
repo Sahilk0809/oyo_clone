@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:oyo_clone/view/screens/login/component/component.dart';
 
 class OtpScreen extends StatefulWidget {
@@ -30,7 +31,7 @@ class _OtpScreenState extends State<OtpScreen> {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               SizedBox(
-                height: height * 0.35,
+                height: height * 0.3,
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -42,7 +43,14 @@ class _OtpScreenState extends State<OtpScreen> {
                 ],
               ),
               const Spacer(),
-              GestureDetector(onTap: () {}, child: button(height, width)),
+              GestureDetector(
+                  onTap: () {
+                    otp = txtOtp1.text +
+                        txtOtp2.text +
+                        txtOtp3.text +
+                        txtOtp4.text;
+                  },
+                  child: button(height, width)),
             ],
           ),
         ),
@@ -55,14 +63,25 @@ class _OtpScreenState extends State<OtpScreen> {
       height: 50,
       width: 50,
       child: TextField(
+        textInputAction: TextInputAction.next,
+        textAlign: TextAlign.center,
         controller: controller,
         keyboardType: TextInputType.phone,
+        cursorColor: Colors.black,
         decoration: const InputDecoration(
           border: OutlineInputBorder(
             borderSide: BorderSide(width: 1),
+          ),
+          focusedBorder: OutlineInputBorder(
+            borderSide: BorderSide(
+              width: 2,
+              color: Colors.black,
+            ),
           ),
         ),
       ),
     );
   }
 }
+
+String? otp;

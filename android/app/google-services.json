@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "360744678302",
+    "project_id": "fir-project-auth-2857f",
+    "storage_bucket": "fir-project-auth-2857f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:360744678302:android:00e85a4584b952d1eb1c8f",
+        "android_client_info": {
+          "package_name": "com.example.oyo_clone"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCbiNTmqOWs32frqOHasTvhjRmDFN_IGrM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
