@@ -153,64 +153,64 @@ class _ServiceScreenState extends State<ServiceScreen> {
                 width: double.infinity,
                 decoration: const BoxDecoration(
                   image: DecorationImage(
-                    fit: BoxFit.cover,
+                    fit: BoxFit.contain,
                     image: AssetImage(
-                      'asset/Images/oyo.jpg',
+                      'asset/Images/Template1.jpeg',
                     ),
                   ),
                 ),
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Row(
-                      children: [
-                        Container(
-                          height: height * 0.04,
-                          width: width * 0.42,
-                          decoration: BoxDecoration(
-                            color: Colors.white,
-                            borderRadius: BorderRadius.circular(9),
-                          ),
-                          child: const Center(
-                            child: Text(
-                              'Company-Serviced',
-                              style: TextStyle(
-                                  fontSize: 15, fontWeight: FontWeight.w600),
-                            ),
-                          ),
-                        ),
-                      ],
-                    ),
-                    SizedBox(
-                      height: height * 0.015,
-                    ),
-                    const Row(
-                      children: [
-                        Text(
-                          'This is OYO serviced',
-                          style: TextStyle(
-                            color: Colors.black,
-                            fontSize: 30,
-                            fontWeight: FontWeight.bold,
-                          ),
-                        ),
-                      ],
-                    ),
-                    const Row(
-                      children: [
-                        Text(
-                          'Premium hotel',
-                          style: TextStyle(
-                            color: Colors.black,
-                            fontSize: 30,
-                            fontWeight: FontWeight.bold,
-                            height: 1,
-                          ),
-                        ),
-                      ],
-                    ),
-                  ],
-                ),
+                // child: Column(
+                //   mainAxisAlignment: MainAxisAlignment.center,
+                //   children: [
+                //     Row(
+                //       children: [
+                //         Container(
+                //           height: height * 0.04,
+                //           width: width * 0.42,
+                //           decoration: BoxDecoration(
+                //             color: Colors.white,
+                //             borderRadius: BorderRadius.circular(9),
+                //           ),
+                //           child: const Center(
+                //             child: Text(
+                //               'Company-Serviced',
+                //               style: TextStyle(
+                //                   fontSize: 15, fontWeight: FontWeight.w600),
+                //             ),
+                //           ),
+                //         ),
+                //       ],
+                //     ),
+                //     SizedBox(
+                //       height: height * 0.015,
+                //     ),
+                //     const Row(
+                //       children: [
+                //         Text(
+                //           'This is OYO serviced',
+                //           style: TextStyle(
+                //             color: Colors.white,
+                //             fontSize: 30,
+                //             fontWeight: FontWeight.bold,
+                //           ),
+                //         ),
+                //       ],
+                //     ),
+                //     const Row(
+                //       children: [
+                //         Text(
+                //           'Premium hotel',
+                //           style: TextStyle(
+                //             color: Colors.white,
+                //             fontSize: 30,
+                //             fontWeight: FontWeight.bold,
+                //             height: 1,
+                //           ),
+                //         ),
+                //       ],
+                //     ),
+                //   ],
+                // ),
               ),
               Padding(
                 padding: const EdgeInsets.only(
