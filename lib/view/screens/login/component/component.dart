@@ -1,4 +1,6 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:google_sign_in/google_sign_in.dart';
 
 class DropdownButtonExample extends StatefulWidget {
   const DropdownButtonExample({super.key});
@@ -38,6 +40,11 @@ class _DropdownButtonExampleState extends State<DropdownButtonExample> {
     );
   }
 }
+
+
+String countryCode = '+91';
+String phone = '';
+String verify = '';
 
 const List<String> list = <String>[
   'India',
@@ -90,4 +97,31 @@ Container button(double height, double width, text) {
       ),
     ),
   );
+}
+
+class FireBaseServices {
+  final auth = FirebaseAuth.instance;
+  final googleSignIn = GoogleSignIn();
+
+  signInWithGoogle() async {
+    try {
+      final GoogleSignInAccount? googleSignInAccount =
+      await googleSignIn.signIn();
+      if (googleSignInAccount != null) {
+        final GoogleSignInAuthentication googleSignInAuthentication =
+        await googleSignInAccount.authentication;
+        final AuthCredential authCredential = GoogleAuthProvider.credential(
+          accessToken: googleSignInAuthentication.accessToken,
+          idToken: googleSignInAuthentication.idToken,
+        );
+        await auth.signInWithCredential(authCredential);
+      }
+    } on FirebaseAuthException catch (e) {
+      print(e.toString());
+    }
+  }
+
+  googleSignOut() async {
+    await googleSignIn.signOut();
+  }
 }

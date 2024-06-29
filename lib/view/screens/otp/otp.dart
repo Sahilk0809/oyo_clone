@@ -44,6 +44,7 @@ class _OtpScreenState extends State<OtpScreen> {
     var width = MediaQuery.of(context).size.width;
     return SafeArea(
       child: Scaffold(
+        resizeToAvoidBottomInset: false,
         appBar: AppBar(
           centerTitle: true,
           title: const Text('Otp Screen'),

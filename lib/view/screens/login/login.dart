@@ -1,6 +1,7 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:google_sign_in/google_sign_in.dart';
+import 'package:oyo_clone/view/screens/homescreen/homescreen.dart';
 import 'package:oyo_clone/view/screens/otp/otp.dart';
 import 'package:page_transition/page_transition.dart';
 import '../../../utils/global.dart';
@@ -80,7 +81,6 @@ class _LoginScreenState extends State<LoginScreen> {
                   cursorColor: Colors.black,
                   keyboardType: TextInputType.phone,
                   decoration: InputDecoration(
-                    hintText: 'Enter mobile number',
                     labelText: 'Enter mobile number',
                     labelStyle: const TextStyle(
                       color: Colors.black,
@@ -137,8 +137,18 @@ class _LoginScreenState extends State<LoginScreen> {
                   height: height * 0.015,
                 ),
                 GestureDetector(
-                  onTap: () {
-                    signInWithGoogle();
+                  onTap: () async {
+                    // await signInWithGoogle();
+                    // GoogleSignIn googleSignIn =
+                    //     GoogleSignIn(signInOption: SignInOption.standard);
+                    // await googleSignIn.signIn();
+                    await FireBaseServices().signInWithGoogle();
+                    Navigator.pushReplacement(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const Homescreen(),
+                      ),
+                    );
                   },
                   child: Container(
                     height: height * 0.06,
@@ -190,21 +200,3 @@ class _LoginScreenState extends State<LoginScreen> {
     );
   }
 }
-
-signInWithGoogle() async {
-  GoogleSignInAccount? googleUser = await GoogleSignIn().signIn();
-
-  GoogleSignInAuthentication? googleAuth = await googleUser?.authentication;
-
-  AuthCredential credential = GoogleAuthProvider.credential(
-    accessToken: googleAuth?.accessToken,
-    idToken: googleAuth?.idToken,
-  );
-
-  UserCredential userCredential =
-      await FirebaseAuth.instance.signInWithCredential(credential);
-}
-
-String countryCode = '+91';
-String phone = '';
-String verify = '';
