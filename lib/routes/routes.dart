@@ -16,6 +16,7 @@ class MyRoutes{
     //'/':(context)=>Service_page(),
     // '/': (context) => const SavedScreen(),
     '/detail': (context) => const DetailScreen(),
+    '/booking': (context) => const BookingScreen(),
     '/': (context) => const LoginScreen(),
     '/search': (context) => const SearchScreen(),
     '/login': (context) => const LoginScreen(),
