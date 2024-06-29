@@ -24,7 +24,7 @@ List<dynamic> hotelList = [
     "ret": '3.4',
     "address": "1010 Banjara Hills, Hyderabad, Telangana 500034",
     "img": "asset/Images/oyo.jpg",
-    "like" : false,
+    "like": false,
   },
   {
     "name": "OYO Hotel Green Valley",
@@ -37,7 +37,7 @@ List<dynamic> hotelList = [
     "ret": '4.0',
     "address": "1111 Hadimba Temple Road, Manali, Himachal Pradesh 175131",
     "img": "asset/Images/oyo.jpg",
-    "like" : false,
+    "like": false,
   },
   {
     "name": "OYO Hotel Horizon",
@@ -50,7 +50,7 @@ List<dynamic> hotelList = [
     "ret": '3.5',
     "address": "1212 Mall Road, Nainital, Uttarakhand 263002",
     "img": "asset/Images/oyo.jpg",
-    "like" : false,
+    "like": false,
   },
   {
     "name": "OYO Hotel Metro",
@@ -63,7 +63,7 @@ List<dynamic> hotelList = [
     "ret": '3.7',
     "address": "1313 Hazratganj, Lucknow, Uttar Pradesh 226001",
     "img": "asset/Images/oyo.jpg",
-    "like" : false,
+    "like": false,
   },
   {
     "name": "OYO Hotel Garden View",
@@ -76,7 +76,7 @@ List<dynamic> hotelList = [
     "ret": '4.3',
     "address": "1414 Shamla Hills, Bhopal, Madhya Pradesh 462002",
     "img": "asset/Images/oyo.jpg",
-    "like" : false,
+    "like": false,
   },
   {
     "name": "OYO Hotel Sea Breeze",
@@ -89,7 +89,7 @@ List<dynamic> hotelList = [
     "ret": '4.1',
     "address": "1515 Beach Road, Visakhapatnam, Andhra Pradesh 530001",
     "img": "asset/Images/oyo.jpg",
-    "like" : false,
+    "like": false,
   },
   {
     "name": "OYO Hotel Sunrise",
@@ -102,7 +102,7 @@ List<dynamic> hotelList = [
     "ret": '3.6',
     "address": "1616 Taj Ganj, Agra, Uttar Pradesh 282001",
     "img": "asset/Images/oyo.jpg",
-    "like" : false,
+    "like": false,
   },
   {
     "name": "OYO Hotel Royal Inn",
@@ -115,7 +115,7 @@ List<dynamic> hotelList = [
     "ret": '4.6',
     "address": "1717 Golden Temple Road, Amritsar, Punjab 143006",
     "img": "asset/Images/oyo.jpg",
-    "like" : false,
+    "like": false,
   },
   {
     "name": "OYO Hotel Royal Palace",
@@ -128,7 +128,7 @@ List<dynamic> hotelList = [
     "ret": '4.8',
     "address": "123 Marine Drive, Mumbai, Maharashtra",
     "img": "asset/Images/oyo.jpg",
-    "like" : false,
+    "like": false,
   },
   {
     "name": "OYO Hotel Central Inn",
@@ -141,7 +141,7 @@ List<dynamic> hotelList = [
     "ret": '3.4',
     "address": "456 Connaught Place, Delhi, Delhi ",
     "img": "asset/Images/oyo.jpg",
-    "like" : false,
+    "like": false,
   },
   {
     "name": "OYO Hotel Silver Sands",
@@ -154,7 +154,7 @@ List<dynamic> hotelList = [
     "ret": '4.0',
     "address": "789 Calangute Beach Road, Goa, Goa 403516",
     "img": "asset/Images/oyo.jpg",
-    "like" : false,
+    "like": false,
   },
   {
     "name": "OYO Hotel Green Park",
@@ -167,7 +167,7 @@ List<dynamic> hotelList = [
     "ret": '3.7',
     "address": "101 MG Road, Bangalore, Karnataka 560001",
     "img": "asset/Images/oyo.jpg",
-    "like" : false,
+    "like": false,
   },
   {
     "name": "OYO Hotel Sunshine",
@@ -180,7 +180,7 @@ List<dynamic> hotelList = [
     "ret": '3.5',
     "address": "202 Marina Beach, Chennai, Tamil Nadu 600002",
     "img": "asset/Images/oyo.jpg",
-    "like" : false,
+    "like": false,
   },
   {
     "name": "OYO Hotel Lake View",
@@ -193,7 +193,7 @@ List<dynamic> hotelList = [
     "ret": '3.2',
     "address": "303 Lake Pichola, Udaipur, Rajasthan 313001",
     "img": "asset/Images/oyo.jpg",
-    "like" : false,
+    "like": false,
   },
   {
     "name": "OYO Hotel Heritage",
@@ -206,7 +206,7 @@ List<dynamic> hotelList = [
     "ret": '3.9',
     "address": "404 Amer Fort Road, Jaipur, Rajasthan 302002",
     "img": "asset/Images/oyo.jpg",
-    "like" : false,
+    "like": false,
   },
   {
     "name": "OYO Hotel Riverside",
@@ -219,7 +219,7 @@ List<dynamic> hotelList = [
     "ret": '4.5',
     "address": "505 Marine Drive, Kochi, Kerala 682031",
     "img": "asset/Images/oyo.jpg",
-    "like" : false,
+    "like": false,
   },
   {
     "name": "OYO Hotel Blue Lagoon",
@@ -232,7 +232,7 @@ List<dynamic> hotelList = [
     "ret": '4.7',
     "address": "606 Beach Road, Pondicherry, Pondicherry 605001",
     "img": "asset/Images/oyo.jpg",
-    "like" : false,
+    "like": false,
   },
   {
     "name": "OYO Hotel Lotus",
@@ -245,7 +245,7 @@ List<dynamic> hotelList = [
     "ret": '4.8',
     "address": "707 SG Highway, Ahmedabad, Gujarat 380015",
     "img": "asset/Images/oyo.jpg",
-    "like" : false,
+    "like": false,
   },
   {
     "name": "OYO Hotel City Plaza",
@@ -258,7 +258,7 @@ List<dynamic> hotelList = [
     "ret": '4.2',
     "address": "808 Park Street, Kolkata, West Bengal 700016",
     "img": "asset/Images/oyo.jpg",
-    "like" : false,
+    "like": false,
   },
   {
     "name": "OYO Hotel Midtown",
@@ -271,7 +271,7 @@ List<dynamic> hotelList = [
     "ret": '4.0',
     "address": "909 FC Road, Pune, Maharashtra 411004",
     "img": "asset/Images/oyo.jpg",
-    "like" : false,
+    "like": false,
   },
   {
     "name": "OYO Hotel Willow",
@@ -284,7 +284,7 @@ List<dynamic> hotelList = [
     "ret": '3.6',
     "address": "6666 MG Road, Thiruvananthapuram, Kerala 695001",
     "img": "asset/Images/oyo.jpg",
-    "like" : false,
+    "like": false,
   },
   {
     "name": "OYO Hotel Xanadu",
@@ -297,7 +297,7 @@ List<dynamic> hotelList = [
     "ret": '4.5',
     "address": "6767 Avinashi Road, Coimbatore, Tamil Nadu 641018",
     "img": "asset/Images/oyo.jpg",
-    "like" : false,
+    "like": false,
   },
   {
     "name": "OYO Hotel Yellow House",
@@ -307,10 +307,10 @@ List<dynamic> hotelList = [
     "amount": '1030',
     "par": '45',
     "tax": '18',
-    "ret":' 3.6',
+    "ret": ' 3.6',
     "address": "6868 Dal Lake Road, Srinagar, Jammu and Kashmir 190001",
     "img": "asset/Images/oyo.jpg",
-    "like" : false,
+    "like": false,
   },
   {
     "name": "OYO Hotel Zenith",
@@ -323,7 +323,7 @@ List<dynamic> hotelList = [
     "ret": '4.6',
     "address": "6969 Alkapuri Road, Vadodara, Gujarat 390007",
     "img": "asset/Images/oyo.jpg",
-    "like" : false,
+    "like": false,
   },
   {
     "name": "OYO Hotel Aspen",
@@ -336,7 +336,7 @@ List<dynamic> hotelList = [
     "ret": '4.7',
     "address": "7070 Ridge Road, Shimla, Himachal Pradesh 171001",
     "img": "assets/img/hotel.jpg",
-    "like" : false,
+    "like": false,
   },
   {
     "name": "OYO Hotel Beacon",
@@ -349,7 +349,7 @@ List<dynamic> hotelList = [
     "ret": '3.0',
     "address": "7171 FC Road, Pune, Maharashtra 411004",
     "img": "assets/img/hotel.jpg",
-    "like" : false,
+    "like": false,
   },
   {
     "name": "OYO Hotel Coral",
@@ -362,7 +362,7 @@ List<dynamic> hotelList = [
     "ret": '4.6',
     "address": "7272 Sector 22, Chandigarh, Punjab 160022",
     "img": "assets/img/hotel.jpg",
-    "like" : false,
+    "like": false,
   },
   {
     "name": "OYO Hotel Dewdrop",
@@ -375,7 +375,7 @@ List<dynamic> hotelList = [
     "ret": '3.6',
     "address": "7373 Park Street, Kolkata, West Bengal 700016",
     "img": "assets/img/hotel.jpg",
-    "like" : false,
+    "like": false,
   },
   {
     "name": "OYO Hotel Emerald",
@@ -388,7 +388,7 @@ List<dynamic> hotelList = [
     "ret": '3.0',
     "address": "7474 Fateh Sagar Lake Road, Udaipur, Rajasthan 313001",
     "img": "assets/img/hotel.jpg",
-    "like" : false,
+    "like": false,
   },
   {
     "name": "OYO Hotel Falcon Crest",
@@ -401,7 +401,7 @@ List<dynamic> hotelList = [
     "ret": '4.0',
     "address": "7575 Manu Temple Road, Manali, Himachal Pradesh 175131",
     "img": "assets/img/hotel.jpg",
-    "like" : false,
+    "like": false,
   },
   {
     "name": "OYO Hotel Greenfield",
@@ -414,7 +414,7 @@ List<dynamic> hotelList = [
     "ret": '4.5',
     "address": "7676 Electronic City, Bangalore, Karnataka",
     "img": "assets/img/hotel.jpg",
-    "like" : false,
+    "like": false,
   },
   {
     "name": "OYO Hotel Highland",
@@ -427,7 +427,7 @@ List<dynamic> hotelList = [
     "ret": '4.0',
     "address": "7777 Laitumkhrah Main Road, Shillong, Meghalaya",
     "img": "assets/img/hotel.jpg",
-    "like" : false,
+    "like": false,
   },
   {
     "name": "OYO Hotel Ivory",
@@ -440,7 +440,7 @@ List<dynamic> hotelList = [
     "ret": '3.0',
     "address": "7878 MG Road, Kochi, Kerala ",
     "img": "assets/img/hotel.jpg",
-    "like" : false,
+    "like": false,
   },
   {
     "name": "OYO Hotel Jade",
@@ -453,7 +453,7 @@ List<dynamic> hotelList = [
     "ret": '2.6',
     "address": "7979 MI Road, Jaipur, Rajasthan ",
     "img": "assets/img/hotel.jpg",
-    "like" : false,
+    "like": false,
   },
   {
     "name": "OYO Hotel Karma",
@@ -466,7 +466,7 @@ List<dynamic> hotelList = [
     "ret": '4.2',
     "address": "8080 MG Marg, Gangtok, Sikkim",
     "img": "assets/img/hotel.jpg",
-    "like" : false,
+    "like": false,
   },
   {
     "name": "OYO Hotel Falcon Crest",
@@ -479,7 +479,7 @@ List<dynamic> hotelList = [
     "ret": '4.0',
     "address": "4949 Manu Temple Road, Manali, Himachal Pradesh 175131",
     "img": "assets/img/hotel.jpg",
-    "like" : false,
+    "like": false,
   },
   {
     "name": "OYO Hotel Park Avenue",
@@ -492,7 +492,7 @@ List<dynamic> hotelList = [
     "ret": '3.0',
     "address": "1818 Sitabuldi Main Road, Nagpur, Maharashtra 440012",
     "img": "assets/img/hotel.jpg",
-    "like" : false,
+    "like": false,
   },
   {
     "name": "OYO Hotel Bliss",
@@ -505,7 +505,7 @@ List<dynamic> hotelList = [
     "ret": '2.0',
     "address": "1919 MG Road, Gurgaon, Haryana 122001",
     "img": "assets/img/hotel.jpg",
-    "like" : false,
+    "like": false,
   },
   {
     "name": "OYO Hotel Comfort Stay",
@@ -518,7 +518,7 @@ List<dynamic> hotelList = [
     "ret": '3.9',
     "address": "2020 Sector 18, Noida, Uttar Pradesh 201301",
     "img": "assets/img/hotel.jpg",
-    "like" : false,
+    "like": false,
   },
   {
     "name": "OYO Hotel Diamond",
@@ -531,7 +531,7 @@ List<dynamic> hotelList = [
     "ret": '4.0',
     "address": "2121 Ring Road, Surat, Gujarat 395002",
     "img": "assets/img/hotel.jpg",
-    "like" : false,
+    "like": false,
   },
   {
     "name": "OYO Hotel Horizon View",
@@ -544,7 +544,7 @@ List<dynamic> hotelList = [
     "ret": '3.6',
     "address": "2525 Chamundi Hill Road, Mysore, Karnataka 570010",
     "img": "assets/img/hotel.jpg",
-    "like" : false,
+    "like": false,
   },
   {
     "name": "OYO Hotel Imperial",
@@ -557,7 +557,7 @@ List<dynamic> hotelList = [
     "ret": '4.6',
     "address": "2626 Rai Ka Bagh, Jodhpur, Rajasthan 342006",
     "img": "assets/img/hotel.jpg",
-    "like" : false,
+    "like": false,
   },
   {
     "name": "OYO Hotel Jewel",
@@ -570,7 +570,7 @@ List<dynamic> hotelList = [
     "ret": '3.0',
     "address": "2727 Sector 17, Chandigarh, Punjab 160017",
     "img": "assets/img/hotel.jpg",
-    "like" : false,
+    "like": false,
   },
   {
     "name": "OYO Hotel Kings",
@@ -583,7 +583,7 @@ List<dynamic> hotelList = [
     "ret": '4.0',
     "address": "2828 Fraser Road, Patna, Bihar 800001",
     "img": "assets/img/hotel.jpg",
-    "like" : false,
+    "like": false,
   },
   {
     "name": "OYO Hotel Lake Palace",
@@ -596,7 +596,7 @@ List<dynamic> hotelList = [
     "ret": '2.3',
     "address": "2929 VIP Road, Bhopal, Madhya Pradesh 462011",
     "img": "assets/img/hotel.jpg",
-    "like" : false,
+    "like": false,
   },
   {
     "name": "OYO Hotel Majestic",
@@ -609,7 +609,7 @@ List<dynamic> hotelList = [
     "ret": '3.6',
     "address": "3030 Pandri Road, Raipur, Chhattisgarh 492001",
     "img": "assets/img/hotel.jpg",
-    "like" : false,
+    "like": false,
   },
   {
     "name": "OYO Hotel New Era",
@@ -622,7 +622,7 @@ List<dynamic> hotelList = [
     "ret": '4.5',
     "address": "3131 Alkapuri Road, Vadodara, Gujarat 390007",
     "img": "assets/img/hotel.jpg",
-    "like" : false,
+    "like": false,
   },
   {
     "name": "OYO Hotel Opal",
@@ -632,10 +632,10 @@ List<dynamic> hotelList = [
     "amount": '5045',
     "par": '75',
     "tax": '357',
-    "ret":' 4.2',
+    "ret": ' 4.2',
     "address": "3232 Main Road, Ranchi, Jharkhand 834001",
     "img": "assets/img/hotel.jpg",
-    "like" : false,
+    "like": false,
   },
   {
     "name": "OYO Hotel Paradise",
@@ -648,7 +648,7 @@ List<dynamic> hotelList = [
     "ret": '3.0',
     "address": "3333 Janpath Road, Bhubaneswar, Odisha 751001",
     "img": "assets/img/hotel.jpg",
-    "like" : false,
+    "like": false,
   },
   {
     "name": "OYO Hotel Queen",
@@ -661,7 +661,7 @@ List<dynamic> hotelList = [
     "ret": '3.2',
     "address": "3434 Rajpur Road, Dehradun, Uttarakhand 248001",
     "img": "assets/img/hotel.jpg",
-    "like" : false,
+    "like": false,
   },
   {
     "name": "OYO Hotel Regency",
@@ -674,7 +674,7 @@ List<dynamic> hotelList = [
     "ret": '4.0',
     "address": "3535 Civic Center, Jabalpur, Madhya Pradesh 482001",
     "img": "assets/img/hotel.jpg",
-    "like" : false,
+    "like": false,
   },
   {
     "name": "OYO Hotel Sapphire",
@@ -687,7 +687,7 @@ List<dynamic> hotelList = [
     "ret": '3.2',
     "address": "3636 Cantonment Road, Varanasi, Uttar Pradesh 221002",
     "img": "assets/img/hotel.jpg",
-    "like" : false,
+    "like": false,
   },
   {
     "name": "OYO Hotel Tranquil",
@@ -700,7 +700,7 @@ List<dynamic> hotelList = [
     "ret": '4.0',
     "address": "3737 Anna Nagar, Madurai, Tamil Nadu 625020",
     "img": "assets/img/hotel.jpg",
-    "like" : false,
+    "like": false,
   },
   {
     "name": "OYO Hotel Urban",
@@ -713,7 +713,7 @@ List<dynamic> hotelList = [
     "ret": '3.0',
     "address": "3838 City Center, Gwalior, Madhya Pradesh 474001",
     "img": "assets/img/hotel.jpg",
-    "like" : false,
+    "like": false,
   },
   {
     "name": "OYO Hotel Vista",
@@ -726,7 +726,7 @@ List<dynamic> hotelList = [
     "ret": '3.6',
     "address": "3939 Mall Road, Kanpur, Uttar Pradesh 208001",
     "img": "assets/img/hotel.jpg",
-    "like" : false,
+    "like": false,
   },
   {
     "name": "OYO Hotel Willow",
@@ -739,7 +739,7 @@ List<dynamic> hotelList = [
     "ret": '4.9',
     "address": "4040 MG Road, Thiruvananthapuram, Kerala 695001",
     "img": "assets/img/hotel.jpg",
-    "like" : false,
+    "like": false,
   },
   {
     "name": "OYO Hotel Xanadu",
@@ -752,7 +752,7 @@ List<dynamic> hotelList = [
     "ret": '3.6',
     "address": "4141 Avinashi Road, Coimbatore, Tamil Nadu 641018",
     "img": "assets/img/hotel.jpg",
-    "like" : false,
+    "like": false,
   },
   {
     "name": "OYO Hotel Yellow House",
@@ -765,7 +765,7 @@ List<dynamic> hotelList = [
     "ret": '3.5',
     "address": "4242 Dal Lake Road, Srinagar, Jammu and Kashmir 190001",
     "img": "assets/img/hotel.jpg",
-    "like" : false,
+    "like": false,
   },
   {
     "name": "OYO Hotel Zenith",
@@ -778,7 +778,7 @@ List<dynamic> hotelList = [
     "ret": '4.6',
     "address": "4343 Alkapuri Road, Vadodara, Gujarat 390007",
     "img": "assets/img/hotel.jpg",
-    "like" : false,
+    "like": false,
   },
   {
     "name": "OYO Hotel Aspen",
@@ -791,7 +791,7 @@ List<dynamic> hotelList = [
     "ret": '3.6',
     "address": "4444 Ridge Road, Shimla, Himachal Pradesh 171001",
     "img": "assets/img/hotel.jpg",
-    "like" : false,
+    "like": false,
   },
   {
     "name": "OYO Hotel Beacon",
@@ -804,7 +804,7 @@ List<dynamic> hotelList = [
     "ret": '4.6',
     "address": "4545 FC Road, Pune, Maharashtra 411004",
     "img": "assets/img/hotel.jpg",
-    "like" : false,
+    "like": false,
   },
   {
     "name": "OYO Hotel Coral",
@@ -817,7 +817,7 @@ List<dynamic> hotelList = [
     "ret": '4.0',
     "address": "4646 Sector 22, Chandigarh, Punjab 160022",
     "img": "assets/img/hotel.jpg",
-    "like" : false,
+    "like": false,
   },
   {
     "name": "OYO Hotel Dewdrop",
@@ -830,7 +830,7 @@ List<dynamic> hotelList = [
     "ret": '3.6',
     "address": "4747 Park Street, Kolkata, West Bengal 700016",
     "img": "assets/img/hotel.jpg",
-    "like" : false,
+    "like": false,
   },
   {
     "name": "OYO Hotel Emerald",
@@ -843,7 +843,7 @@ List<dynamic> hotelList = [
     "ret": '3.8',
     "address": "4848 Fateh Sagar Lake Road, Udaipur, Rajasthan 313001",
     "img": "assets/img/hotel.jpg",
-    "like" : false,
+    "like": false,
   },
   {
     "name": "OYO Hotel Greenfield",
@@ -856,7 +856,7 @@ List<dynamic> hotelList = [
     "ret": '4.7',
     "address": "5050 Electronic City, Bangalore, Karnataka 560100",
     "img": "assets/img/hotel.jpg",
-    "like" : false,
+    "like": false,
   },
   {
     "name": "OYO Hotel Highland",
@@ -869,7 +869,7 @@ List<dynamic> hotelList = [
     "ret": '3.7',
     "address": "5151 Laitumkhrah Main Road, Shillong, Meghalaya 793003",
     "img": "assets/img/hotel.jpg",
-    "like" : false,
+    "like": false,
   },
   {
     "name": "OYO Hotel Ivory",
@@ -882,7 +882,7 @@ List<dynamic> hotelList = [
     "ret": '4.6',
     "address": "5252 MG Road, Kochi, Kerala 682011",
     "img": "assets/img/hotel.jpg",
-    "like" : false,
+    "like": false,
   },
   {
     "name": "OYO Hotel Jade",
@@ -895,7 +895,7 @@ List<dynamic> hotelList = [
     "ret": '3.6',
     "address": "5353 MI Road, Jaipur, Rajasthan 302001",
     "img": "assets/img/hotel.jpg",
-    "like" : false,
+    "like": false,
   },
   {
     "name": "OYO Hotel Karma",
@@ -908,7 +908,7 @@ List<dynamic> hotelList = [
     "ret": '3.2',
     "address": "5454 MG Marg, Gangtok, Sikkim 737101",
     "img": "assets/img/hotel.jpg",
-    "like" : false,
+    "like": false,
   },
   {
     "name": "OYO Hotel Luna",
@@ -921,7 +921,7 @@ List<dynamic> hotelList = [
     "ret": '3.6',
     "address": "5555 Station Road, Aurangabad, Maharashtra 431001",
     "img": "assets/img/hotel.jpg",
-    "like" : false,
+    "like": false,
   },
   {
     "name": "OYO Hotel Mirage",
@@ -934,7 +934,7 @@ List<dynamic> hotelList = [
     "ret": '3.9',
     "address": "5656 Krishna Temple Road, Udupi, Karnataka 576101",
     "img": "assets/img/hotel.jpg",
-    "like" : false,
+    "like": false,
   },
   {
     "name": "OYO Hotel Nova",
@@ -947,7 +947,7 @@ List<dynamic> hotelList = [
     "ret": '4.5',
     "address": "5757 Tapovan, Rishikesh, Uttarakhand 249201",
     "img": "assets/img/hotel.jpg",
-    "like" : false,
+    "like": false,
   },
   {
     "name": "OYO Hotel Oasis",
@@ -960,7 +960,7 @@ List<dynamic> hotelList = [
     "ret": '4.5',
     "address": "5858 White Town, Pondicherry, Pondicherry 605001",
     "img": "assets/img/hotel.jpg",
-    "like" : false,
+    "like": false,
   },
   {
     "name": "OYO Hotel Pristine",
@@ -973,7 +973,7 @@ List<dynamic> hotelList = [
     "ret": '3.8',
     "address": "5959 Sector 45, Gurgaon, Haryana 122003",
     "img": "assets/img/hotel.jpg",
-    "like" : false,
+    "like": false,
   },
   {
     "name": "OYO Hotel Quest",
@@ -986,7 +986,7 @@ List<dynamic> hotelList = [
     "ret": '4.0',
     "address": "6060 Civil Lines, Kanpur, Uttar Pradesh 208001",
     "img": "assets/img/hotel.jpg",
-    "like" : false,
+    "like": false,
   },
   {
     "name": "OYO Hotel Radiant",
@@ -999,7 +999,7 @@ List<dynamic> hotelList = [
     "ret": '3.6',
     "address": "6161 Gomti Nagar, Lucknow, Uttar Pradesh 226010",
     "img": "assets/img/hotel.jpg",
-    "like" : false,
+    "like": false,
   },
   {
     "name": "OYO Hotel Serene",
@@ -1012,7 +1012,7 @@ List<dynamic> hotelList = [
     "ret": '3.0',
     "address": "6262 Rajpur Road, Dehradun, Uttarakhand 248001",
     "img": "assets/img/hotel.jpg",
-    "like" : false,
+    "like": false,
   },
   {
     "name": "OYO Hotel Tranquil",
@@ -1025,7 +1025,7 @@ List<dynamic> hotelList = [
     "ret": '4.6',
     "address": "6363 Anna Nagar, Madurai, Tamil Nadu 625020",
     "img": "assets/img/hotel.jpg",
-    "like" : false,
+    "like": false,
   },
   {
     "name": "OYO Hotel Urban",
@@ -1038,7 +1038,7 @@ List<dynamic> hotelList = [
     "ret": '4.2',
     "address": "6464 City Center, Gwalior, Madhya Pradesh 474001",
     "img": "assets/img/hotel.jpg",
-    "like" : false,
+    "like": false,
   },
   {
     "name": "OYO Hotel Vista",
@@ -1051,7 +1051,7 @@ List<dynamic> hotelList = [
     "ret": '3.9',
     "address": "6565 Mall Road, Kanpur, Uttar Pradesh 208001",
     "img": "assets/img/hotel.jpg",
-    "like" : false,
+    "like": false,
   },
   //
   //
@@ -1066,10 +1066,10 @@ List<dynamic> hotelList = [
     "address": "Palanpur Gam Main Road, Surat",
     "rent": '639',
     "ret": '4.5',
-    "tax" : '131',
-    "amount" :'1323',
-    "par":'34',
-    "like" : false,
+    "tax": '131',
+    "amount": '1323',
+    "par": '34',
+    "like": false,
   },
   {
     "name": "OYO Hotel Spark",
@@ -1078,10 +1078,10 @@ List<dynamic> hotelList = [
     "address": "Magob, Surat",
     "rent": '826',
     "ret": '4.4',
-    "tax" : '234',
-    "amount" :'999',
-    "par":'78',
-    "like" : false,
+    "tax": '234',
+    "amount": '999',
+    "par": '78',
+    "like": false,
   },
   {
     "name": "Super Collection O Hotel Solitaire",
@@ -1090,10 +1090,10 @@ List<dynamic> hotelList = [
     "address": "Sant Crystal Avenue, Surat",
     "rent": '979',
     "ret": '4.4',
-    "tax" : '131',
-    "amount" :'1323',
-    "par":'34',
-    "like" : false,
+    "tax": '131',
+    "amount": '1323',
+    "par": '34',
+    "like": false,
   },
   {
     "name": "Flagship Hotel Cozy Rooms",
@@ -1102,10 +1102,10 @@ List<dynamic> hotelList = [
     "city": "Surat",
     "rent": '485',
     "ret": '3.4',
-    "tax" : '131',
-    "amount" :'1673',
-    "par":'70',
-    "like" : false,
+    "tax": '131',
+    "amount": '1673',
+    "par": '70',
+    "like": false,
   },
   {
     "name": "OYO Hotel Shree Krishna Inn Rooms",
@@ -1114,10 +1114,10 @@ List<dynamic> hotelList = [
     "address": "Pandesara, Surat",
     "rent": '519',
     "ret": '3.8',
-    "tax" : '142',
-    "amount" :'1990',
-    "par":'68',
-    "like" : false,
+    "tax": '142',
+    "amount": '1990',
+    "par": '68',
+    "like": false,
   },
   {
     "name": "Collection O Ospite Hotel",
@@ -1126,10 +1126,10 @@ List<dynamic> hotelList = [
     "address": "Laldarwaja Flyover, Surat",
     "rent": '1127',
     "ret": '3.8',
-    "tax" : '127',
-    "amount" :'133',
-    "par":'76',
-    "like" : false,
+    "tax": '127',
+    "amount": '133',
+    "par": '76',
+    "like": false,
   },
   {
     "name": "OYO VR Hotel",
@@ -1138,10 +1138,10 @@ List<dynamic> hotelList = [
     "city": "Surat",
     "rent": '695',
     "ret": '3.5',
-    "tax" : '121',
-    "amount" :'1323',
-    "par":'76',
-    "like" : false,
+    "tax": '121',
+    "amount": '1323',
+    "par": '76',
+    "like": false,
   },
   {
     "name": "OYO Flagship Hotel Rose Palace",
@@ -1150,10 +1150,10 @@ List<dynamic> hotelList = [
     "address": "V I P Road, Surat",
     "rent": '700',
     "ret": '4.1',
-    "tax" : '131',
-    "amount" :'1323',
-    "par":'34',
-    "like" : false,
+    "tax": '131',
+    "amount": '1323',
+    "par": '34',
+    "like": false,
   },
   {
     "name": "OYO THE 9 HOTEL",
@@ -1162,10 +1162,10 @@ List<dynamic> hotelList = [
     "address": "Laskana, Surat",
     "rent": '689',
     "ret": '4.5',
-    "tax" : '131',
-    "amount" :'1019',
-    "par":'87',
-    "like" : false,
+    "tax": '131',
+    "amount": '1019',
+    "par": '87',
+    "like": false,
   },
   {
     "name": "Capital O Hotel Vrundavan Room & Banquet",
@@ -1174,10 +1174,10 @@ List<dynamic> hotelList = [
     "address": "Parle Point, Surat",
     "rent": '949',
     "ret": '4.9',
-    "tax" : '152',
-    "amount" :'1243',
-    "par":'45',
-    "like" : false,
+    "tax": '152',
+    "amount": '1243',
+    "par": '45',
+    "like": false,
   },
   //
   //
@@ -1192,10 +1192,10 @@ List<dynamic> hotelList = [
     "city": "Mumbai",
     "rent": '199',
     "ret": '4.0',
-    "tax" : '152',
-    "amount" :'1243',
-    "par":'45',
-    "like" : false,
+    "tax": '152',
+    "amount": '1243',
+    "par": '45',
+    "like": false,
   },
   {
     "name": "OYO 10001 Hotel Blue Ocean",
@@ -1204,10 +1204,10 @@ List<dynamic> hotelList = [
     "city": "Mumbai",
     "rent": '1499',
     "ret": '3.8',
-    "tax" : '232',
-    "amount" :'2000',
-    "par":'55',
-    "like" : false,
+    "tax": '232',
+    "amount": '2000',
+    "par": '55',
+    "like": false,
   },
   {
     "name": "OYO 19841 Hotel Garden Park - Premium",
@@ -1216,11 +1216,10 @@ List<dynamic> hotelList = [
     "city": "Mumbai",
     "rent": '1599',
     "ret": '4.2',
-    "tax" : '120',
-    "amount" :'1700',
-    "par":'26',
-    "like" : false,
-
+    "tax": '120',
+    "amount": '1700',
+    "par": '26',
+    "like": false,
   },
   {
     "name": "OYO 829 Garden View",
@@ -1229,10 +1228,10 @@ List<dynamic> hotelList = [
     "city": "Mumbai",
     "rent": '1399',
     "ret": '3.9',
-    "tax" : '100',
-    "amount" :'1800',
-    "par":'29',
-    "like" : false,
+    "tax": '100',
+    "amount": '1800',
+    "par": '29',
+    "like": false,
   },
   {
     "name": "OYO 3793 Hotel Bawa Regency",
@@ -1240,11 +1239,12 @@ List<dynamic> hotelList = [
     "location": "Mumbai,Maharashtra",
     "rent": '1799',
     "ret": '4.1',
-    "city": "Mumbai",''
-    "tax" : '120',
-    "amount" :'1900',
-    "par":'20',
-    "like" : false,
+    "city": "Mumbai",
+    ''
+        "tax": '120',
+    "amount": '1900',
+    "par": '20',
+    "like": false,
   },
   {
     "name": "OYO 20001 Hotel Platinum Palace",
@@ -1253,11 +1253,10 @@ List<dynamic> hotelList = [
     "city": "Mumbai",
     "rent": '1699',
     "ret": '4.0',
-    "tax" : '50',
-    "amount" :'1800',
-    "like" : false,
-    "par":'30',
-
+    "tax": '50',
+    "amount": '1800',
+    "like": false,
+    "par": '30',
   },
   {
     "name": "OYO 18311 Hotel Elite 59",
@@ -1266,11 +1265,10 @@ List<dynamic> hotelList = [
     "city": "Mumbai",
     "rent": '1399',
     "ret": '3.8',
-    "tax" : '100',
-    "amount" :'1990',
-    "like" : false,
-    "par":'78',
-
+    "tax": '100',
+    "amount": '1990',
+    "like": false,
+    "par": '78',
   },
   {
     "name": "OYO 9353 Hotel Red Palms",
@@ -1278,12 +1276,12 @@ List<dynamic> hotelList = [
     "location": "Mumbai,Maharashtra",
     "city": "Mumbai",
     "ret": '3.7',
-    "rent": '1599',''
-    "tax" : '190',
-    "amount" :'2500',
-    "par":'45',
-    "like" : false,
-
+    "rent": '1599',
+    ''
+        "tax": '190',
+    "amount": '2500',
+    "par": '45',
+    "like": false,
   },
   {
     "name": "OYO 2024 Hotel Dream Residency",
@@ -1292,11 +1290,10 @@ List<dynamic> hotelList = [
     "city": "Mumbai",
     "rent": '1499',
     "ret": '4.0',
-    "tax" : '109',
-    "amount" :'1999',
-    "par":'40',
-    "like" : false,
-
+    "tax": '109',
+    "amount": '1999',
+    "par": '40',
+    "like": false,
   },
   {
     "name": "OYO 9312 Hotel Elphinstone Annex",
@@ -1305,11 +1302,10 @@ List<dynamic> hotelList = [
     "city": "Mumbai",
     "rent": '1699',
     "ret": '4.1',
-    "tax" : '99',
-    "amount" :'1800',
-    "par":'89',
-    "like" : false,
-
+    "tax": '99',
+    "amount": '1800',
+    "par": '89',
+    "like": false,
   },
   //
   //
@@ -1325,7 +1321,7 @@ List<dynamic> hotelList = [
     "tax": '150',
     "amount": '1650',
     "par": '80',
-    "like" : false,
+    "like": false,
   },
   {
     "name": "OYO 18419 Regal Stay Homes",
@@ -1337,7 +1333,7 @@ List<dynamic> hotelList = [
     "tax": '130',
     "amount": '1430',
     "par": '85',
-    "like" : false,
+    "like": false,
   },
   {
     "name": "OYO 16095 Sri Venkatesha Residency",
@@ -1349,7 +1345,7 @@ List<dynamic> hotelList = [
     "tax": '140',
     "amount": '1540',
     "par": '75',
-    "like" : false,
+    "like": false,
   },
   {
     "name": "OYO 18831 Hotel Hyderabad Continental",
@@ -1361,7 +1357,7 @@ List<dynamic> hotelList = [
     "tax": '125',
     "amount": '1375',
     "par": '85',
-    "like" : false,
+    "like": false,
   },
   {
     "name": "OYO 9960 Hotel Green Leaf",
@@ -1373,7 +1369,7 @@ List<dynamic> hotelList = [
     "tax": '120',
     "ret": '1320',
     "par": '80',
-    "like" : false,
+    "like": false,
   },
   {
     "name": "OYO 1271 Hotel Nakshatra",
@@ -1385,7 +1381,7 @@ List<dynamic> hotelList = [
     "tax": '160',
     "ret": '1760',
     "par": '85',
-    "like" : false,
+    "like": false,
   },
   {
     "name": "OYO 2251 Hotel Surya Residency",
@@ -1397,7 +1393,7 @@ List<dynamic> hotelList = [
     "tax": '150',
     "amount": '1650',
     "par": '90',
-    "like" : false,
+    "like": false,
   },
   {
     "name": "OYO 2156 Hotel Moti Palace",
@@ -1409,7 +1405,7 @@ List<dynamic> hotelList = [
     "tax": '145',
     "amount": '1595',
     "par": '80',
-    "like" : false,
+    "like": false,
   },
   {
     "name": "OYO 1234 Hotel Sri Sai Regency",
@@ -1421,7 +1417,7 @@ List<dynamic> hotelList = [
     "tax": '135',
     "amount": '1485',
     "par": '75',
-    "like" : false,
+    "like": false,
   },
   {
     "name": "OYO 7893 Hotel Strawberry",
@@ -1433,7 +1429,7 @@ List<dynamic> hotelList = [
     "tax": '155',
     "amount": '1705',
     "par": '85',
-    "like" : false,
+    "like": false,
   },
 //
 //
@@ -1450,7 +1446,7 @@ List<dynamic> hotelList = [
     "tax": '249',
     "amount": '2748',
     "par": '89',
-    "like" : false,
+    "like": false,
   },
   {
     "name": "OYO 2696 Hotel Miramar",
@@ -1462,7 +1458,7 @@ List<dynamic> hotelList = [
     "tax": '189',
     "amount": '2088',
     "par": '85',
-    "like" : false,
+    "like": false,
   },
   {
     "name": "OYO 14019 Hotel Praia Da Oura",
@@ -1474,7 +1470,7 @@ List<dynamic> hotelList = [
     "tax": '229',
     "amount": '2528',
     "par": '88',
-    "like" : false,
+    "like": false,
   },
   {
     "name": "OYO 9872 Pherozi Guest Hou''se",
@@ -1486,7 +1482,7 @@ List<dynamic> hotelList = [
     "tax": '149',
     "amount": '1648',
     "par": '82',
-    "like" : false,
+    "like": false,
   },
   {
     "name": "OYO 8058 Map5 Village Resort",
@@ -1497,8 +1493,8 @@ List<dynamic> hotelList = [
     "ret": '4.1',
     "tax": '179',
     "amount": '1978',
-    "par": '8.4',''
-    "like" : false,
+    "par": '8.4',
+    "like": false,
   },
   {
     "name": "OYO 10176 Sun N Sea Beach Resort",
@@ -1507,10 +1503,10 @@ List<dynamic> hotelList = [
     "city": "Goa",
     "rent": '1699',
     "ret": '4.2',
-    "tax": '169',''
+    "tax": '169',
     "amount": '1868',
-    "par": '85',"like" : false,
-
+    "par": '85',
+    "like": false,
   },
   {
     "name": "OYO 15642 Elvin De Mar",
@@ -1522,7 +1518,7 @@ List<dynamic> hotelList = [
     "tax": '139',
     "amount": '1538',
     "par": '80',
-    "like" : false,
+    "like": false,
   },
   {
     "name": "OYO 12043 Hotel Stay Inn",
@@ -1534,7 +1530,7 @@ List<dynamic> hotelList = [
     "tax": '159',
     "amount": '1758',
     "par": '84',
-    "like" : false,
+    "like": false,
   },
   {
     "name": "OYO 16843 Riverfront Studio Baga",
@@ -1546,7 +1542,7 @@ List<dynamic> hotelList = [
     "tax": '189',
     "amount": '2088',
     "par": '87',
-    "like" : false,
+    "like": false,
   },
   {
     "name": "OYO 23253 Flagship Calangute",
@@ -1558,7 +1554,7 @@ List<dynamic> hotelList = [
     "tax": '179',
     "amount": '1978',
     "par": '85',
-    "like" : false,
+    "like": false,
   }
 ];
 
