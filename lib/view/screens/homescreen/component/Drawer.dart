@@ -1,6 +1,6 @@
 import'package:flutter/material.dart';
 
-Drawer buildDrawer(double height) {
+Drawer buildDrawer(double height, BuildContext context ) {
   return Drawer(
     backgroundColor: Colors.white,
     shape: RoundedRectangleBorder(
@@ -64,7 +64,7 @@ Drawer buildDrawer(double height) {
           ),
           ListTile(
             onTap: (){
-              //Navigator.of(context).pushNamed('/'),
+              Navigator.of(context).pushNamed('/wallet');
             },
             leading: Icon(Icons.account_balance_wallet_outlined, size: 25, color: Colors.black38),
             title: Text('View wallets', style: TextStyle(
@@ -105,7 +105,7 @@ Drawer buildDrawer(double height) {
           ),
           ListTile(
             onTap: (){
-              //Navigator.of(context).pushNamed('/help'),
+              Navigator.of(context).pushNamed('/help');
             },
             leading: Icon(Icons.live_help_outlined, size: 25, color: Colors.black38),
             title: Text('Need help', style: TextStyle(

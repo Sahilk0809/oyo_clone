@@ -1,23 +1,36 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:oyo_clone/utils/Color.dart';
 import 'package:oyo_clone/utils/Location_List.dart';
 import 'package:oyo_clone/utils/global.dart';
 import 'package:oyo_clone/utils/imagelist.dart';
 import 'package:oyo_clone/view/screens/homescreen/component/component.dart';
-import 'package:oyo_clone/view/screens/login/component/component.dart';
 import '../../../modal/modal.dart';
+import '../NeedHelp/HelpScreen.dart';
+import '../bookingscreen/bookingscreen.dart';
+import '../searchscreen/search_screen.dart';
+import '../servicescreen/servicescreen.dart';
 import 'component/Drawer.dart';
 
 DetailModel? detailModel;
 
 class Homescreen extends StatefulWidget {
+
   const Homescreen({super.key});
+
 
   @override
   State<Homescreen> createState() => _HomescreenState();
 }
 
 class _HomescreenState extends State<Homescreen> {
+  int _selectedIndex = 0;
+
+  void _onItemTapped(int index) {
+    setState(() {
+      _selectedIndex = index;
+    });
+  }
   @override
   Widget build(BuildContext context) {
     detailModel = DetailModel.toList(hotelList);
@@ -39,9 +52,9 @@ class _HomescreenState extends State<Homescreen> {
           ),
         ),
       ),
-      drawer: buildDrawer(height),
+      drawer: buildDrawer(height,context),
       body: Padding(
-        padding: const EdgeInsets.all(8.0),
+        padding: const EdgeInsets.only(top: 8,right: 8,left: 8),
         child: SingleChildScrollView(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -465,7 +478,8 @@ fontWeight: FontWeight.w500,
                    padding: const EdgeInsets.all(10.0),
                    child: GestureDetector(
                      onTap: (){
-                      // Navigator.of(context).pushNamed('/detail'),
+                      Navigator.of(context).pushNamed('/detail');
+                      selectIndex=index;
                      },
                      child: Column(
                        children: [
@@ -593,14 +607,61 @@ fontWeight: FontWeight.w500,
                        ],
                      ),
                    ),
-                 ),)
+                 ),),
                ],
              ),
-
+             
             ],
           ),
         ),
+
       ),
+      bottomNavigationBar: Container(
+        decoration: BoxDecoration(
+          boxShadow: [
+            BoxShadow(
+              color: Colors.grey,
+              blurRadius: 3,
+            ),
+          ],
+        ),
+        child: NavigationBar(
+          backgroundColor: Colors.white,
+          indicatorColor: Colors.black,
+          height: height * 0.09,
+          selectedIndex: _selectedIndex,
+          onDestinationSelected: _onItemTapped,
+          destinations: [
+            NavigationDestination(
+              icon: Icon(Icons.home, size: 20,color: Colors.grey.shade600,),
+              label: 'Home',
+            ),
+            GestureDetector(
+              onTap: (){
+                Navigator.of(context).pushNamed('/det');
+              },
+              child: NavigationDestination(
+                icon: FaIcon(FontAwesomeIcons.suitcase, size: 20,color: Colors.grey.shade600,),
+                label: 'Bookings',
+              ),
+            ),
+            NavigationDestination(
+              icon: Icon(Icons.search, size: 20,color: Colors.grey.shade600,),
+              label: 'Search',
+            ),
+            NavigationDestination(
+              icon: FaIcon(FontAwesomeIcons.userTie, size: 20,color: Colors.grey.shade600,),
+              label: 'Services',
+            ),
+            NavigationDestination(
+              icon: FaIcon(FontAwesomeIcons.questionCircle, size: 20,color: Colors.grey.shade600,),
+              label: 'Help',
+            ),
+
+          ],
+        ),
+      ),
+
     );
   }
 }

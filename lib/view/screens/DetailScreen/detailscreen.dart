@@ -105,23 +105,6 @@ class _DetailScreenState extends State<DetailScreen> {
                           ),
                         ),
 
-                        // Image.asset('${imageList[selectIndex]['img1']}'),
-                        // SizedBox(
-                        //   width: width * 0.01,
-                        // ),
-                        // Image.asset('${imageList[selectIndex]['img2']}'),
-                        // SizedBox(
-                        //   width: width * 0.01,
-                        // ),
-                        // Image.asset('${imageList[selectIndex]['img3']}'),
-                        // SizedBox(
-                        //   width: width * 0.01,
-                        // ),
-                        // Image.asset('${imageList[selectIndex]['img4']}'),
-                        // SizedBox(
-                        //   width: width * 0.01,
-                        // ),
-                        // Image.asset('${imageList[selectIndex]['img5']}'),
                       ],
                     ),
                   ),
@@ -158,21 +141,22 @@ class _DetailScreenState extends State<DetailScreen> {
                     child: Column(
                       children: [
                         Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Row(
                               children: [
                                 Container(
-                                  height: height * 0.1 - 50,
-                                  width: width * 0.4 - 40,
+                                  height: height * 0.03,
+                                  width: width * 0.3,
                                   decoration: BoxDecoration(
                                     color: Color(0xfff5f5f5),
-                                    borderRadius: BorderRadius.circular(18),
+                                    borderRadius: BorderRadius.circular(5),
                                   ),
                                   child: Center(
                                     child: Text(
                                       'Company Serviced',
                                       style: TextStyle(
-                                        fontSize: 13,
+                                        fontSize: 10,
                                         color: Colors.black,
                                       ),
                                     ),
@@ -182,25 +166,28 @@ class _DetailScreenState extends State<DetailScreen> {
                             ),
                           ],
                         ),
+                        SizedBox(
+                          height: height * 0.01,
+                        ),
                         Row(
                           children: [
                             Text(
                               '${detailModel!.hotelList1[selectindex].name}',
                               style: TextStyle(
-                                fontSize: 30,
+                                fontSize: 25,
                                 fontWeight: FontWeight.bold,
                               ),
                             )
                           ],
                         ),
                         SizedBox(
-                          height: height * 0.02,
+                          height: height * 0.015,
                         ),
                         Row(
                           children: [
                             Icon(
                               Icons.star,
-                              color: Colors.red,
+                              color: mainRed,size: 20,
                             ),
                             SizedBox(
                               width: width * 0.02,
@@ -208,22 +195,22 @@ class _DetailScreenState extends State<DetailScreen> {
                             Text(
                               '${detailModel!.hotelList1[selectindex].rating}'
                                   .toString(),
-                              style: TextStyle(fontSize: 18),
+                              style: TextStyle(fontSize: 15),
                             ),
                             SizedBox(
-                              width: width * 0.01,
+                              width: width * 0.015,
                             ),
                             Text(
-                              '(2473 ratings)',
+                              '(${noPerson[selectIndex]})',
                               style: TextStyle(
-                                fontSize: 18,
-                                color: Colors.black38,
+                                fontSize: 15,
+                                color: Colors.grey,
                               ),
                             ),
                             Text(
                               ' 496 reviews',
                               style: TextStyle(
-                                fontSize: 18,
+                                fontSize: 15,
                                 color: Colors.blueAccent,
                               ),
                             ),
@@ -235,19 +222,19 @@ class _DetailScreenState extends State<DetailScreen> {
                         Row(
                           children: [
                             SizedBox(
-                              width: width * 0.08,
+                              width: width * 0.06,
                             ),
                             SizedBox(
-                              width: width * 0.8 + 10,
+                              width: width * 0.85,
                               child: Text(
                                 '5.0 Check-in rating > Delightful experience',
                                 style: TextStyle(
-                                    fontSize: 16, color: Colors.black),
+                                    fontSize: 15, color: Colors.black),
                               ),
                             ),
                           ],
                         ),
-                        Divider(),
+                        Divider(color: Colors.grey.shade200,),
                         SizedBox(
                           height: height * 0.01,
                         ),
@@ -255,11 +242,11 @@ class _DetailScreenState extends State<DetailScreen> {
                           alignment: Alignment.center,
                           child: Text(
                             "${detailModel!.hotelList1[selectindex].address}",
-                            style: TextStyle(fontSize: 20),
+                            style: TextStyle(fontSize: 17),
                           ),
                         ),
                         SizedBox(
-                          height: height * 0.01,
+                          height: height * 0.015,
                         ),
                         Row(
                           children: [
@@ -267,21 +254,21 @@ class _DetailScreenState extends State<DetailScreen> {
                               'View on map',
                               style: TextStyle(
                                 color: Colors.blueAccent,
-                                fontSize: 20,
+                                fontSize: 15,
                               ),
                             )
                           ],
                         ),
                         SizedBox(
-                          height: height * 0.04,
+                          height: height * 0.03,
                         ),
                         Row(
                           children: [
                             Text(
                               'Why book this OYO?',
                               style: TextStyle(
-                                fontSize: 30,
-                                fontWeight: FontWeight.bold,
+                                fontSize: 25,
+                                fontWeight: FontWeight.w600,
                               ),
                             ),
                           ],
@@ -300,7 +287,7 @@ class _DetailScreenState extends State<DetailScreen> {
                             ),
                             Text(
                               'Wizard discount available',
-                              style: TextStyle(fontSize: 18),
+                              style: TextStyle(fontSize: 15),
                             ),
                           ],
                         ),
@@ -310,8 +297,8 @@ class _DetailScreenState extends State<DetailScreen> {
                               width: width * 0.1 - 5,
                             ),
                             Text(
-                              'Upto 10% extra discount for Wizard memebers',
-                              style: TextStyle(color: Colors.black54),
+                              ' Upto 10% extra discount for Wizard memebers',
+                              style: TextStyle(color: Colors.black54,fontSize: 12),
                             )
                           ],
                         ),
@@ -320,13 +307,13 @@ class _DetailScreenState extends State<DetailScreen> {
                         ),
                         Row(
                           children: [
-                            Icon(CupertinoIcons.person_2),
+                            Icon(CupertinoIcons.person_2,size: 25,),
                             SizedBox(
                               width: width * 0.03,
                             ),
                             Text(
                               'Couples are welcome',
-                              style: TextStyle(fontSize: 18),
+                              style: TextStyle(fontSize: 15),
                             ),
                           ],
                         ),
@@ -336,8 +323,8 @@ class _DetailScreenState extends State<DetailScreen> {
                               width: width * 0.1 - 5,
                             ),
                             Text(
-                              'Unmarried couples allowed at the property',
-                              style: TextStyle(color: Colors.black54),
+                              ' Unmarried couples allowed at the property',
+                              style: TextStyle(color: Colors.black54,fontSize: 12),
                             ),
                           ],
                         ),
@@ -346,13 +333,13 @@ class _DetailScreenState extends State<DetailScreen> {
                         ),
                         Row(
                           children: [
-                            Icon(Icons.thumb_up_alt_outlined),
+                            Icon(Icons.thumb_up_alt_outlined,size: 25,),
                             SizedBox(
                               width: width * 0.03,
                             ),
                             Text(
                               'Rated high for cleanliness',
-                              style: TextStyle(fontSize: 18),
+                              style: TextStyle(fontSize: 16),
                             ),
                           ],
                         ),
@@ -361,7 +348,7 @@ class _DetailScreenState extends State<DetailScreen> {
                         ),
                         Row(
                           children: [
-                            Icon(Icons.bookmark_add_outlined),
+                            Icon(Icons.bookmark_add_outlined,size: 25,),
                             SizedBox(
                               width: width * 0.03,
                             ),
@@ -369,7 +356,7 @@ class _DetailScreenState extends State<DetailScreen> {
                               alignment: Alignment.centerRight,
                               child: Text(
                                 '${detailModel!.hotelList1[selectindex].location}',
-                                style: TextStyle(fontSize: 18),
+                                style: TextStyle(fontSize: 16),
                               ),
                             ),
                           ],
@@ -378,8 +365,8 @@ class _DetailScreenState extends State<DetailScreen> {
                           height: height * 0.05,
                         ),
                         Container(
-                          height: height * 0.1 + 50,
-                          width: width * 0.9 + 10,
+                          height: height * 0.15,
+                          width: width ,
                           child: Row(
                             children: [
                               Column(
@@ -389,7 +376,7 @@ class _DetailScreenState extends State<DetailScreen> {
                                     child: Text(
                                       'Get 50 OYO Rupee\ncashback',
                                       style: TextStyle(
-                                        fontSize: 23,
+                                        fontSize: 20,
                                         fontWeight: FontWeight.bold,
                                       ),
                                     ),
@@ -399,7 +386,7 @@ class _DetailScreenState extends State<DetailScreen> {
                                     child: Text(
                                       'Earned on checkout, fully usable on\nnext stay',
                                       style: TextStyle(
-                                          fontSize: 17, color: Colors.black38),
+                                          fontSize: 15, color: Colors.black38),
                                     ),
                                   ),
                                 ],
@@ -410,11 +397,11 @@ class _DetailScreenState extends State<DetailScreen> {
                               Column(
                                 children: [
                                   SizedBox(
-                                    height: height * 0.03,
+                                    height: height * 0.01,
                                   ),
                                   Container(
-                                    height: height * 0.1 - 20,
-                                    width: width * 0.1 + 20,
+                                    height: height * 0.09,
+                                    width: width * 0.2,
                                     decoration: BoxDecoration(
                                       border: Border.all(color: Colors.black38),
                                       borderRadius: BorderRadius.all(
@@ -439,11 +426,14 @@ class _DetailScreenState extends State<DetailScreen> {
                             Text(
                               'Browse through special offers',
                               style: TextStyle(
-                                fontSize: 25,
-                                fontWeight: FontWeight.bold,
+                                fontSize: 20,
+                                fontWeight: FontWeight.w600,
                               ),
                             ),
                           ],
+                        ),
+                        SizedBox(
+                          height: height*0.01,
                         ),
                         SingleChildScrollView(
                           scrollDirection: Axis.horizontal,
@@ -453,13 +443,13 @@ class _DetailScreenState extends State<DetailScreen> {
                                 4,
                                 (index) => Container(
                                   margin: EdgeInsets.all(5),
-                                  height: height * 0.1 - 10,
-                                  width: width * 0.9 + 10,
+                                  height: height * 0.09,
+                                  width: width * 0.8,
                                   decoration: BoxDecoration(
                                     color: Colors.white,
                                     border: Border.all(
                                       color: Colors.black,
-                                      width: 2,
+                                      width: 1,
                                     ),
                                     boxShadow: [
                                       BoxShadow(
@@ -473,7 +463,7 @@ class _DetailScreenState extends State<DetailScreen> {
                                   child: Row(
                                     children: [
                                       SizedBox(
-                                        width: width * 0.02,
+                                        width: width * 0.03,
                                       ),
                                       Image(
                                         image:
@@ -482,7 +472,7 @@ class _DetailScreenState extends State<DetailScreen> {
                                         width: width * 0.3 / 2,
                                       ),
                                       SizedBox(
-                                        width: width * 0.04,
+                                        width: width * 0.15
                                       ),
                                       Column(
                                         children: [
@@ -494,13 +484,13 @@ class _DetailScreenState extends State<DetailScreen> {
                                               Text(
                                                 '${offers[index]['first']}',
                                                 style: TextStyle(
-                                                  fontSize: 20,
+                                                  fontSize: 17,
                                                 ),
                                               ),
                                               Text(
                                                 '${offers[index]['second']}',
                                                 style: TextStyle(
-                                                    fontSize: 17,
+                                                    fontSize: 13,
                                                     color: Colors.black38),
                                               ),
                                             ],
@@ -522,14 +512,14 @@ class _DetailScreenState extends State<DetailScreen> {
                             Text(
                               'View all offers',
                               style: TextStyle(
-                                fontSize: 20,
+                                fontSize: 18,
                                 color: Colors.blueAccent,
                               ),
                             ),
                           ],
                         ),
                         SizedBox(
-                          height: height * 0.1 - 50,
+                          height: height * 0.04,
                         ),
                         Row(
                           children: [
@@ -546,8 +536,8 @@ class _DetailScreenState extends State<DetailScreen> {
                           height: height * 0.02,
                         ),
                         Container(
-                          height: height * 0.2 + 30,
-                          width: width * 0.9 + 20,
+                          height: height * 0.25,
+                          width: width,
                           decoration: BoxDecoration(
                             border: Border.all(
                               color: Colors.black26,
@@ -567,22 +557,22 @@ class _DetailScreenState extends State<DetailScreen> {
                                   ),
                                   Icon(
                                     Icons.calendar_today_outlined,
-                                    size: 28,
+                                    size: 25,
                                   ),
                                   SizedBox(
                                     width: width * 0.05,
                                   ),
                                   Text(
                                     'Dates',
-                                    style: TextStyle(fontSize: 20),
+                                    style: TextStyle(fontSize: 15),
                                   ),
                                   SizedBox(
-                                    width: width * 0.1 + 12,
+                                    width: width * 0.15,
                                   ),
                                   Text(
                                     'Wed,26 Jun - Thu,27 Jun',
                                     style: TextStyle(
-                                      fontSize: 18,
+                                      fontSize: 15,
                                       color: Colors.blueAccent,
                                     ),
                                   )
@@ -602,22 +592,22 @@ class _DetailScreenState extends State<DetailScreen> {
                                   ),
                                   Icon(
                                     CupertinoIcons.person_2,
-                                    size: 28,
+                                    size: 25,
                                   ),
                                   SizedBox(
                                     width: width * 0.05,
                                   ),
                                   Text(
                                     'Guests',
-                                    style: TextStyle(fontSize: 20),
+                                    style: TextStyle(fontSize: 15),
                                   ),
                                   SizedBox(
-                                    width: width * 0.2 + 8,
+                                    width: width * 0.29,
                                   ),
                                   Text(
                                     ' 1 room . 1 guest',
                                     style: TextStyle(
-                                      fontSize: 20,
+                                      fontSize: 15,
                                       color: Colors.blueAccent,
                                     ),
                                   )
@@ -637,22 +627,22 @@ class _DetailScreenState extends State<DetailScreen> {
                                   ),
                                   Icon(
                                     Icons.person_outline,
-                                    size: 28,
+                                    size: 25,
                                   ),
                                   SizedBox(
                                     width: width * 0.05,
                                   ),
                                   Text(
                                     'Booking for',
-                                    style: TextStyle(fontSize: 20),
+                                    style: TextStyle(fontSize: 15),
                                   ),
                                   SizedBox(
-                                    width: width * 0.3,
+                                    width: width * 0.4,
                                   ),
                                   Text(
                                     'User',
                                     style: TextStyle(
-                                      fontSize: 18,
+                                      fontSize: 15,
                                       color: Colors.blueAccent,
                                     ),
                                   )
@@ -669,7 +659,7 @@ class _DetailScreenState extends State<DetailScreen> {
                             Text(
                               'Ratings & reviews',
                               style: TextStyle(
-                                fontSize: 23,
+                                fontSize: 22,
                                 fontWeight: FontWeight.bold,
                               ),
                             ),
@@ -686,7 +676,7 @@ class _DetailScreenState extends State<DetailScreen> {
                             Text(
                               '4.9',
                               style: TextStyle(
-                                fontSize: 40,
+                                fontSize: 35,
                                 fontWeight: FontWeight.bold,
                               ),
                             ),
@@ -696,27 +686,27 @@ class _DetailScreenState extends State<DetailScreen> {
                             Icon(
                               Icons.star,
                               color: mainRed,
-                              size: 40,
+                              size: 35,
                             ),
                             Icon(
                               Icons.star,
                               color: mainRed,
-                              size: 40,
+                              size: 35,
                             ),
                             Icon(
                               Icons.star,
                               color: mainRed,
-                              size: 40,
+                              size: 35,
                             ),
                             Icon(
                               Icons.star,
                               color: mainRed,
-                              size: 40,
+                              size: 35,
                             ),
                             Icon(
                               Icons.star,
                               color: mainRed,
-                              size: 40,
+                              size: 35,
                             ),
                           ],
                         ),
@@ -726,17 +716,17 @@ class _DetailScreenState extends State<DetailScreen> {
                               width: width * 0.09,
                             ),
                             Container(
-                              height: height * 0.1 - 60,
-                              width: width * 0.1 + 40,
+                              height: height * 0.04,
+                              width: width * 0.2,
                               decoration: BoxDecoration(
                                 color: Color(0xfff5f5f5),
-                                borderRadius: BorderRadius.circular(10),
+                                borderRadius: BorderRadius.circular(5),
                               ),
                               child: Center(
                                 child: Text(
                                   'Fabulous',
                                   style: TextStyle(
-                                      fontSize: 15,
+                                      fontSize: 13,
                                       color: Colors.black,
                                       fontWeight: FontWeight.bold),
                                 ),
@@ -749,7 +739,7 @@ class _DetailScreenState extends State<DetailScreen> {
                               '2470 rating  497 reviews',
                               style: TextStyle(
                                 color: Colors.black,
-                                fontSize: 18,
+                                fontSize: 15,
                               ),
                             )
                           ],
@@ -764,7 +754,7 @@ class _DetailScreenState extends State<DetailScreen> {
                                 Text(
                                   'Mani Bhushan',
                                   style: TextStyle(
-                                      fontSize: 20,
+                                      fontSize: 18,
                                       fontWeight: FontWeight.bold),
                                 ),
                               ],
@@ -774,27 +764,27 @@ class _DetailScreenState extends State<DetailScreen> {
                                 Icon(
                                   Icons.star,
                                   color: mainRed,
-                                  size: 20,
+                                  size: 18,
                                 ),
                                 Icon(
                                   Icons.star,
                                   color: mainRed,
-                                  size: 20,
+                                  size: 18,
                                 ),
                                 Icon(
                                   Icons.star,
                                   color: mainRed,
-                                  size: 20,
+                                  size: 18,
                                 ),
                                 Icon(
                                   Icons.star,
                                   color: mainRed,
-                                  size: 20,
+                                  size: 18,
                                 ),
                                 Icon(
                                   Icons.star,
                                   color: Colors.black26,
-                                  size: 20,
+                                  size: 18,
                                 ),
                               ],
                             ),
@@ -810,7 +800,9 @@ class _DetailScreenState extends State<DetailScreen> {
                                     height: height * 0.01,
                                   ),
                                   Text(
-                                      'I will definitely do that, Oyo is not its state of mind, its only a app for finding a hotel near you nothing else, otherwise whenever you call them they will not pick up, after this you have to talk to direct hotel, oyo is showing any amount of a room whenever you go to the hotel, they said its not right, we are not giving any room at this price you have to pay double otherwise we dont have any room, the charge extra for AC. Disgusting.'),
+                                      'I will definitely do that, Oyo is not its state of mind, its only a app for finding a hotel near you nothing else, otherwise whenever you call them they will not pick up, after this you have to talk to direct hotel, oyo is showing any amount of a room whenever you go to the hotel, they said its not right, we are not giving any room at this price you have to pay double otherwise we dont have any room, the charge extra for AC. Disgusting.',style: TextStyle(
+                                    fontSize: 14
+                                  ),),
                                 ],
                               ),
                             ),
@@ -822,7 +814,7 @@ class _DetailScreenState extends State<DetailScreen> {
                                 Text(
                                   'Mayank Aggarwal',
                                   style: TextStyle(
-                                      fontSize: 20,
+                                      fontSize: 18,
                                       fontWeight: FontWeight.bold),
                                 ),
                               ],
@@ -832,27 +824,27 @@ class _DetailScreenState extends State<DetailScreen> {
                                 Icon(
                                   Icons.star,
                                   color: mainRed,
-                                  size: 20,
+                                  size: 18,
                                 ),
                                 Icon(
                                   Icons.star,
                                   color: mainRed,
-                                  size: 20,
+                                  size: 18,
                                 ),
                                 Icon(
                                   Icons.star,
                                   color: mainRed,
-                                  size: 20,
+                                  size: 18,
                                 ),
                                 Icon(
                                   Icons.star,
                                   color: mainRed,
-                                  size: 20,
+                                  size: 18,
                                 ),
                                 Icon(
                                   Icons.star,
                                   color: Colors.black26,
-                                  size: 20,
+                                  size: 18,
                                 ),
                               ],
                             ),
@@ -868,18 +860,20 @@ class _DetailScreenState extends State<DetailScreen> {
                                       height: height * 0.01,
                                     ),
                                     Text(
-                                        'Oyo Rooms is a hotel chain that is known for its budget-friendly prices and comfortable accommodations. According to customer reviews, Oyo Rooms generally receives positive feedback for its clean and well-maintained rooms, friendly staff, and convenient locations. Some reviewers have also noted that the Oyo Rooms app is easy to use and makes booking a room quick and simple.'),
+                                        'Oyo Rooms is a hotel chain that is known for its budget-friendly prices and comfortable accommodations. According to customer reviews, Oyo Rooms generally receives positive feedback for its clean and well-maintained rooms, friendly staff, and convenient locations. Some reviewers have also noted that the Oyo Rooms app is easy to use and makes booking a room quick and simple.',style: TextStyle(
+                                      fontSize: 14
+                                    ),),
                                   ],
                                 )),
                             SizedBox(
-                              height: height * 0.01,
+                              height: height * 0.005,
                             ),
                             Row(
                               children: [
                                 Text(
                                   'BARSA MEHUL',
                                   style: TextStyle(
-                                      fontSize: 20,
+                                      fontSize: 18,
                                       fontWeight: FontWeight.bold),
                                 ),
                               ],
@@ -889,27 +883,27 @@ class _DetailScreenState extends State<DetailScreen> {
                                 Icon(
                                   Icons.star,
                                   color: mainRed,
-                                  size: 20,
+                                  size: 18,
                                 ),
                                 Icon(
                                   Icons.star,
                                   color: mainRed,
-                                  size: 20,
+                                  size: 18,
                                 ),
                                 Icon(
                                   Icons.star,
                                   color: mainRed,
-                                  size: 20,
+                                  size: 18,
                                 ),
                                 Icon(
                                   Icons.star,
                                   color: mainRed,
-                                  size: 20,
+                                  size: 18,
                                 ),
                                 Icon(
                                   Icons.star,
                                   color: mainRed,
-                                  size: 20,
+                                  size: 18,
                                 ),
                               ],
                             ),
@@ -925,7 +919,9 @@ class _DetailScreenState extends State<DetailScreen> {
                                     height: height * 0.01,
                                   ),
                                   Text(
-                                      'Oyo Rooms is a hotel chain that is known for its budget-friendly prices and comfortable accommodations. According to customer reviews, Oyo Rooms generally receives positive feedback for its clean and well-maintained rooms, friendly staff, and convenient locations. Some reviewers have also noted that the Oyo Rooms app is easy to use and makes booking a room quick and simple.'),
+                                      'Oyo Rooms is a hotel chain that is known for its budget-friendly prices and comfortable accommodations. According to customer reviews, Oyo Rooms generally receives positive feedback for its clean and well-maintained rooms, friendly staff, and convenient locations. Some reviewers have also noted that the Oyo Rooms app is easy to use and makes booking a room quick and simple.',style: TextStyle(
+                                    fontSize: 14
+                                  ),),
                                 ],
                               ),
                             ),
@@ -946,14 +942,14 @@ class _DetailScreenState extends State<DetailScreen> {
                     width: width * 0.08,
                     decoration: BoxDecoration(
                         color: Colors.white, shape: BoxShape.circle),
-                    child: Icon(Icons.close),
+                    child: Icon(Icons.close,size: 18,),
                   ),
                   SizedBox(
                     width: width * 0.6,
                   ),
                   ActionChip(
                     avatar: Padding(
-                      padding: const EdgeInsets.only(left: 5),
+                      padding: const EdgeInsets.only(left: 6),
                       child: Icon(
                         favorite ? Icons.favorite : Icons.favorite_border,
                         size: 24,
@@ -993,7 +989,7 @@ class _DetailScreenState extends State<DetailScreen> {
                                       ],
                                     ),
                                     Padding(
-                                      padding: const EdgeInsets.all(12),
+                                      padding: const EdgeInsets.all(10),
                                       child: Column(
                                         children: [
                                           SizedBox(
@@ -1008,7 +1004,7 @@ class _DetailScreenState extends State<DetailScreen> {
                                                 key: imgKey,
                                                 child: Container(
                                                   height: height * 0.4,
-                                                  width: width * 0.7,
+                                                  width: width*0.68,
                                                   color: Colors.black26,
                                                   child: Image(
                                                     image: AssetImage(
@@ -1030,7 +1026,7 @@ class _DetailScreenState extends State<DetailScreen> {
                                               Text(
                                                 'Use the referral link below ',
                                                 style: TextStyle(
-                                                  fontSize: 14,
+                                                  fontSize: 12,
                                                   fontWeight: FontWeight.w400,
                                                 ),
                                               ),
@@ -1038,12 +1034,12 @@ class _DetailScreenState extends State<DetailScreen> {
                                                 'to avail this offer.',
                                                 style: TextStyle(
                                                     fontWeight: FontWeight.w900,
-                                                    fontSize: 14),
+                                                    fontSize: 12),
                                               )
                                             ],
                                           ),
                                           SizedBox(
-                                            height: height * 0.05,
+                                            height: height * 0.02,
                                           ),
                                           InkWell(
                                             onTap: () async {
@@ -1071,7 +1067,7 @@ class _DetailScreenState extends State<DetailScreen> {
                                             },
                                             child: Container(
                                               height: height * 0.05,
-                                              width: width * 0.7,
+                                              width: width * 0.6,
                                               decoration: BoxDecoration(
                                                 color: Colors.green,
                                                 borderRadius:
@@ -1082,7 +1078,7 @@ class _DetailScreenState extends State<DetailScreen> {
                                                   'Share',
                                                   style: TextStyle(
                                                     color: Colors.white,
-                                                    fontSize: 30,
+                                                    fontSize: 25,
                                                   ),
                                                 ),
                                               ),
@@ -1102,7 +1098,7 @@ class _DetailScreenState extends State<DetailScreen> {
                       width: width * 0.08,
                       decoration: BoxDecoration(
                           color: Colors.white, shape: BoxShape.circle),
-                      child: Icon(Icons.share),
+                      child: Icon(Icons.share,size: 18,),
                     ),
                   ),
                 ],
@@ -1125,21 +1121,17 @@ class _DetailScreenState extends State<DetailScreen> {
                     padding: const EdgeInsets.only(right: 60),
                     child: Row(
                       children: [
-                        Icon(
-                          Icons.currency_rupee_outlined,
-                          color: Colors.black,
-                          size: 20,
-                        ),
                         Text(
-                          '${detailModel!.hotelList1[selectindex].rent}',
+                          '  ₹${detailModel!.hotelList1[selectindex].rent}',
                           style: TextStyle(
-                              fontSize: 22,
+                              fontSize: 20,
                               fontWeight: FontWeight.bold,
                               color: Colors.black),
                         ),
                         Text(
-                          '  ${detailModel!.hotelList1[selectindex].amount}',
-                          style: TextStyle(color: Colors.black),
+                          ' ${detailModel!.hotelList1[selectindex].amount}',
+                          style: TextStyle(color: Colors.black,
+                        decoration: TextDecoration.lineThrough),
                         ),
                       ],
                     ),
@@ -1150,17 +1142,8 @@ class _DetailScreenState extends State<DetailScreen> {
                         width: width * 0.04,
                       ),
                       Text(
-                        '+',
-                        style: TextStyle(color: Colors.blue, fontSize: 18),
-                      ),
-                      Icon(
-                        Icons.currency_rupee_outlined,
-                        color: Colors.blue,
-                        size: 17,
-                      ),
-                      Text(
-                        '${detailModel!.hotelList1[selectindex].tax} taxes & fees',
-                        style: TextStyle(fontSize: 17, color: Colors.blue),
+                        '+ ₹${detailModel!.hotelList1[selectindex].tax} taxes & fees',
+                        style: TextStyle(fontSize: 15, color: Colors.blue),
                       ),
                     ],
                   ),
@@ -1186,7 +1169,7 @@ class _DetailScreenState extends State<DetailScreen> {
                         'Book now & pay at hotel',
                         style: TextStyle(
                             color: Colors.white,
-                            fontSize: 17,
+                            fontSize: 15,
                             fontWeight: FontWeight.w400),
                       ),
                     ),

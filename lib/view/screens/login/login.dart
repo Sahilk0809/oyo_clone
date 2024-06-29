@@ -1,6 +1,8 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:google_sign_in/google_sign_in.dart';
+import 'package:oyo_clone/view/screens/otp/otp.dart';
+import 'package:page_transition/page_transition.dart';
 import '../../../utils/global.dart';
 import 'component/component.dart';
 
@@ -100,21 +102,26 @@ class _LoginScreenState extends State<LoginScreen> {
                   height: height * 0.02,
                 ),
                 GestureDetector(
-                  onTap: () async{
+                  onTap: () async {
                     await FirebaseAuth.instance.verifyPhoneNumber(
                       phoneNumber: countryCode + phone,
-                      verificationCompleted: (PhoneAuthCredential credential) {},
+                      verificationCompleted:
+                          (PhoneAuthCredential credential) {},
                       verificationFailed: (FirebaseAuthException e) {},
                       codeSent: (String verificationId, int? resendToken) {
                         verify = verificationId;
-                        Navigator.of(context).pushNamed('/otp');
+                        Navigator.push(
+                          context,
+                          PageTransition(
+                            child: const OtpScreen(),
+                            type: PageTransitionType.leftToRight,
+                          ),
+                        );
                       },
-                      codeAutoRetrievalTimeout: (String verificationId) {
-
-                      },
+                      codeAutoRetrievalTimeout: (String verificationId) {},
                     );
                   },
-                  child: button(height, width, 'Cntinue'),
+                  child: button(height, width, 'Continue'),
                 ),
                 SizedBox(
                   height: height * 0.015,
@@ -184,8 +191,7 @@ class _LoginScreenState extends State<LoginScreen> {
   }
 }
 
-signInWithGoogle() async{
-
+signInWithGoogle() async {
   GoogleSignInAccount? googleUser = await GoogleSignIn().signIn();
 
   GoogleSignInAuthentication? googleAuth = await googleUser?.authentication;
@@ -195,9 +201,8 @@ signInWithGoogle() async{
     idToken: googleAuth?.idToken,
   );
 
-  UserCredential userCredential = await FirebaseAuth.instance.signInWithCredential(credential);
-
-
+  UserCredential userCredential =
+      await FirebaseAuth.instance.signInWithCredential(credential);
 }
 
 String countryCode = '+91';
