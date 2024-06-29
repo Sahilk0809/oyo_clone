@@ -138,10 +138,6 @@ class _LoginScreenState extends State<LoginScreen> {
                 ),
                 GestureDetector(
                   onTap: () async {
-                    // await signInWithGoogle();
-                    // GoogleSignIn googleSignIn =
-                    //     GoogleSignIn(signInOption: SignInOption.standard);
-                    // await googleSignIn.signIn();
                     await FireBaseServices().signInWithGoogle();
                     Navigator.pushReplacement(
                       context,

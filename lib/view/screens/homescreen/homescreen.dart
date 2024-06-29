@@ -4,6 +4,7 @@ import 'package:oyo_clone/utils/Color.dart';
 import 'package:oyo_clone/utils/Location_List.dart';
 import 'package:oyo_clone/utils/global.dart';
 import 'package:oyo_clone/utils/imagelist.dart';
+import 'package:oyo_clone/view/screens/DetailScreen/component/component.dart';
 import 'package:oyo_clone/view/screens/homescreen/component/component.dart';
 import '../../../modal/modal.dart';
 import '../NeedHelp/HelpScreen.dart';
@@ -675,7 +676,7 @@ class _HomescreenState extends State<Homescreen> {
             ),
             GestureDetector(
               onTap: () {
-                Navigator.of(context).pushNamed('/det');
+                Navigator.of(context).pushNamed('/detail');
               },
               child: NavigationDestination(
                 icon: FaIcon(
