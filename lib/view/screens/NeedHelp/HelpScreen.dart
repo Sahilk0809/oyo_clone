@@ -14,7 +14,7 @@ class _HelpscreenState extends State<Helpscreen> {
       Scaffold(
         backgroundColor: Colors.white,
         body:Padding(
-          padding: const EdgeInsets.all(0.0),
+          padding: const EdgeInsets.all(10),
           child: Container(
             height: double.infinity,
             width:double.infinity,

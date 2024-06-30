@@ -23,13 +23,6 @@ class Homescreen extends StatefulWidget {
 }
 
 class _HomescreenState extends State<Homescreen> {
-  int _selectedIndex = 0;
-
-  void _onItemTapped(int index) {
-    setState(() {
-      _selectedIndex = index;
-    });
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -117,7 +110,7 @@ class _HomescreenState extends State<Homescreen> {
                         child: GestureDetector(
                           onTap: () {
                             Navigator.of(context).pushNamed('/detail');
-                            selectIndex=index;
+                            selectIndex = index;
                           },
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
@@ -140,18 +133,27 @@ class _HomescreenState extends State<Homescreen> {
                                       padding: const EdgeInsets.all(4.0),
                                       child: IconButton(
                                         icon: Icon(
-                                          hotelList[index]['like'] ? Icons.favorite : Icons.favorite_border,
-                                          color: hotelList[index]['like'] ? Colors.red : Colors.white,
+                                          hotelList[index]['like']
+                                              ? Icons.favorite
+                                              : Icons.favorite_border,
+                                          color: hotelList[index]['like']
+                                              ? Colors.red
+                                              : Colors.white,
                                           size: 25,
                                         ),
                                         onPressed: () {
+                                          if(hotelList[index]['like']=true)
+                                          {
+                                            likeList.add(hotelList[index]);
+                                          }
                                           setState(() {
-                                            hotelList[index]['like'] = !hotelList[index]['like'];
+                                            hotelList[index]['like'] =
+                                                !hotelList[index]['like'];
                                           });
                                         },
                                       ),
                                     ),
-                                    ],
+                                  ],
                                 ),
                               ),
                               SizedBox(
@@ -533,7 +535,6 @@ class _HomescreenState extends State<Homescreen> {
                                   fit: BoxFit.cover,
                                 ),
                                 borderRadius: BorderRadius.circular(10),
-
                               ),
                               child: Row(
                                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -542,18 +543,23 @@ class _HomescreenState extends State<Homescreen> {
                                   Padding(
                                     padding: const EdgeInsets.all(8.0),
                                     child: IconButton(
-                                        icon: Icon(
-                                          hotelList[index]['like'] ? Icons.favorite : Icons.favorite_border,
-                                          color: hotelList[index]['like'] ? Colors.red : Colors.white,
-                                          size: 25,
-                                        ),
-                                        onPressed: () {
-                                          setState(() {
-                                            hotelList[index]['like'] = !hotelList[index]['like'];
-                                          });
-                                        },
+                                      icon: Icon(
+                                        hotelList[index]['like']
+                                            ? Icons.favorite
+                                            : Icons.favorite_border,
+                                        color: hotelList[index]['like']
+                                            ? Colors.red
+                                            : Colors.white,
+                                        size: 25,
                                       ),
+                                      onPressed: () {
+                                        setState(() {
+                                          hotelList[index]['like'] =
+                                              !hotelList[index]['like'];
+                                        });
+                                      },
                                     ),
+                                  ),
                                 ],
                               ),
                             ),

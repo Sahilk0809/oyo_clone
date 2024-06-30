@@ -13,7 +13,7 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   Widget build(BuildContext context) {
     Timer(const Duration(seconds: 2), () {
-      Navigator.of(context).pushNamed('/create');
+      Navigator.of(context).pushNamed('/navi');
     });
     return Scaffold(
       body:Container(

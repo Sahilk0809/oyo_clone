@@ -346,7 +346,7 @@ class _ServiceScreenState extends State<ServiceScreen> {
                   ),
                   GestureDetector(
                     onTap: () {
-                      Navigator.of(context).pushNamed('/home');
+                      Navigator.of(context).pushNamed('/main');
                     },
                     child: Container(
                       height: height * 0.06,

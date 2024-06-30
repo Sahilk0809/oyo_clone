@@ -3,6 +3,7 @@ import 'package:oyo_clone/utils/global.dart';
 import 'package:oyo_clone/utils/imagelist.dart';
 import 'package:oyo_clone/view/screens/DetailScreen/detailscreen.dart';
 import 'package:oyo_clone/view/screens/bookingscreen/bookingscreen.dart';
+import 'package:oyo_clone/view/screens/bottomnavigator/bottom_navigator.dart';
 import 'package:oyo_clone/view/screens/login/component/component.dart';
 
 class PaymentScreen extends StatefulWidget {
@@ -19,6 +20,7 @@ class _PaymentScreenState extends State<PaymentScreen> {
     double width = MediaQuery.of(context).size.width;
     return SafeArea(
       child: Scaffold(
+        backgroundColor: Colors.white,
         appBar: AppBar(
           centerTitle: true,
           title: const Text('Payment'),
@@ -289,9 +291,31 @@ class _PaymentScreenState extends State<PaymentScreen> {
                 ),
                 GestureDetector(
                   onTap: () {
-                    showDialog(context: context, builder: (context) => AlertDialog(
-
-                    ),);
+                    showDialog(
+                      context: context,
+                      builder: (context) => AlertDialog(
+                        title: const Text('Do you want to cancel booking'),
+                        actions: [
+                          TextButton(
+                            onPressed: () {
+                              Navigator.pop(context);
+                            },
+                            child: const Text('No'),
+                          ),
+                          TextButton(
+                            onPressed: () {
+                              bookingList.removeAt(bookingSelect);
+                              Navigator.of(context).pushReplacement(
+                                MaterialPageRoute(
+                                  builder: (context) => const MainNavigator(),
+                                ),
+                              );
+                            },
+                            child: const Text('Yes'),
+                          ),
+                        ],
+                      ),
+                    );
                   },
                   child: button(height, width, 'Cancel Booking'),
                 ),

@@ -13,6 +13,7 @@ class _ProfilePageState extends State<ProfilePage> {
     var height = MediaQuery.of(context).size.height;
     var width = MediaQuery.of(context).size.width;
     return Scaffold(
+      backgroundColor: Colors.white,
       appBar: AppBar(
         leading: const Icon(
           Icons.arrow_back_rounded,

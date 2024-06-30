@@ -1,4 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:oyo_clone/utils/global.dart';
+
+import '../../../utils/Color.dart';
+import '../../../utils/imagelist.dart';
+import '../DetailScreen/component/component.dart';
 
 class SavedScreen extends StatefulWidget {
   const SavedScreen({super.key});
@@ -20,7 +25,8 @@ class _SavedScreenState extends State<SavedScreen> {
         ),
         backgroundColor: Colors.white,
       ),
-      body: Column(
+      body:
+    likeList.isEmpty? Column(
         children: [
           Row(
             children: [
@@ -37,7 +43,7 @@ class _SavedScreenState extends State<SavedScreen> {
             ],
           ),
           const SizedBox(
-            height: 150,
+            height: 70,
           ),
           Column(
             children: [
@@ -68,21 +74,26 @@ class _SavedScreenState extends State<SavedScreen> {
                     letterSpacing: -0.1,
                     height: 2),
               ),
-              Container(
-                margin: const EdgeInsets.only(top: 10),
-                height: height * 0.059,
-                width: width * 0.390,
-                decoration: BoxDecoration(
-                  color: Colors.black,
-                  borderRadius: BorderRadius.circular(10),
-                ),
-                child: const Center(
-                  child: Text(
-                    'Explore OYOs',
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontWeight: FontWeight.w600,
-                      fontSize: 18,
+              GestureDetector(
+                onTap: (){
+                  Navigator.of(context).pushNamed('/home');
+                },
+                child: Container(
+                  margin: const EdgeInsets.only(top: 10),
+                  height: height * 0.059,
+                  width: width * 0.390,
+                  decoration: BoxDecoration(
+                    color: Colors.black,
+                    borderRadius: BorderRadius.circular(10),
+                  ),
+                  child: const Center(
+                    child: Text(
+                      'Explore OYOs',
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontWeight: FontWeight.w600,
+                        fontSize: 18,
+                      ),
                     ),
                   ),
                 ),
@@ -90,7 +101,133 @@ class _SavedScreenState extends State<SavedScreen> {
             ],
           )
         ],
+      )
+      : SingleChildScrollView(
+      scrollDirection: Axis.vertical,
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          const Text(
+            '   Your Saved',
+            style: TextStyle(
+              fontSize: 21,
+              fontWeight: FontWeight.bold,
+            ),
+          ),
+          SizedBox(height: height*0.02,),
+          Column(
+            children: [
+              ...List.generate(
+                2,
+                    (index) => Padding(
+                  padding:
+                  const EdgeInsets.only(top: 13, right: 10, left: 10),
+                  child: GestureDetector(
+                    onTap: () {
+                      Navigator.of(context).pushNamed('/detail');
+                      selectIndex=index;
+                    },
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Container(
+                          height: height * 0.25,
+                          width: width ,
+                          decoration: BoxDecoration(
+                            image: DecorationImage(
+                              image: AssetImage(imageList[index]['img1']),
+                              fit: BoxFit.cover,
+                            ),
+                            borderRadius: BorderRadius.circular(10),
+                          ),
+                        ),
+                        SizedBox(
+                          height: height * 0.02,
+                        ),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          children: [
+                            Icon(
+                              Icons.star,
+                              color: mainRed,
+                              size: 20,
+                            ),
+                            SizedBox(
+                              width: width * 0.02,
+                            ),
+                            Text(
+                              likeList[index]['ret'],
+                              style: const TextStyle(
+                                fontSize: 15,
+                              ),
+                            ),
+
+                          ],
+                        ),
+                        SizedBox(
+                          height: height * 0.01,
+                        ),
+                        Text(
+                          likeList[index]['name'],
+                          style: const TextStyle(
+                            fontSize: 18,
+                          ),
+                        ),
+                        Text(
+                          likeList[index]['address'],
+                          style: TextStyle(
+                              fontSize: 15, color: Colors.grey.shade500),
+                        ),
+                        SizedBox(
+                          height: height * 0.01,
+                        ),
+                        Row(
+                          children: [
+                            Text(
+                              '₹${likeList[index]['rent']}',
+                              style: const TextStyle(
+                                fontSize: 18,
+                                fontWeight: FontWeight.w500,
+                              ),
+                            ),
+                            SizedBox(
+                              width: width * 0.015,
+                            ),
+                            Text(
+                              '₹${likeList[index]['amount']}',
+                              style: const TextStyle(
+                                decoration: TextDecoration.lineThrough,
+                                fontSize: 13,
+                              ),
+                            ),
+                            SizedBox(
+                              width: width * 0.015,
+                            ),
+                            Text(
+                              '%${likeList[index]['par']} off',
+                              style: const TextStyle(
+                                  fontSize: 13, color: Colors.green),
+                            ),
+                          ],
+                        ),
+                        Text(
+                          '+ ₹${likeList[index]['tax']} takes & fees',
+                          style: TextStyle(
+                            color: Colors.grey.shade600,
+                            fontSize: 15,
+                          ),
+                        ),
+                        Divider(),
+                      ],
+                    ),
+                  ),
+                ),
+              )
+            ],
+          ),
+        ],
       ),
+    ),
     );
   }
 }

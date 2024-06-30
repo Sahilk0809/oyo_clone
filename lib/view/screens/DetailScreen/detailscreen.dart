@@ -107,34 +107,6 @@ class _DetailScreenState extends State<DetailScreen> {
                       ],
                     ),
                   ),
-
-                  // CarouselSlider(
-                  //   options: CarouselOptions(
-                  //     autoPlay: false,
-                  //     autoPlayInterval: Duration(seconds: 2),
-                  //   ),
-                  //   items: hotelList.map((i) {
-                  //     return Builder(
-                  //       builder: (context) => SingleChildScrollView(
-                  //         scrollDirection: Axis.horizontal,
-                  //         child: Row(
-                  //           children: [
-                  //             Container(
-                  //               height: height * 0.3,
-                  //               width: width * 0.9 + 150,
-                  //               decoration: BoxDecoration(
-                  //                 image: DecorationImage(
-                  //                     image: AssetImage(
-                  //                         'asset/hotelImage/hotel1/1.webp'),
-                  //                     fit: BoxFit.cover),
-                  //               ),
-                  //             ),
-                  //           ],
-                  //         ),
-                  //       ),
-                  //     );
-                  //   }).toList(),
-                  // ),
                   Padding(
                     padding: const EdgeInsets.all(10),
                     child: Column(
@@ -985,16 +957,19 @@ class _DetailScreenState extends State<DetailScreen> {
                       });
                     },
                     child: CircleAvatar(
-                      radius: 16,
+                      radius: 15,
                       backgroundColor: Colors.white,
+
                       child: (detailModel!.hotelList1[selectIndex].like! == true)
                           ? const Icon(
                               Icons.favorite,
                               color: Colors.red,
+                        size: 18,
                             )
                           : const Icon(
                               Icons.favorite_border,
-                              color: Colors.red,
+                              color: Colors.black,
+                        size: 18,
                             ),
                     ),
                   ),

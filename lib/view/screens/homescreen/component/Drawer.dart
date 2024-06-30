@@ -3,7 +3,7 @@ import'package:flutter/material.dart';
 Drawer buildDrawer(double height, BuildContext context ) {
   return Drawer(
     backgroundColor: Colors.white,
-    shape: RoundedRectangleBorder(
+    shape: const RoundedRectangleBorder(
         borderRadius: BorderRadius.only(
             topRight: Radius.circular(20),
             bottomRight: Radius.circular(20)
@@ -18,25 +18,25 @@ Drawer buildDrawer(double height, BuildContext context ) {
           ),
           ListTile(
             onTap: (){
-              //Navigator.of(context).pushNamed('/profile'),
+             // Navigator.of(context).pushNamed('/profile');
             },
-            leading: Icon(Icons.person_2_outlined, size: 30, color: Colors.black38),
-            title: Text('Durga Mewada', style: TextStyle(
+            leading: const Icon(Icons.person_2_outlined, size: 30, color: Colors.black38),
+            title: const Text('Durga Mewada', style: TextStyle(
                 color: Colors.black,
                 fontSize: 18
             )),
-            subtitle: Text(
+            subtitle: const Text(
               '+91-9313381084',style: TextStyle(
               color: Colors.grey,
               fontSize: 15,
             ),
             ),
-            trailing: Icon(Icons.arrow_forward_ios_rounded,size: 10,),
+            trailing: const Icon(Icons.arrow_forward_ios_rounded,size: 10,),
           ),
           Divider(
             color: Colors.grey.shade400,
           ),
-          ListTile(
+          const ListTile(
             leading: Icon(Icons.wb_auto_outlined, size: 25, color: Colors.black38),
             title: Text('Become an OYO Wizard', style: TextStyle(
                 color: Colors.black,
@@ -49,7 +49,7 @@ Drawer buildDrawer(double height, BuildContext context ) {
             ),
             ),
           ),
-          ListTile(
+          const ListTile(
             leading: Icon(Icons.person_add_alt_outlined, size: 25, color: Colors.black38),
             title: Text('Invite & Earn', style: TextStyle(
                 color: Colors.black,
@@ -66,12 +66,12 @@ Drawer buildDrawer(double height, BuildContext context ) {
             onTap: (){
               Navigator.of(context).pushNamed('/wallet');
             },
-            leading: Icon(Icons.account_balance_wallet_outlined, size: 25, color: Colors.black38),
-            title: Text('View wallets', style: TextStyle(
+            leading: const Icon(Icons.account_balance_wallet_outlined, size: 25, color: Colors.black38),
+            title: const Text('View wallets', style: TextStyle(
                 color: Colors.black,
                 fontSize: 18
             )),
-            subtitle: Text(
+            subtitle: const Text(
               'Link wallets & check your balance',style: TextStyle(
               color: Colors.grey,
               fontSize: 14,
@@ -86,16 +86,16 @@ Drawer buildDrawer(double height, BuildContext context ) {
           ),
           ListTile(
             onTap: (){
-              //Navigator.of(context).pushNamed('/'),
+              Navigator.of(context).pushNamed('/save');
             },
-            leading: Icon(Icons.favorite_border_outlined, size: 25, color: Colors.black38),
-            title: Text('View saved OYOs', style: TextStyle(
+            leading: const Icon(Icons.favorite_border_outlined, size: 25, color: Colors.black38),
+            title: const Text('View saved OYOs', style: TextStyle(
                 color: Colors.black,
                 fontSize: 18
             )),
 
           ),
-          ListTile(
+          const ListTile(
             leading: Icon(Icons.filter_hdr_outlined, size: 25, color: Colors.black38),
             title: Text('Long Stays in Manali', style: TextStyle(
                 color: Colors.black,
@@ -107,14 +107,14 @@ Drawer buildDrawer(double height, BuildContext context ) {
             onTap: (){
               Navigator.of(context).pushNamed('/help');
             },
-            leading: Icon(Icons.live_help_outlined, size: 25, color: Colors.black38),
-            title: Text('Need help', style: TextStyle(
+            leading: const Icon(Icons.live_help_outlined, size: 25, color: Colors.black38),
+            title: const Text('Need help', style: TextStyle(
                 color: Colors.black,
                 fontSize: 18
             )),
 
           ),
-          ListTile(
+          const ListTile(
             leading: Icon(Icons.language_outlined, size: 25, color: Colors.black38),
             title: Text('Change Language', style: TextStyle(
                 color: Colors.black,
@@ -122,19 +122,19 @@ Drawer buildDrawer(double height, BuildContext context ) {
             )),
 
           ),
-          ListTile(
+          const ListTile(
             leading: Icon(Icons.lock_outline, size: 25, color: Colors.black38),
             title: Text('View privacy policy', style: TextStyle(
                 color: Colors.black,
                 fontSize: 18
             )),
           ),
-          Padding(
-            padding: const EdgeInsets.only(left: 15,top: 30,bottom: 10),
+          const Padding(
+            padding: EdgeInsets.only(left: 15,top: 30,bottom: 10),
             child: Text('Onboard as a partner',
               style: TextStyle(color: Colors.black,fontWeight: FontWeight.bold, fontSize: 23),),
           ),
-          ListTile(
+          const ListTile(
             leading: Icon(Icons.person_2_outlined, size: 25, color: Colors.black38),
             title: Text('Travel agent partner', style: TextStyle(
                 color: Colors.black,
@@ -142,7 +142,7 @@ Drawer buildDrawer(double height, BuildContext context ) {
             )),
 
           ),
-          ListTile(
+          const ListTile(
             leading: Icon(Icons.shopping_bag_outlined, size: 25, color: Colors.black38),
             title: Text('OYO for Business', style: TextStyle(
                 color: Colors.black,
@@ -155,12 +155,12 @@ Drawer buildDrawer(double height, BuildContext context ) {
             ),
             ),
           ),
-          Padding(
-            padding: const EdgeInsets.only(left: 15,top: 30,bottom: 10),
+          const Padding(
+            padding: EdgeInsets.only(left: 15,top: 30,bottom: 10),
             child: Text('Are you a property Owner?',
               style: TextStyle(color: Colors.black,fontWeight: FontWeight.bold, fontSize: 20),),
           ),
-          ListTile(
+          const ListTile(
             leading: Icon(Icons.house_outlined, size: 25, color: Colors.black38),
             title: Text('List your property', style: TextStyle(
                 color: Colors.black,
@@ -168,8 +168,8 @@ Drawer buildDrawer(double height, BuildContext context ) {
             )),
 
           ),
-          Padding(
-            padding: const EdgeInsets.all(15.0),
+          const Padding(
+            padding: EdgeInsets.all(15.0),
             child: Text('Version 10.7.2',
               style: TextStyle(color: Colors.black, fontSize: 13),),
           ),

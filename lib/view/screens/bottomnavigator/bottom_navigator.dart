@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-
 import '../NeedHelp/HelpScreen.dart';
 import '../bookingscreen/bookingscreen.dart';
 import '../homescreen/homescreen.dart';
@@ -39,12 +38,14 @@ class _MainNavigatorState extends State<MainNavigator> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       body: PageView(
         controller: _pageController,
         onPageChanged: _onPageChanged,
         children: _bottomNavigate,
       ),
       bottomNavigationBar: BottomNavigationBar(
+        backgroundColor: Colors.white,
         onTap: _onItemTapped,
         currentIndex: myIndex,
         type: BottomNavigationBarType.fixed,
