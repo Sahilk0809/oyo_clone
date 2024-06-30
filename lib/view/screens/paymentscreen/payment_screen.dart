@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:oyo_clone/utils/global.dart';
+import 'package:oyo_clone/utils/imagelist.dart';
 import 'package:oyo_clone/view/screens/DetailScreen/detailscreen.dart';
+import 'package:oyo_clone/view/screens/bookingscreen/bookingscreen.dart';
 import 'package:oyo_clone/view/screens/login/component/component.dart';
 
 class PaymentScreen extends StatefulWidget {
@@ -53,9 +55,9 @@ class _PaymentScreenState extends State<PaymentScreen> {
                       size: 17,
                     ),
                     const Spacer(),
-                    const Text(
-                      '₹750',
-                      style: TextStyle(
+                    Text(
+                      '₹${bookingList[bookingSelect].rent}',
+                      style: const TextStyle(
                         fontWeight: FontWeight.bold,
                         fontSize: 17,
                       ),
@@ -77,7 +79,8 @@ class _PaymentScreenState extends State<PaymentScreen> {
                 SizedBox(
                   height: height * 0.025,
                 ),
-                button(height, width, 'Pay ₹750 Now'),
+                button(height, width,
+                    'Pay ₹${bookingList[bookingSelect].rent} Now'),
                 SizedBox(
                   height: height * 0.05,
                 ),
@@ -88,9 +91,9 @@ class _PaymentScreenState extends State<PaymentScreen> {
                       children: [
                         SizedBox(
                           width: width * 0.5,
-                          child: const Text(
-                            'OYO Hotel Maple',
-                            style: TextStyle(
+                          child: Text(
+                            bookingList[bookingSelect].name,
+                            style: const TextStyle(
                               fontWeight: FontWeight.bold,
                               fontSize: 20,
                             ),
@@ -99,11 +102,12 @@ class _PaymentScreenState extends State<PaymentScreen> {
                         SizedBox(
                           width: width * 0.6,
                           child: Text(
-                            '1010 Banjara Hills, Hyderabad, Telangana 500034',
+                            bookingList[bookingSelect].address,
                             style: TextStyle(
-                                fontSize: 15,
-                                color: Colors.grey[800],
-                                fontWeight: FontWeight.w500),
+                              fontSize: 15,
+                              color: Colors.grey[800],
+                              fontWeight: FontWeight.w500,
+                            ),
                           ),
                         ),
                       ],
@@ -111,7 +115,7 @@ class _PaymentScreenState extends State<PaymentScreen> {
                     SizedBox(
                       width: width * 0.3,
                       child: Image.asset(
-                        'asset/hotelImage/hotel1/5.webp',
+                        imageList[bookingSelect]['img4'],
                         fit: BoxFit.cover,
                       ),
                     ),

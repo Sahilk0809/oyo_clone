@@ -3,6 +3,7 @@ import 'package:oyo_clone/view/screens/DetailScreen/detailscreen.dart';
 import 'package:oyo_clone/view/screens/bookingscreen/bookingscreen.dart';
 import 'package:oyo_clone/view/screens/homescreen/homescreen.dart';
 import 'package:oyo_clone/view/screens/otp/otp.dart';
+import 'package:oyo_clone/view/screens/paymentscreen/payment_screen.dart';
 import 'package:oyo_clone/view/screens/savescreen/savescreen.dart';
 import 'package:oyo_clone/view/screens/searchscreen/search_screen.dart';
 import '../view/screens/createacount/createaccount.dart';
@@ -17,7 +18,8 @@ class MyRoutes{
     // '/': (context) => const SavedScreen(),
     '/detail': (context) => const DetailScreen(),
     '/booking': (context) => const BookingScreen(),
-    '/': (context) => const ServiceScreen(),
+    '/payment': (context) => const PaymentScreen(),
+    '/': (context) => const Homescreen(),
     '/service': (context) => const ServiceScreen(),
     '/search': (context) => const SearchScreen(),
     '/login': (context) => const LoginScreen(),

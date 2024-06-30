@@ -5,7 +5,6 @@ import 'package:oyo_clone/view/screens/DetailScreen/component/component.dart';
 import 'package:oyo_clone/view/screens/DetailScreen/detailscreen.dart';
 import 'package:oyo_clone/view/screens/login/component/component.dart';
 import 'package:oyo_clone/view/screens/login/login.dart';
-
 import '../../../utils/global.dart';
 
 class BookingScreen extends StatefulWidget {
@@ -110,7 +109,7 @@ class _BookingScreenState extends State<BookingScreen> {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text(
+                    const Text(
                       'Bookings',
                       style: TextStyle(
                         fontSize: 24,
@@ -120,14 +119,14 @@ class _BookingScreenState extends State<BookingScreen> {
                     SizedBox(
                       height: height * 0.04,
                     ),
-                    Text(
+                    const Text(
                       '   Upcoming',
                       style: TextStyle(
                         fontSize: 15,
                         fontWeight: FontWeight.w500,
                       ),
                     ),
-                    Divider(
+                    const Divider(
                       color: Colors.black,
                     ),
                     ...List.generate(
@@ -157,7 +156,7 @@ class _BookingScreenState extends State<BookingScreen> {
                 image: DecorationImage(
                   fit: BoxFit.cover,
                   image: AssetImage(
-                    imageList[selectIndex]['img3'],
+                    imageList[index]['img3'],
                   ),
                 ),
               ),
@@ -170,22 +169,22 @@ class _BookingScreenState extends State<BookingScreen> {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
-                  bookingList[selectIndex].location,
+                  bookingList[index].name,
                   style: const TextStyle(
                     fontWeight: FontWeight.bold,
                     fontSize: 15,
                   ),
                 ),
-                Text(
+                const Text(
                   '30 Jun - 02 Jul . 1 Guest',
-                  style: const TextStyle(
+                  style: TextStyle(
                     fontSize: 13,
                   ),
                 ),
                 SizedBox(
                   width: width * 0.3,
                   child: Text(
-                    bookingList[selectIndex].address,
+                    bookingList[index].address,
                     style: const TextStyle(
                       fontSize: 12,
                       color: Colors.grey,
@@ -194,7 +193,7 @@ class _BookingScreenState extends State<BookingScreen> {
                   ),
                 ),
                 Text(
-                  bookingList[selectIndex].location,
+                  bookingList[index].location,
                   style: const TextStyle(fontSize: 12, color: Colors.grey),
                 ),
               ],
@@ -212,10 +211,10 @@ class _BookingScreenState extends State<BookingScreen> {
                 CircleAvatar(
                   radius: 20,
                   backgroundColor: Colors.grey.shade100,
-                  child: Icon(Icons.location_on_outlined,
+                  child: const Icon(Icons.location_on_outlined,
                       color: Colors.black, size: 20),
                 ),
-                Text(
+                const Text(
                   'Directions',
                   style: TextStyle(
                     fontSize: 14,
@@ -228,9 +227,9 @@ class _BookingScreenState extends State<BookingScreen> {
                 CircleAvatar(
                   radius: 20,
                   backgroundColor: Colors.grey.shade100,
-                  child: Icon(Icons.call, color: Colors.black, size: 20),
+                  child: const Icon(Icons.call, color: Colors.black, size: 20),
                 ),
-                Text(
+                const Text(
                   'Call hotel',
                   style: TextStyle(fontSize: 14),
                 ),
@@ -241,10 +240,10 @@ class _BookingScreenState extends State<BookingScreen> {
                 CircleAvatar(
                   radius: 20,
                   backgroundColor: Colors.grey.shade100,
-                  child: Icon(Icons.help_center_outlined,
+                  child: const Icon(Icons.help_center_outlined,
                       color: Colors.black, size: 20),
                 ),
-                Text(
+                const Text(
                   'Need help',
                   style: TextStyle(fontSize: 14),
                 ),
@@ -255,7 +254,7 @@ class _BookingScreenState extends State<BookingScreen> {
         SizedBox(
           height: height * 0.03,
         ),
-        Text(
+        const Text(
           'Pay now & save time during \ncheck-in',
           style: TextStyle(
             fontSize: 20,
@@ -286,8 +285,8 @@ class _BookingScreenState extends State<BookingScreen> {
               width: width * 0.23,
             ),
             Text(
-              '₹${bookingList[selectIndex].rent}',
-              style: TextStyle(
+              '₹${bookingList[index].rent}',
+              style: const TextStyle(
                 fontSize: 14,
                 color: Colors.black,
               ),
@@ -299,7 +298,8 @@ class _BookingScreenState extends State<BookingScreen> {
         ),
         GestureDetector(
           onTap: (){
-            //Navigator.of(context).pushNamed('/payment');
+            bookingSelect = index;
+            Navigator.of(context).pushNamed('/payment');
           },
           child: Container(
             height: height*0.06,
@@ -309,7 +309,7 @@ class _BookingScreenState extends State<BookingScreen> {
               borderRadius: BorderRadius.circular(10),
             ),
             alignment: Alignment.center,
-            child: Text('Pay ₹${bookingList[selectIndex].rent} now',style: TextStyle(
+            child: Text('Pay ₹${bookingList[index].rent} now',style: const TextStyle(
               color: Colors.white,
             ),),
           ),
@@ -317,8 +317,10 @@ class _BookingScreenState extends State<BookingScreen> {
         SizedBox(
           height: height*0.01,
         ),
-        Divider(color: Colors.grey,),
+        const Divider(color: Colors.grey,),
       ],
     );
   }
 }
+
+int bookingSelect = 0;
