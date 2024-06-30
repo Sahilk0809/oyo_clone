@@ -15,6 +15,7 @@ import 'component/Drawer.dart';
 
 DetailModel? detailModel;
 
+
 class Homescreen extends StatefulWidget {
   const Homescreen({super.key});
 
@@ -650,70 +651,8 @@ class _HomescreenState extends State<Homescreen> {
           ),
         ),
       ),
-      bottomNavigationBar: Container(
-        decoration: BoxDecoration(
-          boxShadow: [
-            BoxShadow(
-              color: Colors.grey,
-              blurRadius: 3,
-            ),
-          ],
-        ),
-        child: NavigationBar(
-          backgroundColor: Colors.white,
-          indicatorColor: Colors.black,
-          height: height * 0.09,
-          selectedIndex: _selectedIndex,
-          onDestinationSelected: _onItemTapped,
-          destinations: [
-            NavigationDestination(
-              icon: Icon(
-                Icons.home,
-                size: 20,
-                color: Colors.grey.shade600,
-              ),
-              label: 'Home',
-            ),
-            GestureDetector(
-              onTap: () {
-                Navigator.of(context).pushNamed('/detail');
-              },
-              child: NavigationDestination(
-                icon: FaIcon(
-                  FontAwesomeIcons.suitcase,
-                  size: 20,
-                  color: Colors.grey.shade600,
-                ),
-                label: 'Bookings',
-              ),
-            ),
-            NavigationDestination(
-              icon: Icon(
-                Icons.search,
-                size: 20,
-                color: Colors.grey.shade600,
-              ),
-              label: 'Search',
-            ),
-            NavigationDestination(
-              icon: FaIcon(
-                FontAwesomeIcons.userTie,
-                size: 20,
-                color: Colors.grey.shade600,
-              ),
-              label: 'Services',
-            ),
-            NavigationDestination(
-              icon: FaIcon(
-                FontAwesomeIcons.questionCircle,
-                size: 20,
-                color: Colors.grey.shade600,
-              ),
-              label: 'Help',
-            ),
-          ],
-        ),
-      ),
     );
   }
 }
+
+
