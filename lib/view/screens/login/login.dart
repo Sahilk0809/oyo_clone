@@ -1,6 +1,7 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:google_sign_in/google_sign_in.dart';
+import 'package:intl_phone_field/intl_phone_field.dart';
 import 'package:oyo_clone/view/screens/homescreen/homescreen.dart';
 import 'package:oyo_clone/view/screens/otp/otp.dart';
 import 'package:page_transition/page_transition.dart';
@@ -72,12 +73,12 @@ class _LoginScreenState extends State<LoginScreen> {
                 SizedBox(
                   height: height * 0.025,
                 ),
-                TextFormField(
+                IntlPhoneField(
+                  initialCountryCode: 'IN',
                   onChanged: (value) {
-                    phone = value;
+                    //phone = value;
                   },
                   controller: txtContact,
-                  maxLength: 10,
                   cursorColor: Colors.black,
                   keyboardType: TextInputType.phone,
                   decoration: InputDecoration(

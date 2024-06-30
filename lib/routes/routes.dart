@@ -17,9 +17,9 @@ class MyRoutes{
     // '/': (context) => const SavedScreen(),
     '/detail': (context) => const DetailScreen(),
     '/booking': (context) => const BookingScreen(),
-    '/': (context) => const LoginScreen(),
+    //'/': (context) => const LoginScreen(),
     '/search': (context) => const SearchScreen(),
-    '/login': (context) => const LoginScreen(),
+    '/': (context) => const LoginScreen(),
     '/otp': (context) => const OtpScreen(),
     // '/': (context) => const CreateAccount(),
   };
