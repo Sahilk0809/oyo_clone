@@ -171,7 +171,7 @@ class _DetailScreenState extends State<DetailScreen> {
                         Row(
                           children: [
                             Text(
-                              '${detailModel!.hotelList1[selectindex].name}',
+                              '${detailModel!.hotelList1[selectIndex].name}',
                               style: const TextStyle(
                                 fontSize: 25,
                                 fontWeight: FontWeight.bold,
@@ -193,7 +193,7 @@ class _DetailScreenState extends State<DetailScreen> {
                               width: width * 0.02,
                             ),
                             Text(
-                              '${detailModel!.hotelList1[selectindex].rating}'
+                              '${detailModel!.hotelList1[selectIndex].rating}'
                                   .toString(),
                               style: const TextStyle(fontSize: 15),
                             ),
@@ -243,7 +243,7 @@ class _DetailScreenState extends State<DetailScreen> {
                         Align(
                           alignment: Alignment.center,
                           child: Text(
-                            "${detailModel!.hotelList1[selectindex].address}",
+                            "${detailModel!.hotelList1[selectIndex].address}",
                             style: const TextStyle(fontSize: 17),
                           ),
                         ),
@@ -368,7 +368,7 @@ class _DetailScreenState extends State<DetailScreen> {
                             Align(
                               alignment: Alignment.centerRight,
                               child: Text(
-                                '${detailModel!.hotelList1[selectindex].location}',
+                                '${detailModel!.hotelList1[selectIndex].location}',
                                 style: const TextStyle(fontSize: 16),
                               ),
                             ),
@@ -972,22 +972,22 @@ class _DetailScreenState extends State<DetailScreen> {
                   GestureDetector(
                     onTap: () {
                       setState(() {
-                        if (detailModel!.hotelList1[selectindex].like! == true) {
-                          detailModel!.hotelList1[selectindex].like = false;
-                          print(detailModel!.hotelList1[selectindex].like);
-                          likeList.removeAt(selectindex);
+                        if (detailModel!.hotelList1[selectIndex].like! == true) {
+                          detailModel!.hotelList1[selectIndex].like = false;
+                          print(detailModel!.hotelList1[selectIndex].like);
+                          likeList.removeAt(selectIndex);
                         }
                         else {
-                          detailModel!.hotelList1[selectindex].like = true;
-                          print(detailModel!.hotelList1[selectindex].like);
-                          likeList.add(detailModel!.hotelList1[selectindex]);
+                          detailModel!.hotelList1[selectIndex].like = true;
+                          print(detailModel!.hotelList1[selectIndex].like);
+                          likeList.add(detailModel!.hotelList1[selectIndex]);
                         }
                       });
                     },
                     child: CircleAvatar(
                       radius: 16,
                       backgroundColor: Colors.white,
-                      child: (detailModel!.hotelList1[selectindex].like! == true)
+                      child: (detailModel!.hotelList1[selectIndex].like! == true)
                           ? const Icon(
                               Icons.favorite,
                               color: Colors.red,
@@ -1173,7 +1173,7 @@ class _DetailScreenState extends State<DetailScreen> {
                     child: Row(
                       children: [
                         Text(
-                          '  ₹${detailModel!.hotelList1[selectindex].rent}',
+                          '  ₹${detailModel!.hotelList1[selectIndex].rent}',
                           style: const TextStyle(
                             fontSize: 20,
                             fontWeight: FontWeight.bold,
@@ -1181,7 +1181,7 @@ class _DetailScreenState extends State<DetailScreen> {
                           ),
                         ),
                         Text(
-                          ' ${detailModel!.hotelList1[selectindex].amount}',
+                          ' ${detailModel!.hotelList1[selectIndex].amount}',
                           style: const TextStyle(
                             color: Colors.black,
                             decoration: TextDecoration.lineThrough,
@@ -1196,7 +1196,7 @@ class _DetailScreenState extends State<DetailScreen> {
                         width: width * 0.04,
                       ),
                       Text(
-                        '+ ₹${detailModel!.hotelList1[selectindex].tax} taxes & fees',
+                        '+ ₹${detailModel!.hotelList1[selectIndex].tax} taxes & fees',
                         style:
                             const TextStyle(fontSize: 15, color: Colors.blue),
                       ),
@@ -1214,12 +1214,12 @@ class _DetailScreenState extends State<DetailScreen> {
                   ),
                   GestureDetector(
                     onTap: () {
-                      bookingList.add(detailModel!.hotelList1[selectindex]);
+                      bookingList.add(detailModel!.hotelList1[selectIndex]);
                       Navigator.of(context).pushNamed('/booking');
                     },
                     child: Container(
-                      height: height * 0.1 - 35,
-                      width: width * 0.5 + 18,
+                      height: height * 0.07,
+                      width: width * 0.5,
                       decoration: BoxDecoration(
                         color: mainRed,
                         borderRadius: BorderRadius.circular(7),
@@ -1246,7 +1246,5 @@ class _DetailScreenState extends State<DetailScreen> {
   }
 }
 
-List bookingList = [];
-List likeList = [];
-bool favorite = false;
+
 // Text scalar

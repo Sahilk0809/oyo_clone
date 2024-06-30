@@ -117,7 +117,8 @@ class _HomescreenState extends State<Homescreen> {
                             const EdgeInsets.only(top: 13, right: 10, left: 10),
                         child: GestureDetector(
                           onTap: () {
-                            // Navigator.of(context).pushNamed('/detail'),
+                            Navigator.of(context).pushNamed('/detail');
+                            selectIndex=index;
                           },
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
@@ -131,6 +132,27 @@ class _HomescreenState extends State<Homescreen> {
                                     fit: BoxFit.cover,
                                   ),
                                   borderRadius: BorderRadius.circular(10),
+                                ),
+                                child: Row(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  mainAxisAlignment: MainAxisAlignment.end,
+                                  children: [
+                                    Padding(
+                                      padding: const EdgeInsets.all(4.0),
+                                      child: IconButton(
+                                        icon: Icon(
+                                          hotelList[index]['like'] ? Icons.favorite : Icons.favorite_border,
+                                          color: hotelList[index]['like'] ? Colors.red : Colors.white,
+                                          size: 25,
+                                        ),
+                                        onPressed: () {
+                                          setState(() {
+                                            hotelList[index]['like'] = !hotelList[index]['like'];
+                                          });
+                                        },
+                                      ),
+                                    ),
+                                    ],
                                 ),
                               ),
                               SizedBox(
@@ -511,8 +533,29 @@ class _HomescreenState extends State<Homescreen> {
                                   image: AssetImage(imageList[index]['img1']),
                                   fit: BoxFit.cover,
                                 ),
-                                color: Colors.grey,
                                 borderRadius: BorderRadius.circular(10),
+
+                              ),
+                              child: Row(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                mainAxisAlignment: MainAxisAlignment.end,
+                                children: [
+                                  Padding(
+                                    padding: const EdgeInsets.all(8.0),
+                                    child: IconButton(
+                                        icon: Icon(
+                                          hotelList[index]['like'] ? Icons.favorite : Icons.favorite_border,
+                                          color: hotelList[index]['like'] ? Colors.red : Colors.white,
+                                          size: 25,
+                                        ),
+                                        onPressed: () {
+                                          setState(() {
+                                            hotelList[index]['like'] = !hotelList[index]['like'];
+                                          });
+                                        },
+                                      ),
+                                    ),
+                                ],
                               ),
                             ),
                             Column(

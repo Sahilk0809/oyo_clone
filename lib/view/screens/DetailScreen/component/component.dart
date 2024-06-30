@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:oyo_clone/modal/modal.dart';
 
 int value = 0;
-int selectindex = 0;
 // bool favorite = false;
 DetailModel? detailModel;
 GlobalKey imgKey = GlobalKey();

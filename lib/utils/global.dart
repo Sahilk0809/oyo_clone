@@ -1558,46 +1558,10 @@ List<dynamic> hotelList = [
   }
 ];
 
-List LikeList = [];
-
-List prachiimg = [
-  {
-    'imgs': 'asset/images/banglore.jpeg',
-  },
-  {
-    'imgs': 'asset/images/chennai.jpeg',
-  },
-  {
-    'imgs': 'asset/images/dehli.jpeg',
-  },
-  {
-    'imgs': 'asset/images/gurgoan.jpeg',
-  },
-  {
-    'imgs': 'asset/images/haybd.jpeg',
-  },
-  {
-    'imgs': 'asset/images/banglore.jpeg',
-  },
-  {
-    'imgs': 'asset/images/banglore.jpeg',
-  },
-  {
-    'imgs': 'asset/images/banglore.jpeg',
-  },
-  {
-    'imgs': 'asset/images/banglore.jpeg',
-  },
-  {
-    'imgs': 'asset/images/banglore.jpeg',
-  },
-  {
-    'imgs': 'asset/images/banglore.jpeg',
-    'imgs': '',
-  },
-];
-
-
 List noPerson=[
   32,120,45,37,28,98,130,54,123,94,28,58,29,49,2901,56,78,505,698,178,10,70,42
 ];
+
+
+List bookingList = [];
+List likeList = [];
