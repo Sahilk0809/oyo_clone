@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:oyo_clone/view/screens/login/component/component.dart';
 
 class ProfilePage extends StatefulWidget {
   const ProfilePage({super.key});
@@ -40,6 +41,7 @@ class _ProfilePageState extends State<ProfilePage> {
       body: Padding(
         padding: const EdgeInsets.all(15),
         child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             const Row(
               children: [
@@ -63,7 +65,8 @@ class _ProfilePageState extends State<ProfilePage> {
             ),
             Column(
               children: [
-                buildTextFormField(label: 'Full name', controller: txtAccountHolder),
+                buildTextFormField(
+                    label: 'Full name', controller: txtAccountHolder),
                 const SizedBox(
                   height: 32,
                 ),
@@ -95,27 +98,42 @@ class _ProfilePageState extends State<ProfilePage> {
             const SizedBox(
               height: 5,
             ),
-            Container(
-              height: height * 0.05,
-              width: double.infinity,
-              decoration: BoxDecoration(
-                  color: Colors.grey.shade200,
-                  borderRadius: BorderRadius.circular(25)),
-              child: const Padding(
-                padding: EdgeInsets.only(left: 30, right: 20),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-
-                  ],
-                ),
+            radioButton('Male'),
+            radioButton('Female'),
+            radioButton('Prefer not to say'),
+            SizedBox(
+              height: height * 0.02,
+            ),
+            const Text(
+              'Avail GST credit on booking',
+              style: TextStyle(
+                fontWeight: FontWeight.bold,
+                fontSize: 22,
               ),
-            )
+            ),
+            SizedBox(
+              height: height * 0.02,
+            ),
+            button(height, width, 'Add GSTIn details'),
           ],
         ),
       ),
     );
   }
+
+  RadioListTile<dynamic> radioButton(genderType) {
+    return RadioListTile(
+      value: genderType,
+      groupValue: isMale,
+      onChanged: (value) {
+        setState(() {
+          isMale = value!;
+        });
+      },
+      title: Text(genderType),
+    );
+  }
+
   TextFormField buildTextFormField(
       {required String label, required TextEditingController? controller}) {
     return TextFormField(
@@ -135,6 +153,8 @@ class _ProfilePageState extends State<ProfilePage> {
     );
   }
 }
+
+String isMale = 'Male';
 
 var txtAccountHolder = TextEditingController();
 var txtDate = TextEditingController();
