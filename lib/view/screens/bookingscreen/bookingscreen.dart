@@ -103,8 +103,8 @@ class _BookingScreenState extends State<BookingScreen> {
               ),
             )
           : SingleChildScrollView(
-        scrollDirection: Axis.vertical,
-            child: Padding(
+              scrollDirection: Axis.vertical,
+              child: Padding(
                 padding: const EdgeInsets.all(10.0),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -136,7 +136,7 @@ class _BookingScreenState extends State<BookingScreen> {
                   ],
                 ),
               ),
-          ),
+            ),
     );
   }
 
@@ -294,30 +294,35 @@ class _BookingScreenState extends State<BookingScreen> {
           ],
         ),
         SizedBox(
-          height: height*0.02,
+          height: height * 0.02,
         ),
         GestureDetector(
-          onTap: (){
+          onTap: () {
             bookingSelect = index;
             Navigator.of(context).pushNamed('/payment');
           },
           child: Container(
-            height: height*0.06,
-            width: width*0.58,
+            height: height * 0.06,
+            width: width * 0.58,
             decoration: BoxDecoration(
               color: mainRed,
               borderRadius: BorderRadius.circular(10),
             ),
             alignment: Alignment.center,
-            child: Text('Pay ₹${bookingList[index].rent} now',style: const TextStyle(
-              color: Colors.white,
-            ),),
+            child: Text(
+              'Pay ₹${bookingList[index].rent} now',
+              style: const TextStyle(
+                color: Colors.white,
+              ),
+            ),
           ),
         ),
         SizedBox(
-          height: height*0.01,
+          height: height * 0.01,
         ),
-        const Divider(color: Colors.grey,),
+        const Divider(
+          color: Colors.grey,
+        ),
       ],
     );
   }

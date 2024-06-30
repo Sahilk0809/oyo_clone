@@ -288,10 +288,13 @@ class _PaymentScreenState extends State<PaymentScreen> {
                   height: height * 0.03,
                 ),
                 GestureDetector(
-                    onTap: () {
-                      bookingList.removeAt(selectIndex);
-                    },
-                    child: button(height, width, 'Cancel Booking')),
+                  onTap: () {
+                    showDialog(context: context, builder: (context) => AlertDialog(
+
+                    ),);
+                  },
+                  child: button(height, width, 'Cancel Booking'),
+                ),
               ],
             ),
           ),
