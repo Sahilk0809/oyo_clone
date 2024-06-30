@@ -1,6 +1,5 @@
 import 'package:flutter/cupertino.dart';
 import 'package:oyo_clone/view/screens/DetailScreen/detailscreen.dart';
-import 'package:oyo_clone/view/screens/NeedHelp/HelpScreen.dart';
 import 'package:oyo_clone/view/screens/WalletScreen/Wallet.dart';
 import 'package:oyo_clone/view/screens/bookingscreen/bookingscreen.dart';
 import 'package:oyo_clone/view/screens/bottomnavigator/bottom_navigator.dart';
@@ -31,7 +30,5 @@ class MyRoutes{
     '/profile': (context) => const ProfilePage(),
      '/create': (context) => const CreateAccount(),
      '/wallet': (context) => const Wallet(),
-     '/help': (context) => const Helpscreen(),
-
   };
 }

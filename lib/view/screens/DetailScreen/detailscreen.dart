@@ -943,33 +943,25 @@ class _DetailScreenState extends State<DetailScreen> {
                   GestureDetector(
                     onTap: () {
                       setState(() {
-                        if (detailModel!.hotelList1[selectIndex].like! ==
-                            true) {
-                          detailModel!.hotelList1[selectIndex].like = false;
-                          print(detailModel!.hotelList1[selectIndex].like);
-                          likeList.removeAt(selectIndex);
-                        } else {
-                          detailModel!.hotelList1[selectIndex].like = true;
-                          print(detailModel!.hotelList1[selectIndex].like);
-                          likeList.add(detailModel!.hotelList1[selectIndex]);
-                        }
+                        hotelList[selectIndex]['like'] =
+                            !hotelList[selectIndex]['like'];
+                        hotelList[selectIndex]['like']
+                            ? likeList.add(hotelList[selectIndex])
+                            : likeList.removeAt(selectIndex);
                       });
                     },
                     child: CircleAvatar(
                       radius: 15,
                       backgroundColor: Colors.white,
-                      child:
-                          (detailModel!.hotelList1[selectIndex].like! == true)
-                              ? const Icon(
-                                  Icons.favorite,
-                                  color: Colors.red,
-                                  size: 18,
-                                )
-                              : const Icon(
-                                  Icons.favorite_border,
-                                  color: Colors.black,
-                                  size: 18,
-                                ),
+                      child: Icon(
+                        hotelList[selectIndex]['like']
+                            ? Icons.favorite
+                            : Icons.favorite_border,
+                        color: hotelList[selectIndex]['like']
+                            ? Colors.red
+                            : Colors.black,
+                        size: 25,
+                      ),
                     ),
                   ),
                   SizedBox(

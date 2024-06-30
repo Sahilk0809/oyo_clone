@@ -1,4 +1,6 @@
 import'package:flutter/material.dart';
+import 'package:oyo_clone/view/screens/profilescreen/profile_screen.dart';
+import 'package:pinput/pinput.dart';
 
 Drawer buildDrawer(double height, BuildContext context ) {
   return Drawer(
@@ -21,12 +23,12 @@ Drawer buildDrawer(double height, BuildContext context ) {
               Navigator.of(context).pushNamed('/profile');
             },
             leading: const Icon(Icons.person_2_outlined, size: 30, color: Colors.black38),
-            title: const Text('Durga Mewada', style: TextStyle(
+            title: Text(txtAccountHolder.text, style: const TextStyle(
                 color: Colors.black,
                 fontSize: 18
             )),
-            subtitle: const Text(
-              '+91-9313381084',style: TextStyle(
+            subtitle:  Text(
+              '+91-${txtNumber.text}',style: const TextStyle(
               color: Colors.grey,
               fontSize: 15,
             ),

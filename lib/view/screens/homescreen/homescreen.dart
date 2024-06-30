@@ -149,13 +149,8 @@ class _HomescreenState extends State<Homescreen> {
                                           //   likeList.add(hotelList[index]);
                                           // }
                                           setState(() {
-                                            hotelList[index]['like'] =
-                                                !hotelList[index]['like'];
-                                            hotelList[selectIndex]['like']
-                                                ? likeList
-                                                    .add(hotelList[selectIndex])
-                                                : likeList
-                                                    .removeAt(selectIndex);
+                                            hotelList[index]['like'] = !hotelList[index]['like'];
+                                            hotelList[index]['like'] ? likeList.add(hotelList[index]) : likeList.removeAt(index);
                                           });
                                         },
                                       ),

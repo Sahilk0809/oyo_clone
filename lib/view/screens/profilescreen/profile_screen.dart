@@ -14,16 +14,14 @@ class _ProfilePageState extends State<ProfilePage> {
     var height = MediaQuery.of(context).size.height;
     var width = MediaQuery.of(context).size.width;
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       backgroundColor: Colors.white,
       appBar: AppBar(
-        leading: const Icon(
-          Icons.arrow_back_rounded,
-          size: 27,
-          color: Colors.black87,
-        ),
         actions: [
           IconButton(
-            onPressed: () {},
+            onPressed: () {
+              Navigator.of(context).pop(context);
+            },
             icon: const Padding(
               padding: EdgeInsets.only(right: 15),
               child: Text(
@@ -40,82 +38,84 @@ class _ProfilePageState extends State<ProfilePage> {
       ),
       body: Padding(
         padding: const EdgeInsets.all(15),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            const Row(
-              children: [
-                Text(
-                  'Profile',
-                  style: TextStyle(
-                    fontSize: 30,
-                    fontWeight: FontWeight.bold,
-                  ),
-                )
-              ],
-            ),
-            const Row(
-              children: [
-                Text(
-                  'Personal details',
-                  style: TextStyle(
-                      fontSize: 25, fontWeight: FontWeight.bold, height: 3),
-                )
-              ],
-            ),
-            Column(
-              children: [
-                buildTextFormField(
-                    label: 'Full name', controller: txtAccountHolder),
-                const SizedBox(
-                  height: 32,
-                ),
-                buildTextFormField(
-                    label: 'Mobile number', controller: txtNumber),
-                const SizedBox(
-                  height: 32,
-                ),
-                buildTextFormField(
-                    label: 'Email address', controller: txtEmail),
-                const SizedBox(
-                  height: 32,
-                ),
-                buildTextFormField(label: 'Date of birth', controller: txtDate),
-              ],
-            ),
-            const SizedBox(
-              height: 30,
-            ),
-            const Row(
-              children: [
-                Text(
-                  'GENDER',
-                  style: TextStyle(
-                      color: Colors.teal, fontWeight: FontWeight.w600),
-                ),
-              ],
-            ),
-            const SizedBox(
-              height: 5,
-            ),
-            radioButton('Male'),
-            radioButton('Female'),
-            radioButton('Prefer not to say'),
-            SizedBox(
-              height: height * 0.02,
-            ),
-            const Text(
-              'Avail GST credit on booking',
-              style: TextStyle(
-                fontWeight: FontWeight.bold,
-                fontSize: 22,
+        child: SingleChildScrollView(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              const Row(
+                children: [
+                  Text(
+                    'Profile',
+                    style: TextStyle(
+                      fontSize: 30,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  )
+                ],
               ),
-            ),
-            SizedBox(
-              height: height * 0.02,
-            ),
-            button(height, width, 'Add GSTIn details'),
-          ],
+              const Row(
+                children: [
+                  Text(
+                    'Personal details',
+                    style: TextStyle(
+                        fontSize: 25, fontWeight: FontWeight.bold, height: 3),
+                  )
+                ],
+              ),
+              Column(
+                children: [
+                  buildTextFormField(
+                      label: 'Full name', controller: txtAccountHolder),
+                  const SizedBox(
+                    height: 32,
+                  ),
+                  buildTextFormField(
+                      label: 'Mobile number', controller: txtNumber),
+                  const SizedBox(
+                    height: 32,
+                  ),
+                  buildTextFormField(
+                      label: 'Email address', controller: txtEmail),
+                  const SizedBox(
+                    height: 32,
+                  ),
+                  buildTextFormField(label: 'Date of birth', controller: txtDate),
+                ],
+              ),
+              const SizedBox(
+                height: 30,
+              ),
+              const Row(
+                children: [
+                  Text(
+                    'GENDER',
+                    style: TextStyle(
+                        color: Colors.teal, fontWeight: FontWeight.w600),
+                  ),
+                ],
+              ),
+              const SizedBox(
+                height: 5,
+              ),
+              radioButton('Male'),
+              radioButton('Female'),
+              radioButton('Prefer not to say'),
+              SizedBox(
+                height: height * 0.02,
+              ),
+              const Text(
+                'Avail GST credit on booking',
+                style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  fontSize: 22,
+                ),
+              ),
+              SizedBox(
+                height: height * 0.02,
+              ),
+              button(height, width, 'Add GSTIn details'),
+            ],
+          ),
         ),
       ),
     );
