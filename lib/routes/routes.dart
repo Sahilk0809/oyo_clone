@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:oyo_clone/view/screens/DetailScreen/detailscreen.dart';
+import 'package:oyo_clone/view/screens/NeedHelp/HelpScreen.dart';
 import 'package:oyo_clone/view/screens/WalletScreen/Wallet.dart';
 import 'package:oyo_clone/view/screens/bookingscreen/bookingscreen.dart';
 import 'package:oyo_clone/view/screens/bottomnavigator/bottom_navigator.dart';
@@ -16,8 +17,8 @@ import '../view/screens/servicescreen/servicescreen.dart';
 
 class MyRoutes{
   static Map<String, Widget Function(BuildContext)> routes = {
-     //'/': (context) => const SplashScreen(),
-     //'/': (context) => const Homescreen(),
+     '/': (context) => const SplashScreen(),
+     '/home': (context) => const Homescreen(),
     '/detail': (context) => const DetailScreen(),
     '/booking': (context) => const BookingScreen(),
     '/payment': (context) => const PaymentScreen(),
@@ -29,6 +30,8 @@ class MyRoutes{
     '/otp': (context) => const OtpScreen(),
     '/profile': (context) => const ProfilePage(),
      '/create': (context) => const CreateAccount(),
-     //'/': (context) => const Wallet(),
+     '/wallet': (context) => const Wallet(),
+     '/help': (context) => const Helpscreen(),
+
   };
 }
