@@ -8,6 +8,7 @@ import '../DetailScreen/component/component.dart';
 class SavedScreen extends StatefulWidget {
   const SavedScreen({super.key});
 
+
   @override
   State<SavedScreen> createState() => _SavedScreenState();
 }
