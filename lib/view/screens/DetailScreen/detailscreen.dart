@@ -890,7 +890,6 @@ class _DetailScreenState extends State<DetailScreen> {
                                 ),
                               ],
                             ),
-
                             SizedBox(
                               height: height * 0.01,
                             ),
@@ -944,12 +943,12 @@ class _DetailScreenState extends State<DetailScreen> {
                   GestureDetector(
                     onTap: () {
                       setState(() {
-                        if (detailModel!.hotelList1[selectIndex].like! == true) {
+                        if (detailModel!.hotelList1[selectIndex].like! ==
+                            true) {
                           detailModel!.hotelList1[selectIndex].like = false;
                           print(detailModel!.hotelList1[selectIndex].like);
                           likeList.removeAt(selectIndex);
-                        }
-                        else {
+                        } else {
                           detailModel!.hotelList1[selectIndex].like = true;
                           print(detailModel!.hotelList1[selectIndex].like);
                           likeList.add(detailModel!.hotelList1[selectIndex]);
@@ -959,18 +958,18 @@ class _DetailScreenState extends State<DetailScreen> {
                     child: CircleAvatar(
                       radius: 15,
                       backgroundColor: Colors.white,
-
-                      child: (detailModel!.hotelList1[selectIndex].like! == true)
-                          ? const Icon(
-                              Icons.favorite,
-                              color: Colors.red,
-                        size: 18,
-                            )
-                          : const Icon(
-                              Icons.favorite_border,
-                              color: Colors.black,
-                        size: 18,
-                            ),
+                      child:
+                          (detailModel!.hotelList1[selectIndex].like! == true)
+                              ? const Icon(
+                                  Icons.favorite,
+                                  color: Colors.red,
+                                  size: 18,
+                                )
+                              : const Icon(
+                                  Icons.favorite_border,
+                                  color: Colors.black,
+                                  size: 18,
+                                ),
                     ),
                   ),
                   SizedBox(
@@ -1220,6 +1219,5 @@ class _DetailScreenState extends State<DetailScreen> {
     );
   }
 }
-
 
 // Text scalar
