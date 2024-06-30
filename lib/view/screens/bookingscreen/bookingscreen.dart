@@ -3,6 +3,7 @@ import 'package:oyo_clone/utils/imagelist.dart';
 import 'package:oyo_clone/view/screens/DetailScreen/component/component.dart';
 import 'package:oyo_clone/view/screens/DetailScreen/detailscreen.dart';
 import 'package:oyo_clone/view/screens/login/component/component.dart';
+import 'package:oyo_clone/view/screens/login/login.dart';
 
 class BookingScreen extends StatefulWidget {
   const BookingScreen({super.key});
