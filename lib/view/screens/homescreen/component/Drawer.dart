@@ -18,7 +18,7 @@ Drawer buildDrawer(double height, BuildContext context ) {
           ),
           ListTile(
             onTap: (){
-             // Navigator.of(context).pushNamed('/profile');
+              Navigator.of(context).pushNamed('/profile');
             },
             leading: const Icon(Icons.person_2_outlined, size: 30, color: Colors.black38),
             title: const Text('Durga Mewada', style: TextStyle(

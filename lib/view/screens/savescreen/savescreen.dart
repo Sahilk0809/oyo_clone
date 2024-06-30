@@ -1,13 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:oyo_clone/utils/global.dart';
-
 import '../../../utils/Color.dart';
 import '../../../utils/imagelist.dart';
 import '../DetailScreen/component/component.dart';
 
 class SavedScreen extends StatefulWidget {
   const SavedScreen({super.key});
-
 
   @override
   State<SavedScreen> createState() => _SavedScreenState();

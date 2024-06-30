@@ -144,10 +144,10 @@ class _HomescreenState extends State<Homescreen> {
                                           size: 25,
                                         ),
                                         onPressed: () {
-                                          if(hotelList[index]['like']=true)
-                                          {
-                                            likeList.add(hotelList[index]);
-                                          }
+                                          // if(hotelList[index]['like']=true)
+                                          // {
+                                          //   likeList.add(hotelList[index]);
+                                          // }
                                           setState(() {
                                             hotelList[index]['like'] =
                                                 !hotelList[index]['like'];

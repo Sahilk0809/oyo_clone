@@ -41,7 +41,7 @@ class _ProfilePageState extends State<ProfilePage> {
         padding: const EdgeInsets.all(15),
         child: Column(
           children: [
-            Row(
+            const Row(
               children: [
                 Text(
                   'Profile',
@@ -52,7 +52,7 @@ class _ProfilePageState extends State<ProfilePage> {
                 )
               ],
             ),
-            Row(
+            const Row(
               children: [
                 Text(
                   'Personal details',
@@ -64,26 +64,26 @@ class _ProfilePageState extends State<ProfilePage> {
             Column(
               children: [
                 buildTextFormField(label: 'Full name', controller: txtAccountHolder),
-                SizedBox(
+                const SizedBox(
                   height: 32,
                 ),
                 buildTextFormField(
                     label: 'Mobile number', controller: txtNumber),
-                SizedBox(
+                const SizedBox(
                   height: 32,
                 ),
                 buildTextFormField(
                     label: 'Email address', controller: txtEmail),
-                SizedBox(
+                const SizedBox(
                   height: 32,
                 ),
                 buildTextFormField(label: 'Date of birth', controller: txtDate),
               ],
             ),
-            SizedBox(
+            const SizedBox(
               height: 30,
             ),
-            Row(
+            const Row(
               children: [
                 Text(
                   'GENDER',
@@ -92,7 +92,7 @@ class _ProfilePageState extends State<ProfilePage> {
                 ),
               ],
             ),
-            SizedBox(
+            const SizedBox(
               height: 5,
             ),
             Container(
@@ -101,8 +101,8 @@ class _ProfilePageState extends State<ProfilePage> {
               decoration: BoxDecoration(
                   color: Colors.grey.shade200,
                   borderRadius: BorderRadius.circular(25)),
-              child: Padding(
-                padding: const EdgeInsets.only(left: 30, right: 20),
+              child: const Padding(
+                padding: EdgeInsets.only(left: 30, right: 20),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
@@ -123,10 +123,10 @@ class _ProfilePageState extends State<ProfilePage> {
       decoration: InputDecoration(
         labelText: label,
         labelStyle: TextStyle(color: Colors.grey.shade500),
-        contentPadding: EdgeInsets.only(left: 15),
+        contentPadding: const EdgeInsets.only(left: 15),
         border: OutlineInputBorder(
           borderRadius: BorderRadius.circular(10),
-          borderSide: BorderSide(
+          borderSide: const BorderSide(
             color: Colors.black,
             width: 2,
           ),
