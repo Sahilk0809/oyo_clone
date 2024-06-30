@@ -1,6 +1,7 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:oyo_clone/utils/Color.dart';
 import 'package:oyo_clone/view/screens/login/component/component.dart';
 import 'package:oyo_clone/view/screens/login/login.dart';
 import 'package:pinput/pinput.dart';
@@ -13,8 +14,6 @@ class OtpScreen extends StatefulWidget {
 }
 
 class _OtpScreenState extends State<OtpScreen> {
-  var txtOtp = TextEditingController();
-
   @override
   Widget build(BuildContext context) {
     final defaultPinTheme = PinTheme(
@@ -55,7 +54,17 @@ class _OtpScreenState extends State<OtpScreen> {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               SizedBox(
-                height: height * 0.3,
+                height: height * 0.2,
+              ),
+              const Text(
+                'Do not share your OTP with others!',
+                style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  fontSize: 20,
+                ),
+              ),
+              SizedBox(
+                height: height * 0.05,
               ),
               Pinput(
                 onChanged: (value) {
@@ -80,37 +89,27 @@ class _OtpScreenState extends State<OtpScreen> {
                       (route) => false,
                     );
                   } catch (e) {
-                    print('Wrong otp');
+                    showDialog(
+                      barrierDismissible: false,
+                      context: context,
+                      builder: (context) => AlertDialog(
+                        title: const Text('Wrong OTP entered!'),
+                        content: const Text('Please try again !'),
+                        actions: [
+                          TextButton(
+                            onPressed: () {
+                              Navigator.of(context).pop();
+                            },
+                            child: const Text('OK'),
+                          ),
+                        ],
+                      ),
+                    );
                   }
                 },
                 child: button(height, width, 'Verify your phone number'),
               ),
             ],
-          ),
-        ),
-      ),
-    );
-  }
-
-  SizedBox otpField({required controller}) {
-    return SizedBox(
-      height: 50,
-      width: 50,
-      child: TextField(
-        textInputAction: TextInputAction.next,
-        textAlign: TextAlign.center,
-        controller: controller,
-        keyboardType: TextInputType.phone,
-        cursorColor: Colors.black,
-        decoration: const InputDecoration(
-          border: OutlineInputBorder(
-            borderSide: BorderSide(width: 1),
-          ),
-          focusedBorder: OutlineInputBorder(
-            borderSide: BorderSide(
-              width: 2,
-              color: Colors.black,
-            ),
           ),
         ),
       ),

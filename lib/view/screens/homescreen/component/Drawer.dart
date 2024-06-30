@@ -5,8 +5,8 @@ Drawer buildDrawer(double height, BuildContext context ) {
     backgroundColor: Colors.white,
     shape: const RoundedRectangleBorder(
         borderRadius: BorderRadius.only(
-            topRight: Radius.circular(20),
-            bottomRight: Radius.circular(20)
+            topRight: Radius.circular(10),
+            bottomRight: Radius.circular(10)
         )
     ),
     child: SingleChildScrollView(

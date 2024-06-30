@@ -74,10 +74,9 @@ class _LoginScreenState extends State<LoginScreen> {
                 SizedBox(
                   height: height * 0.025,
                 ),
-                IntlPhoneField(
-                  initialCountryCode: 'IN',
+                TextFormField(
                   onChanged: (value) {
-                    //phone = value;
+                    phone = value.toString();
                   },
                   controller: txtContact,
                   cursorColor: Colors.black,
