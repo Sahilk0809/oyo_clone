@@ -42,6 +42,7 @@ class _SearchScreenState extends State<SearchScreen> {
     var width = MediaQuery.of(context).size.width;
     return SafeArea(
       child: Scaffold(
+        backgroundColor: Colors.white,
         body: Padding(
           padding: const EdgeInsets.all(16.0),
           child: Column(
