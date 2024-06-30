@@ -109,7 +109,9 @@ class _HomescreenState extends State<Homescreen> {
                             const EdgeInsets.only(top: 13, right: 10, left: 10),
                         child: GestureDetector(
                           onTap: () {
-                            Navigator.of(context).pushNamed('/detail');
+                            Navigator.of(context).pushNamed('/detail').then(
+                                  (value) => setState(() {}),
+                                );
                             selectIndex = index;
                           },
                           child: Column(
@@ -149,6 +151,11 @@ class _HomescreenState extends State<Homescreen> {
                                           setState(() {
                                             hotelList[index]['like'] =
                                                 !hotelList[index]['like'];
+                                            hotelList[selectIndex]['like']
+                                                ? likeList
+                                                    .add(hotelList[selectIndex])
+                                                : likeList
+                                                    .removeAt(selectIndex);
                                           });
                                         },
                                       ),
