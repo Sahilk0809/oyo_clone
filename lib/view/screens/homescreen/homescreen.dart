@@ -15,7 +15,6 @@ import 'component/Drawer.dart';
 
 DetailModel? detailModel;
 
-
 class Homescreen extends StatefulWidget {
   const Homescreen({super.key});
 
@@ -697,5 +696,3 @@ class _HomescreenState extends State<Homescreen> {
     );
   }
 }
-
-

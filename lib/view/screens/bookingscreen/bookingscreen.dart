@@ -76,7 +76,7 @@ class _BookingScreenState extends State<BookingScreen> {
                       ),
                       GestureDetector(
                         onTap: () {
-                          Navigator.of(context).pushNamed('/home');
+                          Navigator.of(context).pushNamed('/main');
                         },
                         child: Container(
                           margin: const EdgeInsets.only(top: 10),

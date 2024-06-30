@@ -11,15 +11,15 @@ import '../view/screens/servicescreen/servicescreen.dart';
 
 class MyRoutes{
   static Map<String, Widget Function(BuildContext)> routes = {
-     '/': (context) => const Homescreen(),
+     '/home': (context) => const Homescreen(),
     // '/': (context) => const LoginScreen(),
     //'/':(context)=>Service_page(),
     // '/': (context) => const SavedScreen(),
     '/detail': (context) => const DetailScreen(),
     '/booking': (context) => const BookingScreen(),
-    //'/': (context) => const ServiceScreen(),
+    '/': (context) => const ServiceScreen(),
     '/service': (context) => const ServiceScreen(),
-    //'/': (context) => const SearchScreen(),
+    '/search': (context) => const SearchScreen(),
     '/login': (context) => const LoginScreen(),
     '/otp': (context) => const OtpScreen(),
     // '/': (context) => const CreateAccount(),
