@@ -10,6 +10,7 @@ import 'package:oyo_clone/view/screens/DetailScreen/component/component.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:share_extend/share_extend.dart';
 import 'dart:ui' as ui;
+import '../../../utils/Location_List.dart';
 import '../../../utils/imagelist.dart';
 
 class DetailScreen extends StatefulWidget {

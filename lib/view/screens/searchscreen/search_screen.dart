@@ -4,6 +4,8 @@ import 'package:oyo_clone/utils/global.dart';
 import 'package:oyo_clone/utils/imagelist.dart';
 import 'package:oyo_clone/view/screens/DetailScreen/component/component.dart';
 
+import '../../../utils/Location_List.dart';
+
 class SearchScreen extends StatefulWidget {
   const SearchScreen({super.key});
 
