@@ -12,3 +12,16 @@ List premium = [
   'asset/Images/Premium4.jpeg',
 
 ];
+
+int selectindex = 0;
+List NewList = [];
+bool NewIndex = false;
+bool NewIndex2 = false;
+bool NewIndex3 = false;
+List<String> NameList = [];
+List PriceList = [];
+int num = 0;
+List AddList = [];
+double value1 = 200;
+double value2 = 2000;
+List MgList = [];

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:oyo_clone/utils/Color.dart';
 import 'package:oyo_clone/utils/global.dart';
 import 'package:oyo_clone/utils/imagelist.dart';
 import 'package:oyo_clone/view/screens/DetailScreen/detailscreen.dart';
@@ -22,6 +23,7 @@ class _PaymentScreenState extends State<PaymentScreen> {
       child: Scaffold(
         backgroundColor: Colors.white,
         appBar: AppBar(
+          backgroundColor: Colors.white,
           centerTitle: true,
           title: const Text('Payment'),
         ),
@@ -317,7 +319,7 @@ class _PaymentScreenState extends State<PaymentScreen> {
                       ),
                     );
                   },
-                  child: button(height, width, 'Cancel Booking'),
+                  child: button(height, width, 'Cancel Booking',),
                 ),
               ],
             ),

@@ -125,6 +125,9 @@ class _SavedScreenState extends State<SavedScreen> {
                             onTap: () {
                               Navigator.of(context).pushNamed('/detail');
                               selectIndex = index;
+                              setState(() {
+
+                              });
                             },
                             child: Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
