@@ -460,6 +460,7 @@ class _HomescreenState extends State<Homescreen> {
                         showModalBottomSheet(
                           context: context,
                           builder: (context) => Container(
+                            color: Colors.white,
                             height: height * 0.4,
                             width: width,
                             child: Padding(
@@ -513,7 +514,7 @@ class _HomescreenState extends State<Homescreen> {
                                             width: width * 0.04,
                                           ),
                                           Text(
-                                            'Nearest firat',
+                                            'Nearest first',
                                             style: TextStyle(
                                                 fontSize: 18,
                                                 color: Colors.black87),
@@ -526,6 +527,7 @@ class _HomescreenState extends State<Homescreen> {
                                       // todo
                                       InkWell(
                                         onTap: () {
+                                          Navigator.of(context).pop();
                                           setState(() {
                                             NewIndex = true;
                                             NewList = [];
@@ -705,6 +707,7 @@ class _HomescreenState extends State<Homescreen> {
                                       // todo
                                       InkWell(
                                         onTap: () {
+                                          Navigator.of(context).pop();
                                           setState(() {
                                             NewIndex = false;
                                             NewIndex2 = false;
@@ -975,7 +978,7 @@ class _HomescreenState extends State<Homescreen> {
                                               width: width * 0.03,
                                             ),
                                             Text(
-                                              'Price- Low to high',
+                                              'Price - Low to High',
                                               style: TextStyle(
                                                   fontSize: 18,
                                                   color: Colors.black87),
@@ -989,6 +992,7 @@ class _HomescreenState extends State<Homescreen> {
                                       // todo
                                       InkWell(
                                         onTap: () {
+                                          Navigator.of(context).pop();
                                           setState(() {
                                             NewIndex = false;
                                             NewIndex2 = true;
@@ -1256,7 +1260,7 @@ class _HomescreenState extends State<Homescreen> {
                                               width: width * 0.03,
                                             ),
                                             Text(
-                                              'Price- Heigh to low',
+                                              'Price - High to Low',
                                               style: TextStyle(
                                                   fontSize: 18,
                                                   color: Colors.black87),
@@ -1334,7 +1338,7 @@ class _HomescreenState extends State<Homescreen> {
                                         'Price range',
                                         style: TextStyle(
                                             fontWeight: FontWeight.bold,
-                                            fontSize: 30),
+                                            fontSize: 25),
                                       ),
                                     ],
                                   ),
@@ -1344,6 +1348,7 @@ class _HomescreenState extends State<Homescreen> {
                                     child: StatefulBuilder(
                                       builder: (context, state) {
                                         return RangeSlider(
+                                          activeColor: Colors.black,
                                           values: _currentRangeValues,
                                           max: 2000,
                                           divisions: 5,
@@ -1374,25 +1379,30 @@ class _HomescreenState extends State<Homescreen> {
                                         'Clear all',
                                         style: TextStyle(
                                             color: Colors.blue,
-                                            fontSize: 30),
+                                            fontSize: 20),
                                       ),
                                       SizedBox(
-                                        width: width * 0.09,
+                                        width: width * 0.25,
                                       ),
-                                      Container(
-                                        height: height * 0.06,
-                                        width: width * 0.5,
-                                        decoration: BoxDecoration(
-                                            color: Colors.black,
-                                            borderRadius: BorderRadius.all(
-                                                Radius.circular(10))),
-                                        child: Center(
-                                            child: Text(
-                                              'Apply',
-                                              style: TextStyle(
-                                                  color: Colors.white,
-                                                  fontSize: 25),
-                                            )),
+                                      GestureDetector(
+                                        onTap: (){
+                                          Navigator.of(context).pop();
+                                        },
+                                        child: Container(
+                                          height: height * 0.05,
+                                          width: width * 0.45,
+                                          decoration: BoxDecoration(
+                                              color: Colors.black,
+                                              borderRadius: BorderRadius.all(
+                                                  Radius.circular(10))),
+                                          child: Center(
+                                              child: Text(
+                                                'Apply',
+                                                style: TextStyle(
+                                                    color: Colors.white,
+                                                    fontSize: 20),
+                                              )),
+                                        ),
                                       )
                                     ],
                                   ),
