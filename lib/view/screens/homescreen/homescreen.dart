@@ -1401,9 +1401,9 @@ class _HomescreenState extends State<Homescreen> {
                                                 style: TextStyle(
                                                     color: Colors.white,
                                                     fontSize: 20),
-                                              )),
+                                              ),),
                                         ),
-                                      )
+                                      ),
                                     ],
                                   ),
                                   SizedBox(

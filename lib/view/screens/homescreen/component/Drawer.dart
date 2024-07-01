@@ -168,8 +168,16 @@ Drawer buildDrawer(double height, BuildContext context ) {
                 color: Colors.black,
                 fontSize: 18
             )),
-
           ),
+       ListTile(
+        onTap:(){
+          Navigator.of(context).pushNamed('');
+        },
+        leading: Icon(Icons.logout_outlined, size: 25, color: Colors.black38),
+        title: Text('Logout', style: TextStyle(
+            color: Colors.black,
+            fontSize: 18
+        )),),
           const Padding(
             padding: EdgeInsets.all(15.0),
             child: Text('Version 10.7.2',

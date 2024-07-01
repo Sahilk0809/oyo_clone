@@ -1045,28 +1045,26 @@ class _DetailScreenState extends State<DetailScreen> {
                                         InkWell(
                                           onTap: () async {
                                             RenderRepaintBoundary boundary =
-                                                imgKey.currentContext!
-                                                        .findRenderObject()
-                                                    as RenderRepaintBoundary;
+                                            imgKey.currentContext!
+                                                .findRenderObject()
+                                            as RenderRepaintBoundary;
                                             ui.Image image =
-                                                await boundary.toImage();
+                                            await boundary.toImage();
                                             ByteData? byteData =
-                                                await image.toByteData(
-                                                    format:
-                                                        ui.ImageByteFormat.png);
+                                            await image.toByteData(
+                                                format: ui
+                                                    .ImageByteFormat.png);
 
-                                            Uint8List img =
-                                                byteData!.buffer.asUint8List();
+                                            Uint8List img = byteData!.buffer
+                                                .asUint8List();
                                             // ImageGallerySaver.saveImage(img);
                                             final path =
-                                                getApplicationDocumentsDirectory();
+                                            getApplicationDocumentsDirectory();
                                             File file = File('$path/img.png');
                                             file.writeAsBytes(img);
 
                                             ShareExtend.share(
-                                              file.path,
-                                              "image",
-                                            );
+                                                file.path, "image");
                                           },
                                           child: Container(
                                             height: height * 0.05,
@@ -1074,9 +1072,9 @@ class _DetailScreenState extends State<DetailScreen> {
                                             decoration: BoxDecoration(
                                               color: Colors.green,
                                               borderRadius:
-                                                  BorderRadius.circular(10),
+                                              BorderRadius.circular(10),
                                             ),
-                                            child: const Center(
+                                            child: Center(
                                               child: Text(
                                                 'Share',
                                                 style: TextStyle(
@@ -1086,7 +1084,52 @@ class _DetailScreenState extends State<DetailScreen> {
                                               ),
                                             ),
                                           ),
-                                        )
+                                        ),
+                                        // InkWell(
+                                        //   onTap: () async {
+                                        //     RenderRepaintBoundary boundary =
+                                        //         imgKey.currentContext!
+                                        //                 .findRenderObject()
+                                        //             as RenderRepaintBoundary;
+                                        //     ui.Image image =
+                                        //         await boundary.toImage();
+                                        //     ByteData? byteData =
+                                        //         await image.toByteData(
+                                        //             format:
+                                        //                 ui.ImageByteFormat.png);
+                                        //
+                                        //     Uint8List img =
+                                        //         byteData!.buffer.asUint8List();
+                                        //     // ImageGallerySaver.saveImage(img);
+                                        //     final path =
+                                        //         getApplicationDocumentsDirectory();
+                                        //     File file = File('$path/img.png');
+                                        //     file.writeAsBytes(img);
+                                        //
+                                        //     ShareExtend.share(
+                                        //       file.path,
+                                        //       "image",
+                                        //     );
+                                        //   },
+                                        //   child: Container(
+                                        //     height: height * 0.05,
+                                        //     width: width * 0.6,
+                                        //     decoration: BoxDecoration(
+                                        //       color: Colors.green,
+                                        //       borderRadius:
+                                        //           BorderRadius.circular(10),
+                                        //     ),
+                                        //     child: const Center(
+                                        //       child: Text(
+                                        //         'Share',
+                                        //         style: TextStyle(
+                                        //           color: Colors.white,
+                                        //           fontSize: 25,
+                                        //         ),
+                                        //       ),
+                                        //     ),
+                                        //   ),
+                                        // )
                                       ],
                                     ),
                                   )
