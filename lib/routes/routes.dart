@@ -16,8 +16,8 @@ import '../view/screens/servicescreen/servicescreen.dart';
 
 class MyRoutes{
   static Map<String, Widget Function(BuildContext)> routes = {
-     //'/': (context) => const SplashScreen(),
-     '/': (context) => const Homescreen(),
+     '/s': (context) => const SplashScreen(),
+     '/home': (context) => const Homescreen(),
     '/detail': (context) => const DetailScreen(),
     '/booking': (context) => const BookingScreen(),
     '/payment': (context) => const PaymentScreen(),
@@ -26,7 +26,7 @@ class MyRoutes{
     '/service': (context) => const ServiceScreen(),
     '/save': (context) => const SavedScreen(),
     '/search': (context) => const SearchScreen(),
-    '/otp': (context) => const OtpScreen(),
+    '/': (context) => const OtpScreen(),
     '/profile': (context) => const ProfilePage(),
      '/create': (context) => const CreateAccount(),
      '/wallet': (context) => const Wallet(),

@@ -1,4 +1,5 @@
 import'package:flutter/material.dart';
+import 'package:oyo_clone/view/screens/login/component/component.dart';
 import 'package:oyo_clone/view/screens/profilescreen/profile_screen.dart';
 import 'package:pinput/pinput.dart';
 
@@ -23,12 +24,12 @@ Drawer buildDrawer(double height, BuildContext context ) {
               Navigator.of(context).pushNamed('/profile');
             },
             leading: const Icon(Icons.person_2_outlined, size: 30, color: Colors.black38),
-            title: Text(txtAccountHolder.text, style: const TextStyle(
+            title: const Text('Sahil Kashyap', style: TextStyle(
                 color: Colors.black,
                 fontSize: 18
             )),
-            subtitle:  Text(
-              '+91-${txtNumber.text}',style: const TextStyle(
+            subtitle:  const Text(
+              '+91- 8153826814',style: TextStyle(
               color: Colors.grey,
               fontSize: 15,
             ),
@@ -171,7 +172,8 @@ Drawer buildDrawer(double height, BuildContext context ) {
           ),
        ListTile(
         onTap:(){
-          Navigator.of(context).pushNamed('');
+          FireBaseServices().googleSignOut();
+          Navigator.of(context).pushNamed('/login');
         },
         leading: Icon(Icons.logout_outlined, size: 25, color: Colors.black38),
         title: Text('Logout', style: TextStyle(

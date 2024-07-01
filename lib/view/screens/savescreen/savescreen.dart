@@ -19,6 +19,7 @@ class _SavedScreenState extends State<SavedScreen> {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
+        scrolledUnderElevation: 0.1,
         backgroundColor: Colors.white,
       ),
       body: likeList.isEmpty
@@ -73,7 +74,7 @@ class _SavedScreenState extends State<SavedScreen> {
                     ),
                     GestureDetector(
                       onTap: () {
-                        Navigator.of(context).pushNamed('/home');
+                        Navigator.of(context).pushNamed('/main');
                       },
                       child: Container(
                         margin: const EdgeInsets.only(top: 10),
@@ -123,11 +124,10 @@ class _SavedScreenState extends State<SavedScreen> {
                               top: 13, right: 10, left: 10),
                           child: GestureDetector(
                             onTap: () {
-                              Navigator.of(context).pushNamed('/detail');
+                              Navigator.of(context).pushNamed('/detail').then(
+                                    (value) => setState(() {}),
+                                  );
                               selectIndex = index;
-                              setState(() {
-
-                              });
                             },
                             child: Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
@@ -220,7 +220,7 @@ class _SavedScreenState extends State<SavedScreen> {
                                     fontSize: 15,
                                   ),
                                 ),
-                                Divider(),
+                                const Divider(),
                               ],
                             ),
                           ),

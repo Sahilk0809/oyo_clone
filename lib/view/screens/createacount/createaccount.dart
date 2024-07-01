@@ -18,7 +18,9 @@ class _CreateAccountState extends State<CreateAccount> {
     var width = MediaQuery.of(context).size.width;
     return SafeArea(
       child: Scaffold(
-        appBar: AppBar(),
+        appBar: AppBar(
+          scrolledUnderElevation: 0.1,
+        ),
         body: Padding(
           padding: const EdgeInsets.all(16.0),
           child: SingleChildScrollView(

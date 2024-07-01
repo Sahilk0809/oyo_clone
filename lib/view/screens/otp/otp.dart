@@ -85,7 +85,7 @@ class _OtpScreenState extends State<OtpScreen> {
                     await auth.signInWithCredential(credential);
                     Navigator.pushNamedAndRemoveUntil(
                       context,
-                      '/home',
+                      '/main',
                       (route) => false,
                     );
                   } catch (e) {

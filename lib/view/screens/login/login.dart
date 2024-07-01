@@ -181,11 +181,16 @@ class _LoginScreenState extends State<LoginScreen> {
                 SizedBox(
                   height: height * 0.03,
                 ),
-                const Center(
-                  child: Text(
-                    "I'll Signup Later",
-                    style: TextStyle(
-                      color: Colors.blue,
+                 Center(
+                  child: GestureDetector(
+                    onTap: () {
+                      Navigator.of(context).pushNamed('/create');
+                    },
+                    child: const Text(
+                      "Create Account",
+                      style: TextStyle(
+                        color: Colors.blue,
+                      ),
                     ),
                   ),
                 ),

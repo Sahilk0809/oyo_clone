@@ -36,6 +36,7 @@ class _HomescreenState extends State<Homescreen> {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
+        scrolledUnderElevation: 0.1,
         backgroundColor: Colors.white,
         centerTitle: true,
         title: const Text(
@@ -61,7 +62,7 @@ class _HomescreenState extends State<Homescreen> {
                   children: [
                     ...List.generate(
                       locationList.length,
-                          (index) => Padding(
+                      (index) => Padding(
                         padding: const EdgeInsets.all(8.0),
                         child: Column(
                           children: [
@@ -107,14 +108,14 @@ class _HomescreenState extends State<Homescreen> {
                   children: [
                     ...List.generate(
                       10,
-                          (index) => Padding(
+                      (index) => Padding(
                         padding:
-                        const EdgeInsets.only(top: 13, right: 10, left: 10),
+                            const EdgeInsets.only(top: 13, right: 10, left: 10),
                         child: GestureDetector(
                           onTap: () {
                             Navigator.of(context).pushNamed('/detail').then(
                                   (value) => setState(() {}),
-                            );
+                                );
                             selectIndex = index;
                           },
                           child: Column(
@@ -152,12 +153,12 @@ class _HomescreenState extends State<Homescreen> {
                                           }
                                           setState(() {
                                             hotelList[index]['like'] =
-                                            !hotelList[index]['like'];
-                                            hotelList[selectIndex]['like']
+                                                !hotelList[index]['like'];
+                                            hotelList[index]['like']
                                                 ? likeList
-                                                .add(hotelList[selectIndex])
+                                                    .add(hotelList[index])
                                                 : likeList
-                                                .removeAt(selectIndex);
+                                                    .removeAt(index);
                                           });
                                         },
                                       ),
@@ -294,21 +295,21 @@ class _HomescreenState extends State<Homescreen> {
                     ),
                     ...List.generate(
                         premium.length,
-                            (index) => Padding(
-                          padding: const EdgeInsets.only(
-                              right: 15, top: 10, left: 10),
-                          child: Container(
-                            height: height * 0.3,
-                            width: width * 0.38,
-                            decoration: BoxDecoration(
-                                image: DecorationImage(
-                                  image: AssetImage('${premium[index]}'),
-                                  fit: BoxFit.cover,
-                                ),
-                                color: Colors.black,
-                                borderRadius: BorderRadius.circular(10)),
-                          ),
-                        ))
+                        (index) => Padding(
+                              padding: const EdgeInsets.only(
+                                  right: 15, top: 10, left: 10),
+                              child: Container(
+                                height: height * 0.3,
+                                width: width * 0.38,
+                                decoration: BoxDecoration(
+                                    image: DecorationImage(
+                                      image: AssetImage('${premium[index]}'),
+                                      fit: BoxFit.cover,
+                                    ),
+                                    color: Colors.black,
+                                    borderRadius: BorderRadius.circular(10)),
+                              ),
+                            ))
                   ],
                 ),
               ),
@@ -332,44 +333,44 @@ class _HomescreenState extends State<Homescreen> {
                   children: [
                     ...List.generate(
                         7,
-                            (index) => Padding(
-                          padding: const EdgeInsets.only(right: 10),
-                          child: Container(
-                            height: height * 0.09,
-                            width: width * 0.5,
-                            decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(8),
-                                border: Border.all(
-                                    color: Colors.grey.shade400)),
-                            child: Row(
-                              mainAxisAlignment:
-                              MainAxisAlignment.spaceEvenly,
-                              children: [
-                                Column(
-                                  crossAxisAlignment:
-                                  CrossAxisAlignment.start,
+                        (index) => Padding(
+                              padding: const EdgeInsets.only(right: 10),
+                              child: Container(
+                                height: height * 0.09,
+                                width: width * 0.5,
+                                decoration: BoxDecoration(
+                                    borderRadius: BorderRadius.circular(8),
+                                    border: Border.all(
+                                        color: Colors.grey.shade400)),
+                                child: Row(
                                   mainAxisAlignment:
-                                  MainAxisAlignment.center,
+                                      MainAxisAlignment.spaceEvenly,
                                   children: [
-                                    Text('${locationList[index]['name']}'),
-                                    const Text(
-                                      '28 Jun - Today',
-                                      style: TextStyle(color: Colors.grey),
-                                    )
+                                    Column(
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.start,
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.center,
+                                      children: [
+                                        Text('${locationList[index]['name']}'),
+                                        const Text(
+                                          '28 Jun - Today',
+                                          style: TextStyle(color: Colors.grey),
+                                        )
+                                      ],
+                                    ),
+                                    SizedBox(
+                                      height: height * 0.1,
+                                    ),
+                                    const Icon(
+                                      Icons.arrow_forward_ios_rounded,
+                                      size: 10,
+                                      color: Colors.grey,
+                                    ),
                                   ],
                                 ),
-                                SizedBox(
-                                  height: height * 0.1,
-                                ),
-                                const Icon(
-                                  Icons.arrow_forward_ios_rounded,
-                                  size: 10,
-                                  color: Colors.grey,
-                                ),
-                              ],
-                            ),
-                          ),
-                        ))
+                              ),
+                            ))
                   ],
                 ),
               ),
@@ -390,21 +391,21 @@ class _HomescreenState extends State<Homescreen> {
                   children: [
                     ...List.generate(
                         template.length,
-                            (index) => Padding(
-                          padding: const EdgeInsets.only(
-                              right: 15, top: 10, left: 10),
-                          child: Container(
-                            height: height * 0.25,
-                            width: width * 0.9,
-                            decoration: BoxDecoration(
-                                image: DecorationImage(
-                                  image: AssetImage('${template[index]}'),
-                                  fit: BoxFit.cover,
-                                ),
-                                color: Colors.black,
-                                borderRadius: BorderRadius.circular(10)),
-                          ),
-                        ))
+                        (index) => Padding(
+                              padding: const EdgeInsets.only(
+                                  right: 15, top: 10, left: 10),
+                              child: Container(
+                                height: height * 0.25,
+                                width: width * 0.9,
+                                decoration: BoxDecoration(
+                                    image: DecorationImage(
+                                      image: AssetImage('${template[index]}'),
+                                      fit: BoxFit.cover,
+                                    ),
+                                    color: Colors.black,
+                                    borderRadius: BorderRadius.circular(10)),
+                              ),
+                            ))
                   ],
                 ),
               ),
@@ -485,7 +486,7 @@ class _HomescreenState extends State<Homescreen> {
                                   ),
                                   Column(
                                     mainAxisAlignment:
-                                    MainAxisAlignment.spaceEvenly,
+                                        MainAxisAlignment.spaceEvenly,
                                     children: [
                                       SizedBox(
                                         height: height * 0.012,
@@ -542,15 +543,15 @@ class _HomescreenState extends State<Homescreen> {
                                             MgList = [];
 
                                             for (int i = 0;
-                                            i < hotelList.length;
-                                            i++) {
+                                                i < hotelList.length;
+                                                i++) {
                                               if (double.parse(detailModel!
-                                                  .hotelList1[i].rating
-                                                  .toString()) ==
-                                                  5.0 &&
+                                                          .hotelList1[i].rating
+                                                          .toString()) ==
+                                                      5.0 &&
                                                   double.parse(detailModel!
-                                                      .hotelList1[i].rating
-                                                      .toString()) >
+                                                          .hotelList1[i].rating
+                                                          .toString()) >
                                                       4.0) {
                                                 max = double.parse(detailModel!
                                                     .hotelList1[i].rating
@@ -576,15 +577,15 @@ class _HomescreenState extends State<Homescreen> {
                                               }
                                             }
                                             for (int i = 0;
-                                            i < hotelList.length;
-                                            i++) {
+                                                i < hotelList.length;
+                                                i++) {
                                               if (double.parse(detailModel!
-                                                  .hotelList1[i].rating
-                                                  .toString()) >=
-                                                  4.0 &&
+                                                          .hotelList1[i].rating
+                                                          .toString()) >=
+                                                      4.0 &&
                                                   double.parse(detailModel!
-                                                      .hotelList1[i].rating
-                                                      .toString()) <
+                                                          .hotelList1[i].rating
+                                                          .toString()) <
                                                       5.0) {
                                                 max = double.parse(detailModel!
                                                     .hotelList1[i].rating
@@ -610,15 +611,15 @@ class _HomescreenState extends State<Homescreen> {
                                               }
                                             }
                                             for (int i = 0;
-                                            i < hotelList.length;
-                                            i++) {
+                                                i < hotelList.length;
+                                                i++) {
                                               if (double.parse(detailModel!
-                                                  .hotelList1[i].rating
-                                                  .toString()) >=
-                                                  3.0 &&
+                                                          .hotelList1[i].rating
+                                                          .toString()) >=
+                                                      3.0 &&
                                                   double.parse(detailModel!
-                                                      .hotelList1[i].rating
-                                                      .toString()) <
+                                                          .hotelList1[i].rating
+                                                          .toString()) <
                                                       4.0) {
                                                 max = double.parse(detailModel!
                                                     .hotelList1[i].rating
@@ -644,15 +645,15 @@ class _HomescreenState extends State<Homescreen> {
                                               }
                                             }
                                             for (int i = 0;
-                                            i < hotelList.length;
-                                            i++) {
+                                                i < hotelList.length;
+                                                i++) {
                                               if (double.parse(detailModel!
-                                                  .hotelList1[i].rating
-                                                  .toString()) >=
-                                                  2.0 &&
+                                                          .hotelList1[i].rating
+                                                          .toString()) >=
+                                                      2.0 &&
                                                   double.parse(detailModel!
-                                                      .hotelList1[i].rating
-                                                      .toString()) <
+                                                          .hotelList1[i].rating
+                                                          .toString()) <
                                                       3.0) {
                                                 max = double.parse(detailModel!
                                                     .hotelList1[i].rating
@@ -724,15 +725,15 @@ class _HomescreenState extends State<Homescreen> {
                                             MgList = [];
 
                                             for (int i = 0;
-                                            i < hotelList.length;
-                                            i++) {
+                                                i < hotelList.length;
+                                                i++) {
                                               if (double.parse(detailModel!
-                                                  .hotelList1[i].rent
-                                                  .toString()) >
-                                                  200 &&
+                                                          .hotelList1[i].rent
+                                                          .toString()) >
+                                                      200 &&
                                                   double.parse(detailModel!
-                                                      .hotelList1[i].rent
-                                                      .toString()) <
+                                                          .hotelList1[i].rent
+                                                          .toString()) <
                                                       300) {
                                                 max = double.parse(detailModel!
                                                     .hotelList1[i].rating
@@ -758,15 +759,15 @@ class _HomescreenState extends State<Homescreen> {
                                               }
                                             }
                                             for (int i = 0;
-                                            i < hotelList.length;
-                                            i++) {
+                                                i < hotelList.length;
+                                                i++) {
                                               if (double.parse(detailModel!
-                                                  .hotelList1[i].rent
-                                                  .toString()) >
-                                                  300 &&
+                                                          .hotelList1[i].rent
+                                                          .toString()) >
+                                                      300 &&
                                                   double.parse(detailModel!
-                                                      .hotelList1[i].rent
-                                                      .toString()) <
+                                                          .hotelList1[i].rent
+                                                          .toString()) <
                                                       400) {
                                                 max = double.parse(detailModel!
                                                     .hotelList1[i].rating
@@ -792,15 +793,15 @@ class _HomescreenState extends State<Homescreen> {
                                               }
                                             }
                                             for (int i = 0;
-                                            i < hotelList.length;
-                                            i++) {
+                                                i < hotelList.length;
+                                                i++) {
                                               if (double.parse(detailModel!
-                                                  .hotelList1[i].rent
-                                                  .toString()) >
-                                                  400 &&
+                                                          .hotelList1[i].rent
+                                                          .toString()) >
+                                                      400 &&
                                                   double.parse(detailModel!
-                                                      .hotelList1[i].rent
-                                                      .toString()) <
+                                                          .hotelList1[i].rent
+                                                          .toString()) <
                                                       500) {
                                                 max = double.parse(detailModel!
                                                     .hotelList1[i].rating
@@ -826,15 +827,15 @@ class _HomescreenState extends State<Homescreen> {
                                               }
                                             }
                                             for (int i = 0;
-                                            i < hotelList.length;
-                                            i++) {
+                                                i < hotelList.length;
+                                                i++) {
                                               if (double.parse(detailModel!
-                                                  .hotelList1[i].rent
-                                                  .toString()) >
-                                                  500 &&
+                                                          .hotelList1[i].rent
+                                                          .toString()) >
+                                                      500 &&
                                                   double.parse(detailModel!
-                                                      .hotelList1[i].rent
-                                                      .toString()) <
+                                                          .hotelList1[i].rent
+                                                          .toString()) <
                                                       600) {
                                                 max = double.parse(detailModel!
                                                     .hotelList1[i].rating
@@ -860,15 +861,15 @@ class _HomescreenState extends State<Homescreen> {
                                               }
                                             }
                                             for (int i = 0;
-                                            i < hotelList.length;
-                                            i++) {
+                                                i < hotelList.length;
+                                                i++) {
                                               if (double.parse(detailModel!
-                                                  .hotelList1[i].rent
-                                                  .toString()) >
-                                                  700 &&
+                                                          .hotelList1[i].rent
+                                                          .toString()) >
+                                                      700 &&
                                                   double.parse(detailModel!
-                                                      .hotelList1[i].rent
-                                                      .toString()) <
+                                                          .hotelList1[i].rent
+                                                          .toString()) <
                                                       800) {
                                                 max = double.parse(detailModel!
                                                     .hotelList1[i].rating
@@ -894,15 +895,15 @@ class _HomescreenState extends State<Homescreen> {
                                               }
                                             }
                                             for (int i = 0;
-                                            i < hotelList.length;
-                                            i++) {
+                                                i < hotelList.length;
+                                                i++) {
                                               if (double.parse(detailModel!
-                                                  .hotelList1[i].rent
-                                                  .toString()) >
-                                                  900 &&
+                                                          .hotelList1[i].rent
+                                                          .toString()) >
+                                                      900 &&
                                                   double.parse(detailModel!
-                                                      .hotelList1[i].rent
-                                                      .toString()) <
+                                                          .hotelList1[i].rent
+                                                          .toString()) <
                                                       1000) {
                                                 max = double.parse(detailModel!
                                                     .hotelList1[i].rating
@@ -928,15 +929,15 @@ class _HomescreenState extends State<Homescreen> {
                                               }
                                             }
                                             for (int i = 0;
-                                            i < hotelList.length;
-                                            i++) {
+                                                i < hotelList.length;
+                                                i++) {
                                               if (double.parse(detailModel!
-                                                  .hotelList1[i].rent
-                                                  .toString()) >
-                                                  1000 &&
+                                                          .hotelList1[i].rent
+                                                          .toString()) >
+                                                      1000 &&
                                                   double.parse(detailModel!
-                                                      .hotelList1[i].rent
-                                                      .toString()) <
+                                                          .hotelList1[i].rent
+                                                          .toString()) <
                                                       2000) {
                                                 max = double.parse(detailModel!
                                                     .hotelList1[i].rating
@@ -1008,15 +1009,15 @@ class _HomescreenState extends State<Homescreen> {
                                             MgList = [];
 
                                             for (int i = 0;
-                                            i < hotelList.length;
-                                            i++) {
+                                                i < hotelList.length;
+                                                i++) {
                                               if (double.parse(detailModel!
-                                                  .hotelList1[i].rent
-                                                  .toString()) >
-                                                  1500 &&
+                                                          .hotelList1[i].rent
+                                                          .toString()) >
+                                                      1500 &&
                                                   double.parse(detailModel!
-                                                      .hotelList1[i].rent
-                                                      .toString()) <
+                                                          .hotelList1[i].rent
+                                                          .toString()) <
                                                       2000) {
                                                 max = double.parse(detailModel!
                                                     .hotelList1[i].rating
@@ -1042,15 +1043,15 @@ class _HomescreenState extends State<Homescreen> {
                                               }
                                             }
                                             for (int i = 0;
-                                            i < hotelList.length;
-                                            i++) {
+                                                i < hotelList.length;
+                                                i++) {
                                               if (double.parse(detailModel!
-                                                  .hotelList1[i].rent
-                                                  .toString()) >
-                                                  900 &&
+                                                          .hotelList1[i].rent
+                                                          .toString()) >
+                                                      900 &&
                                                   double.parse(detailModel!
-                                                      .hotelList1[i].rent
-                                                      .toString()) <
+                                                          .hotelList1[i].rent
+                                                          .toString()) <
                                                       1000) {
                                                 max = double.parse(detailModel!
                                                     .hotelList1[i].rating
@@ -1076,15 +1077,15 @@ class _HomescreenState extends State<Homescreen> {
                                               }
                                             }
                                             for (int i = 0;
-                                            i < hotelList.length;
-                                            i++) {
+                                                i < hotelList.length;
+                                                i++) {
                                               if (double.parse(detailModel!
-                                                  .hotelList1[i].rent
-                                                  .toString()) >
-                                                  800 &&
+                                                          .hotelList1[i].rent
+                                                          .toString()) >
+                                                      800 &&
                                                   double.parse(detailModel!
-                                                      .hotelList1[i].rent
-                                                      .toString()) <
+                                                          .hotelList1[i].rent
+                                                          .toString()) <
                                                       900) {
                                                 max = double.parse(detailModel!
                                                     .hotelList1[i].rating
@@ -1110,15 +1111,15 @@ class _HomescreenState extends State<Homescreen> {
                                               }
                                             }
                                             for (int i = 0;
-                                            i < hotelList.length;
-                                            i++) {
+                                                i < hotelList.length;
+                                                i++) {
                                               if (double.parse(detailModel!
-                                                  .hotelList1[i].rent
-                                                  .toString()) >
-                                                  700 &&
+                                                          .hotelList1[i].rent
+                                                          .toString()) >
+                                                      700 &&
                                                   double.parse(detailModel!
-                                                      .hotelList1[i].rent
-                                                      .toString()) <
+                                                          .hotelList1[i].rent
+                                                          .toString()) <
                                                       800) {
                                                 max = double.parse(detailModel!
                                                     .hotelList1[i].rating
@@ -1144,15 +1145,15 @@ class _HomescreenState extends State<Homescreen> {
                                               }
                                             }
                                             for (int i = 0;
-                                            i < hotelList.length;
-                                            i++) {
+                                                i < hotelList.length;
+                                                i++) {
                                               if (double.parse(detailModel!
-                                                  .hotelList1[i].rent
-                                                  .toString()) >
-                                                  600 &&
+                                                          .hotelList1[i].rent
+                                                          .toString()) >
+                                                      600 &&
                                                   double.parse(detailModel!
-                                                      .hotelList1[i].rent
-                                                      .toString()) <
+                                                          .hotelList1[i].rent
+                                                          .toString()) <
                                                       700) {
                                                 max = double.parse(detailModel!
                                                     .hotelList1[i].rating
@@ -1178,15 +1179,15 @@ class _HomescreenState extends State<Homescreen> {
                                               }
                                             }
                                             for (int i = 0;
-                                            i < hotelList.length;
-                                            i++) {
+                                                i < hotelList.length;
+                                                i++) {
                                               if (double.parse(detailModel!
-                                                  .hotelList1[i].rent
-                                                  .toString()) >
-                                                  500 &&
+                                                          .hotelList1[i].rent
+                                                          .toString()) >
+                                                      500 &&
                                                   double.parse(detailModel!
-                                                      .hotelList1[i].rent
-                                                      .toString()) <
+                                                          .hotelList1[i].rent
+                                                          .toString()) <
                                                       600) {
                                                 max = double.parse(detailModel!
                                                     .hotelList1[i].rating
@@ -1212,15 +1213,15 @@ class _HomescreenState extends State<Homescreen> {
                                               }
                                             }
                                             for (int i = 0;
-                                            i < hotelList.length;
-                                            i++) {
+                                                i < hotelList.length;
+                                                i++) {
                                               if (double.parse(detailModel!
-                                                  .hotelList1[i].rent
-                                                  .toString()) >
-                                                  200 &&
+                                                          .hotelList1[i].rent
+                                                          .toString()) >
+                                                      200 &&
                                                   double.parse(detailModel!
-                                                      .hotelList1[i].rent
-                                                      .toString()) <
+                                                          .hotelList1[i].rent
+                                                          .toString()) <
                                                       300) {
                                                 max = double.parse(detailModel!
                                                     .hotelList1[i].rating
@@ -1324,94 +1325,96 @@ class _HomescreenState extends State<Homescreen> {
                         showModalBottomSheet(
                             context: context,
                             builder: (context) => SingleChildScrollView(
-                              child: Column(
-                                children: [
-                                  SizedBox(
-                                    height: height * 0.02,
-                                  ),
-                                  Row(
+                                  child: Column(
                                     children: [
                                       SizedBox(
-                                        width: width * 0.03,
+                                        height: height * 0.02,
                                       ),
-                                      Text(
-                                        'Price range',
-                                        style: TextStyle(
-                                            fontWeight: FontWeight.bold,
-                                            fontSize: 25),
-                                      ),
-                                    ],
-                                  ),
-                                  Container(
-                                    height: height * 0.2,
-                                    width: width,
-                                    child: StatefulBuilder(
-                                      builder: (context, state) {
-                                        return RangeSlider(
-                                          activeColor: Colors.black,
-                                          values: _currentRangeValues,
-                                          max: 2000,
-                                          divisions: 5,
-                                          labels: RangeLabels(
-                                            _currentRangeValues.start
-                                                .round()
-                                                .toString(),
-                                            _currentRangeValues.end
-                                                .round()
-                                                .toString(),
+                                      Row(
+                                        children: [
+                                          SizedBox(
+                                            width: width * 0.03,
                                           ),
-                                          onChanged: (RangeValues values) {
-                                            state(() {});
-                                            setState(() {
-                                              _currentRangeValues = values;
-                                            });
+                                          Text(
+                                            'Price range',
+                                            style: TextStyle(
+                                                fontWeight: FontWeight.bold,
+                                                fontSize: 25),
+                                          ),
+                                        ],
+                                      ),
+                                      Container(
+                                        height: height * 0.2,
+                                        width: width,
+                                        child: StatefulBuilder(
+                                          builder: (context, state) {
+                                            return RangeSlider(
+                                              activeColor: Colors.black,
+                                              values: _currentRangeValues,
+                                              max: 2000,
+                                              divisions: 5,
+                                              labels: RangeLabels(
+                                                _currentRangeValues.start
+                                                    .round()
+                                                    .toString(),
+                                                _currentRangeValues.end
+                                                    .round()
+                                                    .toString(),
+                                              ),
+                                              onChanged: (RangeValues values) {
+                                                state(() {});
+                                                setState(() {
+                                                  _currentRangeValues = values;
+                                                });
+                                              },
+                                            );
                                           },
-                                        );
-                                      },
-                                    ),
-                                  ),
-                                  Row(
-                                    children: [
-                                      SizedBox(
-                                        width: width * 0.05,
-                                      ),
-                                      Text(
-                                        'Clear all',
-                                        style: TextStyle(
-                                            color: Colors.blue,
-                                            fontSize: 20),
-                                      ),
-                                      SizedBox(
-                                        width: width * 0.25,
-                                      ),
-                                      GestureDetector(
-                                        onTap: (){
-                                          Navigator.of(context).pop();
-                                        },
-                                        child: Container(
-                                          height: height * 0.05,
-                                          width: width * 0.45,
-                                          decoration: BoxDecoration(
-                                              color: Colors.black,
-                                              borderRadius: BorderRadius.all(
-                                                  Radius.circular(10))),
-                                          child: Center(
-                                              child: Text(
-                                                'Apply',
-                                                style: TextStyle(
-                                                    color: Colors.white,
-                                                    fontSize: 20),
-                                              ),),
                                         ),
                                       ),
+                                      Row(
+                                        children: [
+                                          SizedBox(
+                                            width: width * 0.05,
+                                          ),
+                                          Text(
+                                            'Clear all',
+                                            style: TextStyle(
+                                                color: Colors.blue,
+                                                fontSize: 20),
+                                          ),
+                                          SizedBox(
+                                            width: width * 0.25,
+                                          ),
+                                          GestureDetector(
+                                            onTap: () {
+                                              Navigator.of(context).pop();
+                                            },
+                                            child: Container(
+                                              height: height * 0.05,
+                                              width: width * 0.45,
+                                              decoration: BoxDecoration(
+                                                  color: Colors.black,
+                                                  borderRadius:
+                                                      BorderRadius.all(
+                                                          Radius.circular(10))),
+                                              child: Center(
+                                                child: Text(
+                                                  'Apply',
+                                                  style: TextStyle(
+                                                      color: Colors.white,
+                                                      fontSize: 20),
+                                                ),
+                                              ),
+                                            ),
+                                          ),
+                                        ],
+                                      ),
+                                      SizedBox(
+                                        height: height * 0.05,
+                                      ),
                                     ],
                                   ),
-                                  SizedBox(
-                                    height: height * 0.05,
-                                  ),
-                                ],
-                              ),
-                            ));
+                                ));
                       });
                     },
                     child: Container(
@@ -1442,7 +1445,7 @@ class _HomescreenState extends State<Homescreen> {
                 children: [
                   ...List.generate(
                     20,
-                        (index) => Padding(
+                    (index) => Padding(
                       padding: const EdgeInsets.all(10.0),
                       child: GestureDetector(
                         onTap: () {
@@ -1482,7 +1485,7 @@ class _HomescreenState extends State<Homescreen> {
                                       onPressed: () {
                                         setState(() {
                                           hotelList[index]['like'] =
-                                          !hotelList[index]['like'];
+                                              !hotelList[index]['like'];
                                         });
                                       },
                                     ),

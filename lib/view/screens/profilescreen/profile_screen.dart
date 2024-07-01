@@ -17,6 +17,7 @@ class _ProfilePageState extends State<ProfilePage> {
       resizeToAvoidBottomInset: false,
       backgroundColor: Colors.white,
       appBar: AppBar(
+        scrolledUnderElevation: 0.1,
         actions: [
           IconButton(
             onPressed: () {
