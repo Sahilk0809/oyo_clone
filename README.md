@@ -6,9 +6,9 @@
 <img src="https://github.com/Sahilk0809/oyo_clone/assets/149374235/d12cbbe4-de4b-44df-81ec-86dfd5eade78" height=65% width=22%>
 <img src="https://github.com/Sahilk0809/oyo_clone/assets/149374235/26192adc-efc1-4df8-b5d2-4106ffeaafae" height=65% width=22%>
   
-<img src="https://github.com/Sahilk0809/oyo_clone/assets/149374235/0abe9e1e-066a-4ecc-9d77-838712b3eff4" height=65% width=22%>
 <img src="https://github.com/Sahilk0809/oyo_clone/assets/149374235/505af1fa-d901-4e9f-a6dd-383544d2b235" height=65% width=22%>
 <img src="https://github.com/Sahilk0809/oyo_clone/assets/149374235/53641e96-b1ab-49fe-a559-9d9e60a186f5" height=65% width=22%>
+<img src="https://github.com/Sahilk0809/oyo_clone/assets/149373597/126cf782-f91b-4064-a624-999ae39cc5cb" height=65% width=22%>
 <img src="https://github.com/Sahilk0809/oyo_clone/assets/149374235/f846d347-a41c-4353-a99b-94ea311c3ee9" height=65% width=22%>
 
 <img src="https://github.com/Sahilk0809/oyo_clone/assets/149374235/6c64cfdd-09d4-418b-aa11-cb6d9c9e0f37" height=65% width=22%>
