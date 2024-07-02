@@ -31,7 +31,6 @@
 <img src="https://github.com/Sahilk0809/oyo_clone/assets/149374235/0f0fc9e9-ec08-42b5-8bf3-23cd5c178c1e" height=65% width=22%>
 <img src="https://github.com/Sahilk0809/oyo_clone/assets/149374235/417ef558-de6c-404f-b45d-b094047a5c8a" height=65% width=22%>
 
-
 </div>
 
 
